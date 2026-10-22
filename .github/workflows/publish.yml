@@ -5,7 +5,7 @@ name: Publish
 # in Slack. Editing an existing release only redeploys the page.
 #
 # Slack posts once per release: a successful post pushes the tag slack/<id>,
-# and an id that already has the tag is skipped. Backfilled releases are never
+# and an id that already has the tag (or is backfill) is skipped. Backfilled releases are never
 # posted. To post again by hand: Actions → Publish → Run workflow → repost.
 #
 # Secrets: SLACK_BOT_TOKEN (xoxb-, chat:write, bot invited to the channel)
@@ -82,27 +82,20 @@ jobs:
 
       - name: Pick releases to announce
         id: pick
+        # Every release file is a candidate; the slack/<id> tag (posted once) and
+        # the backfill flag decide what is actually sent. Robust to force pushes
+        # and to a post that failed on an earlier run.
         run: |
           if [ -n "${{ inputs.repost }}" ]; then
             echo "ids=${{ inputs.repost }}" >> "$GITHUB_OUTPUT"
             echo "force=1" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          before="${{ github.event.before }}"
-          if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
-            files=$(git ls-files 'releases/*.json')
           else
-            files=$(git diff --name-only --diff-filter=A "$before" "${{ github.sha }}" -- 'releases/*.json')
+            echo "ids=$(git ls-files 'releases/*.json' | xargs -n1 basename | sed 's/\.json$//' | xargs)" >> "$GITHUB_OUTPUT"
           fi
-          echo "ids=$(for f in $files; do basename "$f" .json; done | xargs)" >> "$GITHUB_OUTPUT"
 
       - name: Post to Slack
         if: steps.pick.outputs.ids != ''
         run: |
-          if [ -z "$SLACK_BOT_TOKEN" ] || [ -z "$SLACK_CHANNEL" ]; then
-            echo "::error::Set the SLACK_BOT_TOKEN secret and the SLACK_CHANNEL variable."
-            exit 1
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for id in ${{ steps.pick.outputs.ids }}; do
@@ -111,6 +104,10 @@ jobs:
             fi
             if [ -z "${{ steps.pick.outputs.force }}" ] && git rev-parse -q --verify "refs/tags/slack/$id" >/dev/null; then
               echo "$id: already posted (tag slack/$id), skipped"; continue
+            fi
+            if [ -z "$SLACK_BOT_TOKEN" ] || [ -z "$SLACK_CHANNEL" ]; then
+              echo "::error::$id needs posting: set the SLACK_BOT_TOKEN secret and the SLACK_CHANNEL variable."
+              exit 1
             fi
             node scripts/post-slack.mjs "$id"
             git tag -f "slack/$id" "${{ github.sha }}"
