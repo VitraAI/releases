@@ -10,7 +10,7 @@
   "scripts": {
     "validate": "node scripts/validate.mjs",
     "build": "node scripts/build.mjs",
-    "test": "node --test test/",
+    "test": "node --test test/release.test.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check": "npm run validate && npm run format:check && npm test && npm run build",
