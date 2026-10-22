@@ -1,0 +1,6 @@
+node_modules/
+dist/
+# MR text, diffs and MR-details drafts: infra, env and migration internals.
+# This repo is public — never commit anything from here.
+.work/
+.DS_Store

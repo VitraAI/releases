@@ -1,0 +1,134 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.08.21.2",
+  "date": "2026-08-21",
+  "title": "Set one emotion across a whole language",
+  "summary": "Bulk emotion in the Translate Video editor, process assignment per target language, more accurate Image Translator renders, and fixes for AI usage and transcreation.",
+  "tags": [
+    "translate-video",
+    "emotion",
+    "process-assignment",
+    "translate-photo",
+    "image-translator"
+  ],
+  "backfill": true,
+  "highlights": ["bulk-emotion", "process-assignment"],
+  "sections": [
+    {
+      "id": "bulk-emotion",
+      "area": "translate-video",
+      "kind": "added",
+      "title": "Bulk emotion in Translate Video",
+      "items": [
+        {
+          "title": "Set one emotion for a whole language.",
+          "body": "The **Emotion** picker on the transcript toolbar applies one emotion to the selected cards or every card in the language, then regenerates audio only for lines that can be spoken. Cards with no translated text, Keep Source on or no voice get the emotion without new audio."
+        },
+        {
+          "title": "A plain confirm step.",
+          "body": "You see how many cards will change and confirm with **Apply & Regenerate**. A selection now asks first too, instead of replacing audio straight away."
+        },
+        {
+          "title": "It responds straight away.",
+          "body": "The emotion shows on every card at once, a Process Hub row appears on click, and the cards lock until the job finishes."
+        },
+        {
+          "title": "Progress bars move during speech generation.",
+          "body": "Long speech and autofix stages now advance the bar instead of holding it."
+        },
+        {
+          "title": "Edited emotions reach the voice.",
+          "body": "Speech uses the emotion set for the target language, including on processes without speaker detection. On ElevenLabs, emotion applies with the v3 model."
+        },
+        {
+          "title": "No emotion on Keep Source cards.",
+          "body": "The picker is disabled there, with a tooltip explaining why: those cards play the original audio."
+        }
+      ]
+    },
+    {
+      "id": "process-assignment",
+      "area": "platform",
+      "kind": "added",
+      "title": "Process assignment per target language",
+      "items": [
+        {
+          "title": "Assign members per target language.",
+          "body": "The assign dialog shows one row per target language with its assigned count; open a row to pick members. Languages no longer targeted but still staffed get their own section, so you can remove those assignments."
+        },
+        {
+          "title": "Each member appears once.",
+          "body": "Assignee avatars are grouped by member, with their languages in the tooltip."
+        },
+        {
+          "title": "Assignment now limits what a member sees, whatever their role.",
+          "body": "A member assigned to some languages sees only those in the editor and in Process Hub, and is notified only about their languages. Members with no assignment on a process, and the process creator, are unaffected."
+        },
+        {
+          "title": "Language-limited members can't add languages.",
+          "body": "In the Translate Video editor, **Add language** is hidden for them."
+        }
+      ]
+    },
+    {
+      "id": "image-translator",
+      "area": "translate-photo",
+      "kind": "changed",
+      "title": "Image Translator",
+      "items": [
+        {
+          "title": "Rotated text stays rotated.",
+          "body": "Vertical and spine text is detected with its angle and rendered at that angle, instead of flat."
+        },
+        {
+          "title": "GPT Image renders match your image's size.",
+          "body": "When you keep the original framing, renders target the source image's real pixel dimensions within the model's limits. 1024×1536 comes back at 1024×1536 and 1920×1080 at 1920×1088. Gemini renders are unchanged."
+        },
+        {
+          "title": "Proofreaders see only their languages' versions.",
+          "body": "A proofreader assigned to one language sees only that language's renders, and versions made from them, in version history. Creators always see everything."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Crops and edits from the analyze step were lost on translate.",
+          "body": "Translation now starts from your latest analysis. A language translated for the first time starts from the same base as the job's first translation."
+        },
+        {
+          "title": "Phrase locks disappeared after translation.",
+          "body": "Locked phrases now stay locked on the review page and in versions made from that translation."
+        },
+        {
+          "title": "Only the first language was offered when assigning an image job.",
+          "body": "All of the job's target languages can now be staffed."
+        },
+        {
+          "title": "The assign dialog could hide or wrongly flag assignees.",
+          "body": "If loading eligible members failed, every assignee was flagged and couldn't be removed, and early picks could be overwritten. Existing assignees now stay visible and removable."
+        },
+        {
+          "title": "Usage showed 0 words for AI passes.",
+          "body": "The Usage tab's AI Proofreading, QC and Suggestions rows now record their words."
+        },
+        {
+          "title": "Transcreation runs that returned suggestions were marked failed.",
+          "body": "A note from the model explaining its choice no longer discards the suggestions. A run fails only when it returns none. A pass with nothing to change now reports success with a note instead of an error."
+        },
+        {
+          "title": "Keep Source cards sounded muffled in the editor.",
+          "body": "They played slowed and lower, and their music played twice. They now play at normal speed, as they do in the export."
+        },
+        {
+          "body": "The emotion picker's checkmark no longer covers the emoji, and checkboxes are square again."
+        }
+      ]
+    }
+  ]
+}

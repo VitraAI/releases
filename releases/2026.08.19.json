@@ -1,0 +1,24 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.08.19",
+  "date": "2026-08-19",
+  "title": "Hyperlocal image uploads no longer get blocked",
+  "summary": "Hyperlocal template creatives, contact logos and product images upload reliably again.",
+  "tags": ["hyperlocal", "uploads"],
+  "backfill": true,
+  "sections": [
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Some Hyperlocal image uploads were blocked.",
+          "body": "Template creatives, contact logos and product images could fail with a network error. Files now upload straight to storage, so they go through."
+        }
+      ]
+    }
+  ]
+}

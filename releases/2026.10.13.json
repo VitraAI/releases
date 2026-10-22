@@ -1,0 +1,171 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.10.13",
+  "date": "2026-10-13",
+  "title": "Projects replace Folders",
+  "summary": "Projects replace Folders, Cosmos workflows run on projects, subtitles look the same everywhere, one-step skill installs and a sign-in upgrade.",
+  "tags": ["projects", "cosmos", "translate-video", "skills"],
+  "backfill": true,
+  "highlights": ["projects-replace-folders", "projects-run-cosmos"],
+  "sections": [
+    {
+      "id": "projects-replace-folders",
+      "area": "projects",
+      "kind": "added",
+      "title": "Projects replace Folders",
+      "items": [
+        {
+          "title": "Every folder is now a project.",
+          "body": "Your folders moved over automatically, with the same files and processes. Every process start form and list filter now picks a project instead of a folder.",
+          "link": {
+            "label": "Open Projects",
+            "path": "/projects"
+          }
+        },
+        {
+          "title": "A full project workspace.",
+          "body": "Each project has its own Drive folder for project files, deliverables and input shortcuts.",
+          "children": [
+            {
+              "body": "Tabs: Overview, List, Board, Gantt, Calendar, Team, Files, Fields, Processes, People, Activity, Analytics and Settings."
+            }
+          ]
+        },
+        {
+          "title": "Projects hub.",
+          "body": "\"Needs you\" cards, status groups, a colour-coded status filter, a board view, custom fields, stars, search and infinite scroll."
+        },
+        {
+          "title": "ClickUp-style list and board.",
+          "body": "Drag and drop, quick add, bulk edit (X / A keys), keyboard navigation and resizable panes. The board fills the page, so headers and toolbars stay in view and each column scrolls on its own."
+        },
+        {
+          "title": "Choose how boards scroll sideways",
+          "body": "in Customize: a slim **Bar**, a **Minimap** with one tick per column, or **Arrows**. You can also drag empty board space to pan."
+        },
+        {
+          "title": "Tasks.",
+          "body": "Dates with times, checklists, members and watchers, rich text with mentions, and an activity feed. Use the side drawer or the redesigned task page. A **My work** inbox gathers what's yours, and Cmd+K has task actions."
+        }
+      ]
+    },
+    {
+      "id": "projects-run-cosmos",
+      "area": "cosmos",
+      "kind": "added",
+      "title": "Projects run Cosmos workflows",
+      "items": [
+        {
+          "title": "Attach a workflow to a project.",
+          "body": "Its inputs become project fields, alongside your own custom fields, and individual tasks can override them."
+        },
+        {
+          "title": "Run it on a folder of files.",
+          "body": "You get one task and one run per file, and you see the cost before anything starts. Statuses follow each run as it moves through the workflow, and you can run it again at any time."
+        },
+        {
+          "title": "Skipped files are grouped by reason.",
+          "body": "The Run dialog lists files it skips (copies, other file types, empty files) under a heading and a count for each, for example \"12 skipped · 11 copies · 1 other type\"."
+        },
+        {
+          "title": "Attach a workflow to a project with only custom fields",
+          "body": "from its Fields tab."
+        },
+        {
+          "title": "Step owners and step checklists.",
+          "body": "Each step can have an owner who is handed the task when it's their turn, and a checklist that can hold an approval."
+        },
+        {
+          "title": "Deliverables are filed in the project automatically.",
+          "body": "A re-run replaces the earlier file instead of piling up copies."
+        },
+        {
+          "title": "Live updates and activity.",
+          "body": "Boards update as runs move. The project and task activity feeds show workflow moves and approvals, and project analytics come with charts."
+        },
+        {
+          "body": "Cosmos also gets a run inputs panel, new Translate Video steps, and a fix for approvals racing each other."
+        }
+      ]
+    },
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "changed",
+      "title": "Translate Video",
+      "items": [
+        {
+          "title": "Subtitles look the same everywhere.",
+          "body": "The video editor, the subtitle editor and the export now lay out cues the same way, so a line breaks in the same place in every view and at every export resolution."
+        },
+        {
+          "title": "Default subtitle size is 8,",
+          "body": "and the Default preset is white (it was black). Projects that already use the Default preset keep their black text until it is picked again."
+        },
+        {
+          "kind": "removed",
+          "body": "4:5 and 21:9 are no longer offered in the artboard pickers. Videos already saved at those shapes still export."
+        },
+        {
+          "body": "The crop dialog keeps the video's real shape on tall screens."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "area": "platform",
+      "kind": "changed",
+      "title": "Platform",
+      "items": [
+        {
+          "title": "Sign-in upgraded.",
+          "body": "Organizations with a large logo no longer hang while loading the organization list."
+        },
+        {
+          "title": "Longer-lived download zips.",
+          "body": "The Vitra team can now keep an organization's zips for anywhere from 1 hour to 30 days, and child organizations inherit their parent's setting. The \"Zip ready\" toast shows how long each zip is really available (\"7 days\", \"3 hours\") instead of a fixed 1 hour."
+        },
+        {
+          "title": "Install Vitra skills in one step.",
+          "body": "The Skill Library has an **Install skills** button with the commands for any agent (`npx skills add`) or as a Claude Code plugin. A skill's page can switch between installing just that skill and all Vitra skills. Skills is back in the sidebar for every member.",
+          "link": {
+            "label": "Open Skill Library",
+            "path": "/skills"
+          }
+        },
+        {
+          "title": "Side rail overflow.",
+          "body": "Items that don't fit move into a **More** menu, and Orgs is pinned to the bottom."
+        },
+        {
+          "title": "Steadier under load.",
+          "body": "The server handles many projects being created at once without stalling."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Burned-in subtitles used the wrong language.",
+          "body": "An export could time its subtitles on another language's dub, or leave them out entirely. Each export now burns in the language you exported."
+        },
+        {
+          "title": "Re-runs charged for copies of their own inputs.",
+          "body": "Copies are now skipped and shown as \"Same file as another one here\", and files that have already run aren't charged again."
+        },
+        {
+          "title": "Toggling a switch could slide the whole app up,",
+          "body": "leaving a gap at the bottom of the screen."
+        },
+        {
+          "body": "Compact amounts showed \"$3.0K\" on some browsers. They now show \"$3K\" everywhere."
+        }
+      ]
+    }
+  ]
+}

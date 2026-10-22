@@ -1,0 +1,24 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.24",
+  "date": "2026-09-24",
+  "title": "The rates page shows your organization's prices",
+  "summary": "The credit rates page now shows the prices agreed for your organization instead of the standard ones.",
+  "tags": ["credits", "billing"],
+  "backfill": true,
+  "sections": [
+    {
+      "id": "billing",
+      "area": "billing",
+      "kind": "changed",
+      "title": "Credits and billing",
+      "items": [
+        {
+          "title": "Your own prices on the rates page.",
+          "body": "If your organization has agreed prices for some operations, the rates page now shows those prices instead of the standard ones. Tiered rates are unchanged."
+        }
+      ]
+    }
+  ]
+}

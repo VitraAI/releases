@@ -1,0 +1,199 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.22",
+  "date": "2026-09-22",
+  "title": "Context for every text in AI translation",
+  "summary": "Per-text translation context, AI translation grounded in your memory, Quick Create chat groups, one shared voice library, two-line subtitles and Canva sign-in.",
+  "tags": ["translation-memory", "quick-create", "voices", "translate-video", "canva", "pricing"],
+  "backfill": true,
+  "highlights": ["translation-quality", "voices", "translate-video"],
+  "sections": [
+    {
+      "id": "translation-quality",
+      "area": "translation-memory",
+      "kind": "added",
+      "title": "Translation quality",
+      "items": [
+        {
+          "title": "Context for every text.",
+          "body": "A translation request can now carry context for each text, such as an i18n file's key, so \"Book\" under `nav.library.book` and under `flights.cta.book_now` get different translations instead of one. Playground JSON translation does this automatically, and only for wordings that appear under more than one key, so everything else keeps full reuse and costs the same."
+        },
+        {
+          "title": "AI translation leans on your memory.",
+          "body": "For each text, the model now sees the approved TM wording for phrases found inside it, and how your feature and product names were translated before."
+        },
+        {
+          "title": "Consistent wording across long documents.",
+          "body": "A document translated in parallel parts keeps the same wording for the same short labels throughout."
+        },
+        {
+          "title": "Stricter terminology.",
+          "children": [
+            {
+              "body": "Words with several meanings keep every approved option with its domain."
+            },
+            {
+              "body": "Terms now match in Chinese, Japanese, Korean and Thai."
+            },
+            {
+              "body": "Style-guide \"first mention\" rules land on the right text."
+            },
+            {
+              "body": "Times, dates and numbers follow the target locale."
+            }
+          ]
+        },
+        {
+          "title": "Optional review pass.",
+          "body": "A second AI pass critiques and revises each draft. It is off by default and switched on per organization."
+        }
+      ]
+    },
+    {
+      "id": "quick-create",
+      "area": "playground",
+      "kind": "added",
+      "title": "Quick Create",
+      "items": [
+        {
+          "title": "Chat groups.",
+          "body": "File chats into groups from the sidebar. Give a group standing **rules** (for example \"Diwali campaign: warm palette, no people in the background\") and every chat and render in it follows them. The description is for your team only and never reaches the model."
+        },
+        {
+          "title": "People in reference photos stay who they are.",
+          "body": "The model no longer changes a referenced person's gender, age or appearance, and the reference photo now outranks memory notes and group rules."
+        }
+      ]
+    },
+    {
+      "id": "voices",
+      "area": "playground",
+      "kind": "changed",
+      "title": "Voices",
+      "emoji": "studio_microphone",
+      "items": [
+        {
+          "title": "One voice library across products.",
+          "body": "Voices cloned in Playground and in Translate Video are now one shared set: use, edit or delete any clone from either product. Clones are shared across your organization and its sub-organizations on the same ElevenLabs key, never with anyone else."
+        },
+        {
+          "title": "Clones come back on their own.",
+          "body": "A clone that was freed to make room, or made on a different ElevenLabs account, is re-created automatically the next time it is used."
+        },
+        {
+          "title": "6,400+ new native voices",
+          "body": "from ElevenLabs, and Cebuano, Kyrgyz and Chichewa are now available for standard and cloned voices."
+        },
+        {
+          "body": "Changing your ElevenLabs key in Settings now tells you which clones will be re-created on the new account."
+        }
+      ]
+    },
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "changed",
+      "title": "Translate Video",
+      "items": [
+        {
+          "title": "Subtitles on two lines at 42 characters per line",
+          "body": "(the Netflix standard), up from one line at 36. Uploaded subtitle files keep their own line breaks."
+        },
+        {
+          "title": "Split view scrolls together.",
+          "body": "Scroll either language column and the other follows to the same card."
+        },
+        {
+          "title": "Sharper exports.",
+          "body": "Single-pass encodes tuned per resolution, stereo 256k audio, and files that start playing before they finish downloading."
+        },
+        {
+          "title": "Clearer lip-sync failures.",
+          "body": "A failed lip-sync clip names the editor card it came from, and a lip-sync submit is not retried (each one is billed). An export that needs lip-sync fails clearly when the vendor key is missing, instead of being mis-billed."
+        }
+      ]
+    },
+    {
+      "id": "integrations",
+      "area": "integrations",
+      "kind": "changed",
+      "title": "Integrations",
+      "items": [
+        {
+          "title": "Canva sign-in.",
+          "body": "The Canva app now signs you in on our own domain: enter your email, confirm the code, pick an organization, and Canva stays connected."
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "area": "billing",
+      "kind": "changed",
+      "title": "Pricing",
+      "items": [
+        {
+          "title": "QE (MQM) quality report: 4 credits per source word",
+          "body": "(was 2), for a full MQM evaluation with per-segment scores and corrections."
+        },
+        {
+          "kind": "removed",
+          "title": "AI proofreading and AI back-translation are retired",
+          "body": "from Translate Photo and Playground, along with the old AI QC report. The QE report replaces them."
+        }
+      ]
+    },
+    {
+      "id": "everywhere",
+      "area": "platform",
+      "kind": "changed",
+      "title": "Everywhere",
+      "items": [
+        {
+          "title": "One language order in every picker,",
+          "body": "with the flag beside every name: each language, then its main variant (English, then English (United States)), then the other variants A to Z."
+        },
+        {
+          "body": "Playground: the video process list has pages and a rows-per-page choice, and raw output panes scroll together."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "QE report fixes.",
+          "body": "The **Unverified only** toggle now works, and fixing a single card applies only that card's corrections."
+        },
+        {
+          "title": "Audio-only exports with lip-synced cards failed on retry.",
+          "body": "They work again, and no longer pay for a lip-sync render whose video is never used."
+        },
+        {
+          "title": "480p and 360p exports had black bars",
+          "body": "on widescreen and portrait videos. They are now true 16:9 and 9:16."
+        },
+        {
+          "title": "Bugs found by the new test suite, fixed.",
+          "children": [
+            {
+              "body": "Adding a language no longer overwrites earlier languages on a temporary server error."
+            },
+            {
+              "body": "Generated speech is matched to cards by id, not position."
+            },
+            {
+              "body": "A failed organization-key lookup retries instead of running without the organization's key."
+            },
+            {
+              "body": "Playground TTS sessions with mixed sample rates no longer play back too fast."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

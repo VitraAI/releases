@@ -1,0 +1,116 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.08.26",
+  "date": "2026-08-26",
+  "title": "Translate Word and PowerPoint files with formatting intact",
+  "summary": "Word and PowerPoint translation in Playground and Cosmos, named Cosmos runs, a confirm step on approval gates, notifications by email with your organization's branding, and a voice provider filter.",
+  "tags": [
+    "playground",
+    "office-translation",
+    "cosmos",
+    "notifications",
+    "translate-video",
+    "assets"
+  ],
+  "backfill": true,
+  "highlights": ["office-translation", "cosmos", "notifications"],
+  "sections": [
+    {
+      "id": "office-translation",
+      "area": "playground",
+      "kind": "added",
+      "title": "Word and PowerPoint translation",
+      "items": [
+        {
+          "title": "Translate .docx and .pptx files, formatting intact.",
+          "body": "A new **Word & PowerPoint** card in Playground takes a mix of documents and decks in one drop and translates each into one or more languages with your translation memory. Runs and downloads are on the process page's Document tab."
+        },
+        {
+          "title": "Formatting inside a sentence is kept.",
+          "body": "It shows as tags in the segment editor and is put back in the translated file."
+        },
+        {
+          "title": "Preview the document in the app,",
+          "body": "for both the source and the translation."
+        }
+      ]
+    },
+    {
+      "id": "cosmos",
+      "area": "cosmos",
+      "kind": "added",
+      "title": "Cosmos",
+      "items": [
+        {
+          "title": "Translate Word and PowerPoint files in a workflow.",
+          "body": "New nodes bring Playground document translation into Cosmos. Upload a file or pick one from Drive in the run form."
+        },
+        {
+          "title": "Name your runs.",
+          "body": "Each run gets a name, set automatically or typed by you, and can be renamed at any time. A blank name is taken from the run's input file, the runs list leads with the name and has a Workflow column, and step owner notifications name the run."
+        },
+        {
+          "title": "Confirm before approving or rejecting.",
+          "body": "**Approve** and **Reject** on a run now ask first and name the gate. Rejecting cancels the whole run and can't be undone."
+        },
+        {
+          "title": "Approval gates show their title and instructions",
+          "body": "in step owners, so a flow with several gates no longer lists identical Approval rows."
+        }
+      ]
+    },
+    {
+      "id": "notifications",
+      "area": "notifications",
+      "kind": "added",
+      "title": "Notifications by email",
+      "items": [
+        {
+          "title": "Notification emails carry your brand.",
+          "body": "Notifications now arrive by email too. Each email uses the recipient's organization logo, colour, support address and domain, and is sent through that organization's own mail server when one is set up."
+        }
+      ]
+    },
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "added",
+      "title": "Translate Video",
+      "items": [
+        {
+          "title": "Filter voices by provider.",
+          "body": "The voice filters in the library and the **Choose Voice** dialog add ElevenLabs, Cartesia, Google and Microsoft, and **Clear all** resets every filter."
+        }
+      ]
+    },
+    {
+      "id": "assets",
+      "area": "assets",
+      "kind": "changed",
+      "title": "Assets",
+      "items": [
+        {
+          "title": "Drive folders are now called directories,",
+          "body": "in Assets and the file picker, to tell them apart from the work folders in the sidebar."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "The Microsoft Translator key and region couldn't be removed.",
+          "body": "Because they must be set together, clearing either one was blocked. **Remove** now clears both and says so before you click, and save errors on this page show the real reason."
+        },
+        {
+          "title": "Notification preferences could reset.",
+          "body": "Your preferences were reset whenever the service restarted. They now stay as you set them."
+        }
+      ]
+    }
+  ]
+}

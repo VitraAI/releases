@@ -1,0 +1,29 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.02",
+  "date": "2026-09-02",
+  "title": "Replace logos in translated images",
+  "summary": "Swap a detected logo in the Image Translator for one from your library, an upload or Drive, then move and resize it by hand.",
+  "tags": ["translate-photo", "image-translator", "logo-replacement"],
+  "backfill": true,
+  "highlights": ["logo-replacement"],
+  "sections": [
+    {
+      "id": "logo-replacement",
+      "area": "translate-photo",
+      "kind": "added",
+      "title": "Logo replacement in the Image Translator",
+      "items": [
+        {
+          "title": "Replace a detected logo.",
+          "body": "Pick a replacement from your organization's logo library, upload one, or browse Drive. A preview shows how it fits the original's spot, and warns if it is too low-resolution or the wrong shape, before you spend credits."
+        },
+        {
+          "title": "Move and resize it by hand.",
+          "body": "The new logo starts where the old one was. Drag or scale it to adjust; it never stretches, and **Reset** puts it back."
+        }
+      ]
+    }
+  ]
+}

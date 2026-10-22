@@ -1,0 +1,22 @@
+{
+  "$comment": "GitLab projects searched for release MRs (label release::<id>). `repo` is the short name used in release files; `path` is the full GitLab project path.",
+  "host": "https://gitlab.com",
+  "projects": [
+    {
+      "repo": "universe-3-0-server",
+      "path": "apexfuturelabs/vitra/universe/universe-3-0/universe-3-0-server"
+    },
+    {
+      "repo": "universe-3-0-webapp",
+      "path": "apexfuturelabs/vitra/universe/universe-3-0/universe-3-0-webapp"
+    },
+    {
+      "repo": "conductor-workers",
+      "path": "apexfuturelabs/vitra/universe/universe-3-0/conductor-worker/conductor-workers"
+    },
+    {
+      "repo": "vitra-tm",
+      "path": "apexfuturelabs/vitra/universe/universe-3-0/translation-memory-infra/vitra-tm"
+    }
+  ]
+}

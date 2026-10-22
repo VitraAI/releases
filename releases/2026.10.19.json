@@ -1,0 +1,241 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.10.19",
+  "date": "2026-10-19",
+  "title": "Integrations: connect your accounts and move files",
+  "summary": "A new Integrations page for cloud storage, social and content accounts, image steps and templates in Cosmos, translation of the text inside a document's pictures, Chat spaces, and Magic Layers and Image Creator fixes.",
+  "tags": ["integrations", "cosmos", "playground", "chat", "magic-layers", "image-creator", "api"],
+  "backfill": true,
+  "highlights": ["integrations", "cosmos-images", "document-images"],
+  "sections": [
+    {
+      "id": "integrations",
+      "area": "integrations",
+      "kind": "added",
+      "title": "Integrations",
+      "items": [
+        {
+          "title": "A new Integrations page.",
+          "body": "Your organization's own third-party accounts now live in one place in the side rail, grouped as Social and video, Files and storage, and Websites and content.",
+          "link": {
+            "label": "Open Integrations",
+            "path": "/integrations"
+          }
+        },
+        {
+          "title": "Bring files in and save results back.",
+          "body": "Connect Dropbox, Google Drive, OneDrive, SharePoint or Box, browse it, import files into your Drive and save results back to it. Members with the new **Use** permission can do this without being able to connect or disconnect accounts."
+        },
+        {
+          "title": "Social and content accounts.",
+          "body": "Instagram, YouTube, LinkedIn, TikTok, WordPress, Contentful, HubSpot and GitHub can be connected, and each card shows the account it signed in as.",
+          "children": [
+            {
+              "body": "A self-hosted WordPress site connects with its address, a username and an Application Password."
+            }
+          ]
+        },
+        {
+          "title": "Ask for a service that isn't listed.",
+          "body": "Request any other service by name from the page."
+        }
+      ]
+    },
+    {
+      "id": "cosmos-images",
+      "area": "cosmos",
+      "kind": "added",
+      "title": "Cosmos: image steps and file steps",
+      "items": [
+        {
+          "title": "Image steps for workflows.",
+          "children": [
+            {
+              "body": "Create an image from a prompt."
+            },
+            {
+              "body": "Translate an image."
+            },
+            {
+              "body": "Adapt an image to another size or shape, such as an Instagram Story."
+            },
+            {
+              "body": "Turn an image into an editable, translated Magic Layers design."
+            }
+          ]
+        },
+        {
+          "title": "Four ready-made image workflows.",
+          "children": [
+            {
+              "body": "Create and localise an image."
+            },
+            {
+              "body": "Localise an image for every channel."
+            },
+            {
+              "body": "Create, localise and resize."
+            },
+            {
+              "body": "Create an editable, translated design."
+            }
+          ]
+        },
+        {
+          "title": "See the images on the run page.",
+          "body": "A run's images show in a gallery on its page."
+        },
+        {
+          "title": "Import from and save to cloud storage.",
+          "body": "New steps take a file from a connected storage account and save results back to one."
+        },
+        {
+          "title": "InDesign translation step.",
+          "body": "Translate an InDesign document (.idml) through a translation memory. Frames, styles, images and master pages stay as they are."
+        }
+      ]
+    },
+    {
+      "id": "document-images",
+      "area": "playground",
+      "kind": "added",
+      "title": "Playground",
+      "items": [
+        {
+          "title": "Translate the text inside a document's pictures.",
+          "body": "Choose **Translate text inside images** when you translate a document. Let it pick the pictures that have text, or choose them yourself: a free check ticks the ones it finds text in, and you can untick any to leave it alone (not charged) or tick one it missed.",
+          "children": [
+            {
+              "body": "Scanned pages and pictures that can't be redrawn are shown but can't be ticked."
+            }
+          ]
+        },
+        {
+          "title": "Work on each picture afterwards.",
+          "body": "The document's page lists its pictures. Open one in the image translator or in Magic Layers, or put the original back."
+        },
+        {
+          "title": "Find and replace in text-to-speech.",
+          "body": "Press Cmd/Ctrl+F or **Find** to search the cards, step through matches and replace them. Replace says first when generated audio would need regenerating."
+        },
+        {
+          "title": "Copy or download the source and translated files",
+          "body": "from the maximised raw output view."
+        }
+      ]
+    },
+    {
+      "id": "chat",
+      "area": "ai-assistant",
+      "kind": "added",
+      "title": "Chat",
+      "items": [
+        {
+          "title": "Spaces.",
+          "body": "Group chats into a space with its own instructions and memory notes, which every chat in it uses."
+        },
+        {
+          "title": "A clearer model picker.",
+          "body": "Search models and see at a glance which are most capable, reasoning, balanced or fast, with their price."
+        },
+        {
+          "title": "Pin, rename and move chats,",
+          "body": "into a space, a new space or out of one."
+        }
+      ]
+    },
+    {
+      "id": "magic-layers",
+      "area": "translate-photo",
+      "kind": "changed",
+      "title": "Magic Layers and Image Creator",
+      "items": [
+        {
+          "title": "Opens with the right brand kit.",
+          "body": "An image sent from Image Creator opens in Magic Layers with the brand kit it was made with, so its fonts load straight away."
+        },
+        {
+          "title": "Faster splits.",
+          "body": "Text removal now starts alongside the object cut-outs. A split usually takes 2 to 5 minutes, longer when the AI services are busy, and the app says so."
+        },
+        {
+          "title": "Brand fonts fit the original.",
+          "body": "**Use brand fonts** never sets text taller or wider than the original letters, keeps the design's line spacing, and leaves print on products, logos and screens as it is."
+        },
+        {
+          "title": "Stylised brand names stay logos",
+          "body": "instead of being erased and retyped as plain text."
+        },
+        {
+          "title": "Saves retry on their own.",
+          "body": "A failed autosave tries again after 3, 10 and 30 seconds, and closing the tab with unsaved changes asks first."
+        },
+        {
+          "title": "Image Creator: edit an area precisely.",
+          "body": "Editing a painted area changes only that area, removes the old text fully, and keeps new text whole even when it runs past the edge."
+        }
+      ]
+    },
+    {
+      "id": "hyperlocal",
+      "area": "hyperlocal",
+      "kind": "changed",
+      "title": "Hyperlocal",
+      "items": [
+        {
+          "title": "Copy one language's overlay style to another.",
+          "body": "**Copy style** and **Apply style** carry position, size and styling across without touching the words, so a translated tagline or a localized dealer name stays as it is."
+        }
+      ]
+    },
+    {
+      "id": "developers",
+      "area": "developers",
+      "kind": "changed",
+      "title": "API",
+      "items": [
+        {
+          "title": "API keys have a rate limit.",
+          "body": "Each key allows a burst of 60 requests, refilled at one a second. Over that, requests get a 429 with a Retry-After header."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Magic Layers: some text stayed in the background,",
+          "body": "so it showed twice: stacked price lines and white words on a coloured shape. They're now erased."
+        },
+        {
+          "title": "Magic Layers: **Export PNG** could fail.",
+          "body": "It now works, shows **Exporting…** from the click, and finishes much faster."
+        },
+        {
+          "title": "Magic Layers: opening a text for typing changed its look.",
+          "body": "The original letters stay in view until you change the words, and selected letters no longer turn dark."
+        },
+        {
+          "title": "Image Creator: a brief could show up as raw JSON,",
+          "body": "for example after \"Generate 1 image\". It now shows as the brief card."
+        },
+        {
+          "title": "Image Creator: layout labels were printed on the image,",
+          "body": "such as \"Price lock-up:\" on a banner. They're no longer printed."
+        },
+        {
+          "title": "Image Creator: **Adjust style** and **Regenerate** lost a custom size,",
+          "body": "for example 1360 x 800 came back as 1376 x 768. The exact size is kept."
+        },
+        {
+          "title": "Image Creator: after editing one selected image, the chat offered two versions.",
+          "body": "It now mentions only the images it made."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.10.14",
+  "date": "2026-10-14",
+  "title": "Plugin sign-in works again",
+  "summary": "A fix for signing in to the Adobe and Figma plugins with an email code.",
+  "tags": ["plugins", "sign-in"],
+  "backfill": true,
+  "sections": [
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "The Adobe and Figma plugins couldn't send a sign-in code.",
+          "body": "Since the sign-in upgrade, asking for an email code from a plugin panel was refused. Plugin panels can send the code again, and every other sign-in step keeps its checks."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.14",
+  "date": "2026-09-14",
+  "title": "Support chat gets its own page",
+  "summary": "Support chat moves from a floating bubble to its own Support page, on desktop and mobile.",
+  "tags": ["support", "platform"],
+  "backfill": true,
+  "sections": [
+    {
+      "id": "platform",
+      "area": "platform",
+      "kind": "changed",
+      "title": "Platform",
+      "items": [
+        {
+          "title": "Support chat has its own page.",
+          "body": "**Support** in the nav rail now opens a full-height chat page instead of a floating chat bubble over every page. On mobile, find it in the **More** menu.",
+          "link": {
+            "label": "Open Support",
+            "path": "/support"
+          }
+        }
+      ]
+    }
+  ]
+}

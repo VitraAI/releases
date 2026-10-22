@@ -1,0 +1,45 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.10.01",
+  "date": "2026-10-01",
+  "title": "Lip-sync video exports work again",
+  "summary": "Lip-sync video exports work again, lip-synced voices are heard in audio-only exports, and a welcome video greets new members on the dashboard.",
+  "tags": ["translate-video", "lip-sync", "dashboard"],
+  "backfill": true,
+  "highlights": ["welcome-video"],
+  "sections": [
+    {
+      "id": "welcome-video",
+      "area": "platform",
+      "kind": "added",
+      "title": "Welcome video",
+      "items": [
+        {
+          "title": "A short welcome video on your first visit.",
+          "body": "The organization dashboard shows a \"Welcome to Vitra.ai Universe\" video once per person, with **Skip to get started**. Watch it again any time with the **Watch welcome video** command in Cmd+K."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Video exports with lip-sync on failed before they started.",
+          "body": "They now run, and a lip-sync clip that was already paid for is still never charged twice."
+        },
+        {
+          "title": "Lip-synced cards were silent in audio-only exports.",
+          "body": "Audio-only exports now play each card's dub, and no longer need a lip-sync key."
+        },
+        {
+          "title": "Video exports with lip-sync off could fail",
+          "body": "on projects that had lip-synced cards. Those cards now play their own dub."
+        }
+      ]
+    }
+  ]
+}

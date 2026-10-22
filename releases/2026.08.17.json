@@ -1,0 +1,68 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.08.17",
+  "date": "2026-08-17",
+  "title": "Set speed and volume for each text-to-speech card",
+  "summary": "Speed and volume per text-to-speech card, cloned voices in any language, one edit for a repeated phrase in Playground translations, and proofreading rates per language pair.",
+  "tags": ["playground", "text-to-speech", "voice-clone", "proofreading-rates"],
+  "backfill": true,
+  "highlights": ["text-to-speech", "playground-translation"],
+  "sections": [
+    {
+      "id": "text-to-speech",
+      "area": "playground",
+      "kind": "added",
+      "title": "Text to speech and voice cloning",
+      "items": [
+        {
+          "title": "Set speed and volume per card.",
+          "body": "Each text-to-speech card has its own playback speed and volume, kept with the card. **Apply to all cards** copies a setting across the session."
+        },
+        {
+          "title": "Download at a different speed.",
+          "body": "Pick a speed when you download a session's audio."
+        },
+        {
+          "title": "Cloned voices speak any language.",
+          "body": "The **Cloned** tab in the voice picker now shows for every language, and creating a clone no longer asks for the sample's language."
+        },
+        {
+          "title": "A page for each cloned voice.",
+          "body": "Open a voice clone from the Playground process list to listen to it and download its audio."
+        }
+      ]
+    },
+    {
+      "id": "playground-translation",
+      "area": "playground",
+      "kind": "changed",
+      "title": "Document and text translation",
+      "items": [
+        {
+          "title": "Edit a repeated phrase once.",
+          "body": "Changing a phrase in a document translation updates every other occurrence of it that still has the old wording. Occurrences you translated differently are left alone, and the updated copies go back to unverified."
+        },
+        {
+          "title": "See the back translation in text translation.",
+          "body": "When you ask for one, it shows under the translated text."
+        }
+      ]
+    },
+    {
+      "id": "proofreading-rates",
+      "area": "billing",
+      "kind": "changed",
+      "title": "Proofreading rates",
+      "items": [
+        {
+          "title": "Set rates per language pair.",
+          "body": "Member language rates now have a direction, from a source language to a target language, in your profile and in the organization's member rates."
+        },
+        {
+          "body": "The proofreading Activity tab counts words instead of characters."
+        }
+      ]
+    }
+  ]
+}

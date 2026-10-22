@@ -1,0 +1,224 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.16",
+  "date": "2026-09-16",
+  "title": "Style guides and terminology reach AI translation",
+  "summary": "Style guides, terminology-aware AI translation, TM file import and export, a Cosmos LLM node, a choice of lip-sync models and API keys.",
+  "tags": ["translation-memory", "style-guides", "terminology", "cosmos", "lip-sync", "api-keys"],
+  "backfill": true,
+  "highlights": ["translation-memory", "cosmos"],
+  "sections": [
+    {
+      "id": "translation-memory",
+      "area": "translation-memory",
+      "kind": "added",
+      "title": "Translation Memory",
+      "items": [
+        {
+          "title": "Style guides are their own module.",
+          "body": "Upload up to 10 files (PDF, Word, Markdown, text) and Gemini extracts the rules, one rule set per language plus a general set. Link a guide to a memory and AI translation follows it. Find it in the new **Style guides** tab under Translation Memory.",
+          "children": [
+            {
+              "body": "Adding files only ever _adds_ rules: hand edits are never overwritten, and removing a file keeps its rules."
+            },
+            {
+              "body": "**Extract again** is the only full rebuild."
+            }
+          ]
+        },
+        {
+          "title": "Terminology now reaches AI translation.",
+          "body": "Only the terms that actually occur in each text are sent with it, never the whole term base, so cost scales with your texts, not the size of the base.",
+          "children": [
+            {
+              "body": "Approved terms are binding."
+            },
+            {
+              "body": "New terms are suggestions."
+            },
+            {
+              "body": "Rejected and forbidden terms are never used."
+            },
+            {
+              "body": "The model is told to inflect terms to fit the sentence."
+            }
+          ]
+        },
+        {
+          "title": "Import and export real TM files,",
+          "body": "with downloadable templates.",
+          "children": [
+            {
+              "body": "TMX."
+            },
+            {
+              "body": "XLIFF 1.2 and 2.x, including Trados, memoQ and Phrase flavours."
+            },
+            {
+              "body": "XLSX, CSV and TSV."
+            }
+          ]
+        },
+        {
+          "title": "VitraTM for every language.",
+          "body": "It was enabled on 170 of 1,087 catalogue languages. It now covers all of them, plus 88 newly added languages (1,175 in the catalogue)."
+        }
+      ]
+    },
+    {
+      "id": "cosmos",
+      "area": "cosmos",
+      "kind": "added",
+      "title": "Cosmos",
+      "items": [
+        {
+          "title": "Generic LLM node.",
+          "body": "Pick the input and output modality, system instruction and model when building the flow, and add a prompt per run. The canvas only lets you connect steps whose modalities match, and an input too big for the model's context window is refused _before_ it costs anything."
+        },
+        {
+          "body": "Text and Office inputs can now feed image and video models, so a Markdown brief can drive an image step."
+        },
+        {
+          "body": "Same-format Office steps (docx to docx, pptx to pptx, xlsx to xlsx) are edited in place, so the original styling survives."
+        },
+        {
+          "title": "Model catalogue refreshed.",
+          "children": [
+            {
+              "body": "GPT-5.6 Sol, Terra and Luna."
+            },
+            {
+              "body": "Gemini 3.8 Flash."
+            },
+            {
+              "body": "GPT Image 2.5 Sunburst and Flare."
+            },
+            {
+              "body": "Gemini 3.1 Flash Lite Image."
+            },
+            {
+              "body": "Gemini Omni Flash."
+            }
+          ]
+        },
+        {
+          "title": "View output on every step.",
+          "body": "Use **View output** in the run timeline to preview HTML, Markdown, JSON, images, video and PDF."
+        }
+      ]
+    },
+    {
+      "id": "media-playground",
+      "area": "playground",
+      "kind": "changed",
+      "title": "Media and Playground",
+      "items": [
+        {
+          "title": "Choose your lip-sync model,",
+          "body": "including fal LatentSync. The export panel shows the model and its price, and models with no vendor key are flagged instead of failing.",
+          "children": [
+            {
+              "body": "lipsync-2: 750 credits per minute."
+            },
+            {
+              "body": "lipsync-2-pro: 1,200 credits per minute."
+            },
+            {
+              "body": "sync-3: 2,000 credits per minute."
+            },
+            {
+              "body": "LatentSync: 300 credits per minute."
+            }
+          ]
+        },
+        {
+          "title": "OpenAI is now the default",
+          "body": "for image translation, Image Creator and Adapts. Organizations that already chose a provider keep it."
+        },
+        {
+          "title": "Office translation handles CSV and XLSX,",
+          "body": "with header-row detection and embedded-image preview."
+        },
+        {
+          "body": "The adaptive image modal is reworked, Quick Create errors are clearer, raw output has an HTML preview, and the QC report accuracy view is sharper."
+        },
+        {
+          "body": "VitraAI agent passes (QC report, proofreading, back-translation) retry and fall back to a second model instead of failing the pass."
+        }
+      ]
+    },
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "changed",
+      "title": "Translate Video",
+      "items": [
+        {
+          "title": "Voice cloning",
+          "body": "tries Cartesia first, then ElevenLabs, and English (India) is now a Cartesia clone language. Existing Cartesia clones can be used for English (India) dubs too."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "area": "platform",
+      "kind": "added",
+      "title": "Platform",
+      "items": [
+        {
+          "title": "API keys.",
+          "body": "Organization-scoped keys (`uvk_…`), managed at `/v1/api-keys`. A key can never do more than the person who created it, in the one organization it belongs to. Creating and revoking keys is audited."
+        },
+        {
+          "title": "Agent skills",
+          "body": "built on those keys: video dubbing, image creation, image translation and image resize, as drop-in skills for any agent runtime."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Indic terms were never matched.",
+          "body": "Word boundaries split Bengali and Hindi terms at their vowel signs, so multi-word terms were silently dropped from the term index."
+        },
+        {
+          "title": "Some languages had the wrong code.",
+          "body": "17 pairs of languages (Konkani, Akan, Chinese and others) shared one internal name, so one could resolve to the other's code.",
+          "children": [
+            {
+              "body": "21 labels that showed raw ISO codes now show language names."
+            },
+            {
+              "body": "ar-IL, ar-MR and ar-PS now display right to left."
+            }
+          ]
+        },
+        {
+          "title": "Lip-sync exports ignored the organization's model",
+          "body": "and always used lipsync-2. Exports without a vendor key are no longer marked or billed as lip-sync."
+        },
+        {
+          "title": "Large Gemini batch translations could fail after being paid for.",
+          "body": "They could exceed the output limit. They are now split to fit it."
+        },
+        {
+          "title": "Nano Banana Pro failed at run time.",
+          "body": "It now uses the stable model."
+        },
+        {
+          "title": "Cosmos galaxy nodes dropped run-time fields",
+          "body": "from the run modal."
+        },
+        {
+          "title": "Membership errors showed as a generic server error.",
+          "body": "They now come back as clear request or permission errors."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.10.22",
+  "date": "2026-10-22",
+  "title": "Content Research and Slate",
+  "summary": "Two new galaxies, Content Research and Slate, plus \"Why this translation\" on every translated line, cancel for Playground jobs, replace-or-keep uploads and cleaner deliverables in Projects, and QE reports that name what caused each error.",
+  "tags": [
+    "content-research",
+    "slate",
+    "translation-origin",
+    "projects",
+    "playground",
+    "quality",
+    "integrations"
+  ],
+  "backfill": true,
+  "highlights": ["content-research", "slate", "why-this-translation"],
+  "sections": [
+    {
+      "id": "content-research",
+      "area": "content-research",
+      "kind": "added",
+      "title": "Content Research",
+      "items": [
+        {
+          "title": "Research your market and plan content.",
+          "body": "A research run reads your company profile and writes a report with content pillars, opportunities, campaigns and a bank of ideas. Ask follow-up questions for free. A run costs 20,000 credits and gets a short name when the report lands.",
+          "link": {
+            "label": "Open Content Research",
+            "path": "/galaxy/content-research"
+          }
+        },
+        {
+          "title": "Company profiles.",
+          "body": "Set up a profile from your homepage, read for free."
+        },
+        {
+          "title": "An idea bank.",
+          "body": "Move ideas along a pipeline board, edit their title, hook and summary, archive and restore them, and hand one to Slate or Blog to make it."
+        },
+        {
+          "title": "A shared calendar.",
+          "body": "Public holidays for each region, curated marketing days and dated moments, in month and agenda views."
+        },
+        {
+          "title": "Moments: what people are talking about now.",
+          "body": "Off until you turn it on. It runs in 30-day periods at 6,000 credits each, renews automatically, and tells you 3 days before a renewal.",
+          "children": [
+            {
+              "body": "Listen with topic presets, keywords and RSS feeds."
+            },
+            {
+              "body": "Trends come from Google Trends, Google News, Wikipedia, Bluesky and Hacker News, scored for relevance, heat and brand safety."
+            },
+            {
+              "body": "Search trends live in up to 8 regions, and turn a moment into ideas."
+            }
+          ]
+        },
+        {
+          "title": "Branded reports.",
+          "body": "Download a report as a designed PDF or Word document in your brand kit's logo, colours and fonts, with a cover, an impact and effort matrix, campaigns, follow-up answers and sources. Markdown is still there too."
+        },
+        {
+          "title": "Notifications.",
+          "body": "You're told when your research is ready or has failed, and when Moments pauses."
+        }
+      ]
+    },
+    {
+      "id": "slate",
+      "area": "slate",
+      "kind": "added",
+      "title": "Slate",
+      "items": [
+        {
+          "title": "Work with an AI creative director.",
+          "body": "Start a board from a brief or a Content Research idea. The director kicks off with concepts, then you chat, push it further and pick favourites. A board costs 10,000 credits.",
+          "link": {
+            "label": "Open Slate",
+            "path": "/galaxy/slate"
+          }
+        },
+        {
+          "title": "Concepts you can see.",
+          "body": "Each concept has a palette, type and web and social previews, plus key visuals. A board includes 25 images, and extra images cost 300 credits each."
+        },
+        {
+          "title": "One-page briefs.",
+          "body": "Write a brief with a live preview, download it as a PDF (Devanagari, Arabic, CJK, Cyrillic and Greek print correctly) or save it to Assets."
+        },
+        {
+          "title": "Stay in control.",
+          "children": [
+            {
+              "body": "Stop a running turn (except the opening one)."
+            },
+            {
+              "body": "Edit the board's brand kit, notes, prompt and references after it opens."
+            },
+            {
+              "body": "Review held images before generating them."
+            },
+            {
+              "body": "Archive a board and restore it later. Archived boards are read-only."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-this-translation",
+      "area": "translation-memory",
+      "kind": "added",
+      "title": "Why this translation",
+      "items": [
+        {
+          "title": "See why a translation reads the way it does.",
+          "body": "For VitraTM memories, a **Why** drawer shows who decided the wording (a memory match or the AI model), what the model was shown, what was left out and why, and which words came from a term or a reference. It also says when a person has edited it since."
+        },
+        {
+          "title": "Open it wherever you see a translation.",
+          "children": [
+            {
+              "body": "Translation memory rows and the Translate dialog."
+            },
+            {
+              "body": "QE report segments."
+            },
+            {
+              "body": "Translate Video transcript cards."
+            },
+            {
+              "body": "Translate Photo and Playground segment rows."
+            }
+          ]
+        },
+        {
+          "title": "Translate Video lines explained in full.",
+          "body": "A line reused from the memory says it was reused as is, a merged card shows one record per line, and a line translated moments ago says its record is still being saved."
+        },
+        {
+          "title": "Native-script keyboard in more places:",
+          "body": "glossary entries, term-base concepts and the source text in **Translate & Add**."
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "area": "projects",
+      "kind": "changed",
+      "title": "Projects",
+      "items": [
+        {
+          "title": "Replace a file or keep both.",
+          "body": "Uploading a file with the name of one already in the folder now asks. **Replace** keeps the file's place, task and links with the new content, and the next run re-runs that task. **Keep both** saves the new one as \"name (2)\"."
+        },
+        {
+          "title": "Deliverables named by file and language.",
+          "body": "Outputs are filed as source name, language code and extension (product-intro.de-DE.srt) in a folder per language, and subtitle text is filed too. Cancelling a re-run keeps the last good result."
+        },
+        {
+          "title": "Faster uploads and checklists.",
+          "body": "Up to 4 files upload at once, empty files are left out with a message, and the tray counts files. Checklist items appear at once, and pasting a list adds one item per line."
+        },
+        {
+          "title": "See what failed and why.",
+          "body": "The overview bar shows failed tasks in their own red segment, and the task drawer names the reason with a link to the run."
+        },
+        {
+          "title": "One set of project languages.",
+          "body": "A workflow's language fields now set the project's languages, and Settings shows them read-only with a pointer to the Fields tab."
+        },
+        {
+          "title": "Safer edits.",
+          "children": [
+            {
+              "body": "Saving custom fields asks before deleting a field and its values."
+            },
+            {
+              "body": "A target language the same as the source is refused."
+            },
+            {
+              "body": "An end date before the start date is refused."
+            }
+          ]
+        },
+        {
+          "body": "The top bar and section tabs stay pinned on long pages."
+        }
+      ]
+    },
+    {
+      "id": "playground",
+      "area": "playground",
+      "kind": "added",
+      "title": "Playground",
+      "items": [
+        {
+          "title": "Cancel a running job.",
+          "body": "Document and text translations, text-to-speech, lip-sync and video processes can be cancelled. Credits are refunded if the job hadn't started yet and kept once work has begun. A cancelled job stays listed as Cancelled, to retry (charged again) or delete."
+        }
+      ]
+    },
+    {
+      "id": "quality",
+      "area": "quality",
+      "kind": "changed",
+      "title": "Quality reports",
+      "items": [
+        {
+          "title": "QE reports name what caused each error.",
+          "body": "Each error carries its source (memory, term base, glossary, style guide, default rules or the AI model), with an **Issues by source** table and who translated each segment, in the app and in the PDF."
+        },
+        {
+          "title": "A cleaner QE PDF.",
+          "body": "It prints plain text instead of markup, uses the app's language names, and shows times in your time zone."
+        },
+        {
+          "title": "**Download PDF** saves the file directly.",
+          "body": "Each download uses a private link that expires after 15 minutes."
+        }
+      ]
+    },
+    {
+      "id": "cosmos",
+      "area": "cosmos",
+      "kind": "changed",
+      "title": "Cosmos",
+      "items": [
+        {
+          "title": "Runs show when they last moved.",
+          "body": "The runs list shows **Last updated** instead of Duration, and the run page header shows when it was updated."
+        }
+      ]
+    },
+    {
+      "id": "integrations",
+      "area": "integrations",
+      "kind": "changed",
+      "title": "Integrations",
+      "items": [
+        {
+          "title": "Connect without leaving Universe.",
+          "body": "A connect dialog explains what happens, then the service's own sign-in opens in a pop-up. If the pop-up is blocked or closed, it says so."
+        },
+        {
+          "title": "Many more services listed,",
+          "body": "including Facebook, X, Pinterest, Shopify, Notion, Figma, Canva, Salesforce, Slack and Google Analytics. Services that aren't ready yet show as coming soon."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "area": "platform",
+      "kind": "changed",
+      "title": "Platform",
+      "items": [
+        {
+          "title": "The top bar fits on a phone.",
+          "body": "Below 640 px the switches show icons only, the credit balance is compact (1.5M), and the search pill is hidden, so the bell and account menu are always in reach."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Translate Video: re-translating an unchanged line cleared its audio,",
+          "body": "so the editor said \"No audio found\". The line now keeps its audio and status."
+        },
+        {
+          "title": "QE scores counted markup as words.",
+          "body": "Inline tags inflated the word count and the MQM score. Words are now counted on plain text. Earlier reports keep their counts until re-run."
+        },
+        {
+          "title": "Duplicate glossary and term-base entries said \"Something went wrong\".",
+          "body": "They now say the term already exists."
+        },
+        {
+          "title": "Native-script typing could insert an older suggestion.",
+          "body": "Pressing Space now commits only the suggestion for the word you typed, and Esc closes the suggestion list without closing the dialog."
+        },
+        {
+          "title": "Cancelling a Cosmos run left its jobs queued.",
+          "body": "Its jobs now end with the run."
+        },
+        {
+          "title": "Large zip downloads could hang",
+          "body": "with more than about 50 files. They now finish."
+        },
+        {
+          "title": "Undo after **Assign to me** in Cmd+K did nothing.",
+          "body": "It now puts the task back as it was."
+        },
+        {
+          "title": "Older project tasks filed deliverables under a language name",
+          "body": "such as french_france. They now use the language code (fr-FR)."
+        }
+      ]
+    }
+  ]
+}

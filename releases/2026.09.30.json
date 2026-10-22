@@ -1,0 +1,57 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.30",
+  "date": "2026-09-30",
+  "title": "A timeline row for each speaker's voice-over",
+  "summary": "Translate Video splits voice-overs into one timeline row per speaker, shows trims live on audio tracks, and audio-only exports download as audio files.",
+  "tags": ["translate-video", "timeline"],
+  "backfill": true,
+  "highlights": ["translate-video"],
+  "sections": [
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "changed",
+      "title": "Translate Video",
+      "items": [
+        {
+          "title": "One voice-over row per speaker.",
+          "body": "The Target lane on the timeline splits into a row for each speaker, named after them. Mute a speaker's row to drop only their dubs from the preview.",
+          "children": [
+            {
+              "body": "With two or more speakers, the **Row per speaker** switch in the timeline legend merges them back into one Target row."
+            },
+            {
+              "body": "The timeline is more compact, so more rows fit on screen."
+            }
+          ]
+        },
+        {
+          "title": "See the cut while you trim an audio track.",
+          "body": "The clip shows the waveform of the whole file and stays pinned in place as you drag either edge. Audio clips now match the other lanes, in their own purple colour."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Audio-only exports downloaded with an .mp4 name.",
+          "body": "The download now takes its extension from the exported file, in the automatic download, Recently Exported and Export History."
+        },
+        {
+          "title": "A muted Target row stayed muted after splitting into speakers,",
+          "body": "while each speaker row looked audible with no way to undo it. Speaker rows now follow the Target mute while it is on."
+        },
+        {
+          "title": "Audio clips jumped for a moment",
+          "body": "when you started dragging them."
+        }
+      ]
+    }
+  ]
+}

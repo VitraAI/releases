@@ -1,0 +1,131 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.01",
+  "date": "2026-09-01",
+  "title": "Term bases arrive in VitraTM",
+  "summary": "Term bases in VitraTM, a Cmd+K command palette, bring-your-own-script in Translate Video, and folders and Drive files in Playground and the image translator.",
+  "tags": [
+    "translation-memory",
+    "term-bases",
+    "command-palette",
+    "translate-video",
+    "playground",
+    "translate-photo"
+  ],
+  "backfill": true,
+  "highlights": ["term-bases", "command-palette", "translate-video"],
+  "sections": [
+    {
+      "id": "term-bases",
+      "area": "translation-memory",
+      "kind": "added",
+      "title": "Term bases in VitraTM",
+      "items": [
+        {
+          "title": "Manage terminology as concepts.",
+          "body": "A **Term bases** tab sits beside Translation memories, with a 19-field concept editor and language and status filters."
+        },
+        {
+          "title": "Import and export",
+          "body": "term bases as XLSX, CSV or TBX."
+        },
+        {
+          "title": "Attach term bases to memories",
+          "body": "from either the term base or the memory."
+        },
+        {
+          "title": "The terminology drawer in editors now covers VitraTM,",
+          "body": "not just Phrase."
+        }
+      ]
+    },
+    {
+      "id": "command-palette",
+      "area": "platform",
+      "kind": "added",
+      "title": "Command palette",
+      "items": [
+        {
+          "title": "Press Cmd+K to search and jump anywhere.",
+          "body": "Search memory translations and term-base concepts, open memories, folders, workflows, files and any page you can reach, and start creating. Results include only what your plan and role allow."
+        }
+      ]
+    },
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "added",
+      "title": "Translate Video",
+      "items": [
+        {
+          "title": "Bring your own script.",
+          "body": "Upload a TXT or subtitle file beside the video and it runs as one process instead of two.",
+          "children": [
+            {
+              "body": "An SRT file gets a single speaker and emotion pass."
+            },
+            {
+              "body": "A TXT script is aligned to the audio afterwards, so no word can land on a moment where it wasn't spoken."
+            },
+            {
+              "body": "A video uploaded without a script works exactly as before."
+            }
+          ]
+        },
+        {
+          "kind": "changed",
+          "title": "Dubbing is now part of Translate Video,",
+          "body": "instead of a separate process type."
+        }
+      ]
+    },
+    {
+      "id": "playground",
+      "area": "playground",
+      "kind": "changed",
+      "title": "Playground",
+      "items": [
+        {
+          "title": "Folders and Drive files in Playground.",
+          "children": [
+            {
+              "body": "Folders."
+            },
+            {
+              "body": "Pick Drive files for lip-sync, voice cloning and document translation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "translate-photo",
+      "area": "translate-photo",
+      "kind": "added",
+      "title": "Translate Photo",
+      "items": [
+        {
+          "title": "Folders and verification status.",
+          "body": "Image jobs can be filed in folders, and process rows show a verification bar."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Transcription could save half a transcript.",
+          "body": "A cut-off response now fails instead of saving silently, and overlapping segment boundaries are fixed."
+        },
+        {
+          "title": "Subtitle-only runs failed at the last stage.",
+          "body": "They now finish."
+        }
+      ]
+    }
+  ]
+}

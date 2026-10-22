@@ -1,0 +1,24 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.12",
+  "date": "2026-09-12",
+  "title": "The Canva app connects again",
+  "summary": "A fix for the Canva app, which could only show a generic network error.",
+  "tags": ["canva", "integrations"],
+  "backfill": true,
+  "sections": [
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "The Canva app showed only \"Network error\".",
+          "body": "Its requests were blocked before they reached Universe. The Canva app now connects normally."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.10.09",
+  "date": "2026-10-09",
+  "title": "Translate Video exports match your source video",
+  "summary": "Translate Video exports follow the uploaded video's real frame rate and quality, phone and rotated videos no longer export stretched or juddering, and child organizations inherit Keep original video quality.",
+  "tags": ["translate-video", "export", "video-quality"],
+  "backfill": true,
+  "highlights": ["translate-video"],
+  "sections": [
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "changed",
+      "title": "Translate Video",
+      "items": [
+        {
+          "title": "Exports follow the video you uploaded.",
+          "body": "Frame rate, audio and bitrate come from the upload.",
+          "children": [
+            {
+              "body": "Phone videos with a variable frame rate export at their real, measured rate."
+            },
+            {
+              "body": "Videos at a standard rate of 60 fps or lower keep it, so screen recordings keep every frame of motion."
+            }
+          ]
+        },
+        {
+          "title": "Keep original video quality now carries through to the export.",
+          "body": "With the setting on, exports are encoded at the source video's bitrate instead of a fixed preset, so they look as close to the original as possible."
+        },
+        {
+          "title": "Child organizations follow their parent's setting.",
+          "body": "Keep original video quality now applies to child organizations that never set it themselves. A child organization's own choice, on or off, still wins."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Some uploads exported stretched or juddering.",
+          "body": "Rotated videos, files that aren't MP4 or MOV, and videos whose timing doesn't start at zero are now re-encoded on upload, so they export at the right shape and pace."
+        }
+      ]
+    }
+  ]
+}

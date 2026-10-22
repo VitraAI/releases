@@ -1,0 +1,221 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.10",
+  "date": "2026-09-10",
+  "title": "Scheduled broadcasts and contact groups in Hyper Personalization",
+  "summary": "Scheduled broadcasts and contact groups in Hyper Personalization, subtitle exports in more formats, multi-language subtitle publishing, new chat models, INR pricing and an auditable credit ledger.",
+  "tags": ["hyper-personalization", "translate-video", "subtitles", "chat", "billing", "credits"],
+  "backfill": true,
+  "highlights": ["hyper-personalization", "translate-video", "billing"],
+  "sections": [
+    {
+      "id": "hyper-personalization",
+      "area": "hyperlocal",
+      "kind": "added",
+      "title": "Hyper Personalization",
+      "items": [
+        {
+          "title": "Hyperlocal is now Hyper Personalization.",
+          "body": "Only the name in the app has changed. Your pages and links work as before."
+        },
+        {
+          "title": "Scheduled broadcasts.",
+          "body": "Schedule a broadcast when you create it or in a second step, and pause, resume or stop a send that is in progress. If creatives are still rendering at the scheduled time, it waits and sends as soon as the last one is ready. Times show in the timezone they were set in, so the same campaign reads the same to everyone."
+        },
+        {
+          "title": "Contact groups.",
+          "body": "Named, reusable audience segments, and a dealer can sit in several at once. The contact list and the broadcast audience share one filter, so the audience count always matches what actually gets sent.",
+          "children": [
+            {
+              "body": "Import can file rows straight into a group, linking dealers that already exist instead of skipping them."
+            },
+            {
+              "body": "A zone filter on both the contact list and the broadcast audience."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "added",
+      "title": "Subtitles",
+      "items": [
+        {
+          "title": "Subtitle exports in more formats.",
+          "body": "Export DFXP, Spruce STL, Resolve marker EDL, XML, timestamped TXT and JSON alongside SRT and VTT."
+        },
+        {
+          "title": "Line breaks and styling inside cues.",
+          "body": "Shift+Enter puts a line break inside a cue, and it survives to every export, to the player, and through split and merge. Bold, italic, underline and colour now reach the video."
+        },
+        {
+          "title": "Publish subtitles into many languages at once.",
+          "body": "The first language is translated, the rest queue behind it and arrive one at a time, the same as **Add Language** in the editor. You can now pick up to 20 languages (was 10)."
+        },
+        {
+          "title": "Audio rate can fill gaps when AI Optimize is off,",
+          "body": "with clearer hint text in the editor."
+        }
+      ]
+    },
+    {
+      "id": "chat",
+      "area": "ai-assistant",
+      "kind": "changed",
+      "title": "Chat",
+      "items": [
+        {
+          "title": "The current model line-up.",
+          "body": "Claude models were being served but had never been listed in the picker. You can select them now.",
+          "children": [
+            {
+              "body": "GPT-5.6 Sol, Terra and Luna."
+            },
+            {
+              "body": "Gemini 3.8, 3.7 and 3.6 Flash, plus 3.5 Flash Lite."
+            },
+            {
+              "body": "Claude Opus 5, Sonnet 5 and Haiku 4.5."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "billing",
+      "area": "billing",
+      "kind": "changed",
+      "title": "Credits and billing",
+      "items": [
+        {
+          "title": "Billing in your currency.",
+          "body": "Plans and top-ups show INR prices beside USD, based on the billing owner's country. A child organization uses its parent's country."
+        },
+        {
+          "title": "Updated rate card.",
+          "children": [
+            {
+              "body": "Free: 500"
+            },
+            {
+              "body": "Starter: 7,500"
+            },
+            {
+              "body": "Pro: 25,000"
+            },
+            {
+              "body": "Scale: 90,000"
+            },
+            {
+              "body": "Enterprise: 275,000"
+            }
+          ]
+        },
+        {
+          "title": "Credits you can audit.",
+          "body": "Filter the ledger by type, feature and date. CSV export now includes every page instead of the 20 rows on screen, and the empty state tells \"no match\" apart from \"no activity yet\"."
+        },
+        {
+          "title": "New Translate Video and document prices.",
+          "children": [
+            {
+              "body": "Editing a dub inside the editor is free: retranslate, rewrite, re-speech and subtitle edits."
+            },
+            {
+              "body": "Lip-sync on export: 750 credits per minute. Plain exports stay free."
+            },
+            {
+              "body": "Adding a subtitle-only language: 60 credits per minute."
+            },
+            {
+              "body": "Multi-speaker dubs: 400 credits per minute, against 300 for one speaker."
+            },
+            {
+              "body": "DITA and document translation are charged per source word instead of a flat 1 credit, and DITA only when the run succeeds."
+            }
+          ]
+        },
+        {
+          "title": "Clearer balances.",
+          "body": "The balance pill warns when credits run low, chat shows each model's credit rate, and the balance refreshes as soon as a charge lands."
+        }
+      ]
+    },
+    {
+      "id": "playground",
+      "area": "playground",
+      "kind": "added",
+      "title": "Playground",
+      "items": [
+        {
+          "title": "More image and Office options.",
+          "children": [
+            {
+              "body": "Each organization can use its own image provider for image creation and translation."
+            },
+            {
+              "body": "Translate an image into several languages."
+            },
+            {
+              "body": "Upload files up to 64MB."
+            },
+            {
+              "body": "Edit Office run markers in Playground."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "area": "platform",
+      "kind": "added",
+      "title": "Platform",
+      "items": [
+        {
+          "title": "Support chat.",
+          "body": "A new **Support** item in the nav rail. It appears only on Vitra's own domains, so partner white-label domains don't get it."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Every page was loading twice.",
+          "body": "The app drew two full copies of each page and only showed one, so every page did its work twice. Pages now load once."
+        },
+        {
+          "title": "The Credits page was visible but unreachable.",
+          "body": "Editors and members could see the balance pill that links to it, but weren't allowed to open the page. Both now use the same permission."
+        },
+        {
+          "title": "Running out of credits on a broadcast said only \"Request failed\".",
+          "body": "It now says what happened, shows the real shortfall and offers a **Top up** button."
+        },
+        {
+          "title": "India GST was never detected.",
+          "body": "Checkout now detects India correctly and asks for a billing address, so package top-ups paid with a foreign card no longer fail the India export check."
+        },
+        {
+          "title": "A child organization's parent was wrong.",
+          "body": "It showed the viewer's top-level organization. It now shows its real parent."
+        },
+        {
+          "title": "Charts, waveforms and canvases ignored the theme.",
+          "body": "Their colours, and the page layout, now follow the theme in every product. Hyper Personalization and Quality Control get sidebars on mobile."
+        },
+        {
+          "title": "Translate Video navigation didn't work on mobile.",
+          "body": "It now uses the app's mobile navigation, and the editor's tool rail slides over the editor instead of squeezing it."
+        }
+      ]
+    }
+  ]
+}

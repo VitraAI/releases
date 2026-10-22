@@ -1,0 +1,118 @@
+name: Publish
+
+# On every merge to main: validate and build, deploy dist/ to GitHub Pages
+# (feed.json, <id>.json, index.html), then announce each NEWLY ADDED release
+# in Slack. Editing an existing release only redeploys the page.
+#
+# Slack posts once per release: a successful post pushes the tag slack/<id>,
+# and an id that already has the tag is skipped. Backfilled releases are never
+# posted. To post again by hand: Actions → Publish → Run workflow → repost.
+#
+# Secrets: SLACK_BOT_TOKEN (xoxb-, chat:write, bot invited to the channel)
+# Variables: SLACK_CHANNEL (channel ID, C…)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      repost:
+        description: Release id to post to Slack again (e.g. 2026.10.22). Leave empty to only redeploy.
+        required: false
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run check
+
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
+
+  announce:
+    # After the page is live, so the message's "What's new" link works.
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # push the slack/<id> tag
+    env:
+      SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      SLACK_CHANNEL: ${{ vars.SLACK_CHANNEL }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Pick releases to announce
+        id: pick
+        run: |
+          if [ -n "${{ inputs.repost }}" ]; then
+            echo "ids=${{ inputs.repost }}" >> "$GITHUB_OUTPUT"
+            echo "force=1" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          before="${{ github.event.before }}"
+          if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
+            files=$(git ls-files 'releases/*.json')
+          else
+            files=$(git diff --name-only --diff-filter=A "$before" "${{ github.sha }}" -- 'releases/*.json')
+          fi
+          echo "ids=$(for f in $files; do basename "$f" .json; done | xargs)" >> "$GITHUB_OUTPUT"
+
+      - name: Post to Slack
+        if: steps.pick.outputs.ids != ''
+        run: |
+          if [ -z "$SLACK_BOT_TOKEN" ] || [ -z "$SLACK_CHANNEL" ]; then
+            echo "::error::Set the SLACK_BOT_TOKEN secret and the SLACK_CHANNEL variable."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for id in ${{ steps.pick.outputs.ids }}; do
+            if [ "$(node -p "require('./releases/$id.json').backfill === true")" = "true" ]; then
+              echo "$id: backfilled, not posted"; continue
+            fi
+            if [ -z "${{ steps.pick.outputs.force }}" ] && git rev-parse -q --verify "refs/tags/slack/$id" >/dev/null; then
+              echo "$id: already posted (tag slack/$id), skipped"; continue
+            fi
+            node scripts/post-slack.mjs "$id"
+            git tag -f "slack/$id" "${{ github.sha }}"
+            git push -f origin "refs/tags/slack/$id"
+          done

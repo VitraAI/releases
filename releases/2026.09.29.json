@@ -1,0 +1,69 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.09.29",
+  "date": "2026-09-29",
+  "title": "API keys for your organization",
+  "summary": "Organization API keys in Settings, a privacy consent step at sign-up, a Pricing link in the sidebar, and cleaner term base and glossary CSV imports.",
+  "tags": ["api-keys", "sign-up", "pricing", "translation-memory"],
+  "backfill": true,
+  "highlights": ["api-keys", "sign-up-consent"],
+  "sections": [
+    {
+      "id": "api-keys",
+      "area": "developers",
+      "kind": "added",
+      "title": "API keys",
+      "items": [
+        {
+          "title": "Create API keys for your organization.",
+          "body": "The new **Settings → API keys** page lets you create, list and revoke keys for AI agents, scripts and integrations. A key always acts in the organization it was made in.",
+          "link": {
+            "label": "Open API keys",
+            "path": "/settings/api-keys"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sign-up-consent",
+      "area": "platform",
+      "kind": "added",
+      "title": "Sign-up and navigation",
+      "items": [
+        {
+          "title": "New accounts agree to the privacy policy.",
+          "body": "Signing up with email, Google or Microsoft now shows a consent checkbox, unticked by default, and the account is only created once it is ticked. The Sign in page shows it too, since signing in with a new email creates an account."
+        },
+        {
+          "title": "A Pricing item in the sidebar",
+          "body": "opens Credits, where plans and top-ups live. It sits above Support.",
+          "link": {
+            "label": "Open Credits",
+            "path": "/settings/credits"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Term base and glossary CSV imports garbled Hindi and other Indic text.",
+          "body": "Files saved as UTF-8 without a byte-order mark were read with the wrong encoding. They now import correctly."
+        },
+        {
+          "title": "Term base CSV imports changed some cells.",
+          "body": "Values such as 01/02 were turned into dates, and cells starting with = dropped the row. Cells are now imported exactly as written."
+        },
+        {
+          "title": "Social sign-in buttons could stay busy",
+          "body": "after a failed or abandoned redirect. They reset when you come back to the page."
+        }
+      ]
+    }
+  ]
+}

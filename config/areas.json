@@ -1,0 +1,149 @@
+{
+  "$comment": "Product areas. A section's `area` must be one of these ids. `emoji` is the Slack shortcode; `icon` is a lucide icon name for the in-app page. Order here is the display order; `fixes` is always rendered last.",
+  "areas": [
+    {
+      "id": "projects",
+      "label": "Projects",
+      "emoji": "file_folder",
+      "icon": "folder-kanban"
+    },
+    {
+      "id": "cosmos",
+      "label": "Cosmos",
+      "emoji": "milky_way",
+      "icon": "workflow"
+    },
+    {
+      "id": "deals",
+      "label": "Deals",
+      "emoji": "handshake",
+      "icon": "handshake"
+    },
+    {
+      "id": "backoffice",
+      "label": "Backoffice",
+      "emoji": "briefcase",
+      "icon": "briefcase"
+    },
+    {
+      "id": "translate-video",
+      "label": "Translate Video",
+      "emoji": "clapper",
+      "icon": "clapperboard"
+    },
+    {
+      "id": "translate-photo",
+      "label": "Translate Photo",
+      "emoji": "frame_with_picture",
+      "icon": "image"
+    },
+    {
+      "id": "translate-website",
+      "label": "Translate Website",
+      "emoji": "globe_with_meridians",
+      "icon": "globe"
+    },
+    {
+      "id": "translation-memory",
+      "label": "Translation Memory",
+      "emoji": "books",
+      "icon": "library"
+    },
+    {
+      "id": "quality",
+      "label": "Quality",
+      "emoji": "white_check_mark",
+      "icon": "badge-check"
+    },
+    {
+      "id": "playground",
+      "label": "Playground",
+      "emoji": "art",
+      "icon": "sparkles"
+    },
+    {
+      "id": "content",
+      "label": "Content",
+      "emoji": "memo",
+      "icon": "pen-line"
+    },
+    {
+      "id": "hyperlocal",
+      "label": "Hyperlocal",
+      "emoji": "speech_balloon",
+      "icon": "message-circle"
+    },
+    {
+      "id": "blog",
+      "label": "Blog",
+      "emoji": "writing_hand",
+      "icon": "newspaper"
+    },
+    {
+      "id": "content-research",
+      "label": "Content Research",
+      "emoji": "mag",
+      "icon": "search"
+    },
+    {
+      "id": "slate",
+      "label": "Slate",
+      "emoji": "spiral_note_pad",
+      "icon": "notebook-pen"
+    },
+    {
+      "id": "performance-marketing",
+      "label": "Performance Marketing",
+      "emoji": "chart_with_upwards_trend",
+      "icon": "trending-up"
+    },
+    {
+      "id": "developers",
+      "label": "Developers",
+      "emoji": "jigsaw",
+      "icon": "code"
+    },
+    {
+      "id": "assets",
+      "label": "Assets",
+      "emoji": "card_file_box",
+      "icon": "hard-drive"
+    },
+    {
+      "id": "ai-assistant",
+      "label": "AI assistant",
+      "emoji": "robot_face",
+      "icon": "bot"
+    },
+    {
+      "id": "integrations",
+      "label": "Integrations",
+      "emoji": "electric_plug",
+      "icon": "plug"
+    },
+    {
+      "id": "billing",
+      "label": "Credits and billing",
+      "emoji": "credit_card",
+      "icon": "credit-card"
+    },
+    {
+      "id": "notifications",
+      "label": "Notifications",
+      "emoji": "bell",
+      "icon": "bell"
+    },
+    {
+      "id": "platform",
+      "label": "Platform",
+      "emoji": "key",
+      "icon": "settings"
+    },
+    {
+      "id": "fixes",
+      "label": "Fixes",
+      "emoji": "hammer_and_wrench",
+      "icon": "wrench"
+    }
+  ]
+}

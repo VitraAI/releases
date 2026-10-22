@@ -1,0 +1,5 @@
+dist/
+.work/
+package-lock.json
+# Prose: skill instructions and docs keep their hand formatting.
+*.md

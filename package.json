@@ -1,0 +1,27 @@
+{
+  "name": "vitra-releases",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Universe release notes: one JSON file per release, published as a JSON Feed to GitHub Pages and posted to Slack.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run validate && npm run format:check && npm test && npm run build",
+    "collect": "node scripts/collect-mrs.mjs",
+    "slack": "node scripts/post-slack.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
