@@ -6,19 +6,17 @@
 //   node scripts/collect-mrs.mjs 2026.10.22 --diffs            …plus commits, diffs and signals
 //   node scripts/collect-mrs.mjs 2026.10.22 --url <mr-url> …   these MRs instead of the label
 //
-// Auth: GITLAB_TOKEN (read_api), else the token `glab auth login` stored.
+// Auth: GITLAB_TOKEN (read_api), else the token `glab auth login` stored (see lib/gitlab.mjs).
 //
 // Writes .work/<id>/mrs.json and, with --diffs, .work/<id>/diffs/<repo>-<iid>.diff.
 // `signals` per MR lists the files that usually mean a deploy step: migrations,
 // env/config, CI/infra and dependency changes.
-import { execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-import { ROOT, labelForId, readJson } from './lib/release.mjs';
-
-const config = readJson(join(ROOT, 'config', 'projects.json'));
+import { api, config, gitlabToken } from './lib/gitlab.mjs';
+import { ROOT, labelForId } from './lib/release.mjs';
 
 /** File-path patterns that usually need a line in the MR description. */
 export const SIGNALS = {
@@ -60,41 +58,6 @@ export function parseMrUrl(url) {
   return { path: m[1], iid: Number(m[2]) };
 }
 
-function gitlabToken() {
-  if (process.env.GITLAB_TOKEN) return process.env.GITLAB_TOKEN;
-  const host = new URL(config.host).host;
-  try {
-    const token = execFileSync('glab', ['config', 'get', 'token', '--host', host], {
-      encoding: 'utf8',
-      stdio: ['ignore', 'pipe', 'ignore'],
-    }).trim();
-    if (token) return token;
-  } catch {
-    // fall through
-  }
-  throw new Error(
-    `No GitLab token. Run \`glab auth login --hostname ${host}\` or set GITLAB_TOKEN (read_api).`,
-  );
-}
-
-function api(token) {
-  return async function get(path, { all = false } = {}) {
-    const results = [];
-    const url = new URL(`${config.host}/api/v4${path}`);
-    url.searchParams.set('per_page', '100');
-    for (let page = '1'; page;) {
-      url.searchParams.set('page', page);
-      const res = await fetch(url, { headers: { 'PRIVATE-TOKEN': token } });
-      if (!res.ok) throw new Error(`GitLab ${res.status} on ${path}: ${await res.text()}`);
-      const body = await res.json();
-      if (!all) return body;
-      results.push(...body);
-      page = res.headers.get('x-next-page');
-    }
-    return results;
-  };
-}
-
 const enc = encodeURIComponent;
 const repoFor = (path) =>
   config.projects.find((p) => p.path === path)?.repo ?? path.split('/').pop();
@@ -107,7 +70,7 @@ async function main(argv) {
     console.error('usage: collect-mrs.mjs <YYYY.MM.DD[.N]> [--diffs] [--url <mr-url> ...]');
     process.exit(2);
   }
-  const get = api(gitlabToken());
+  const { get } = api(gitlabToken());
   const label = labelForId(id);
 
   /** @type {{ path: string, iid: number }[]} */

@@ -48,8 +48,8 @@ Open Claude Code in a clone of this repo. The skills live in `.claude/skills/` a
 
 | SOP step | Command | What it does |
 | --- | --- | --- |
-| 1. MR details | `/mr-details 2026-10-22 <mr-link> <mr-link> …` | Reads the given MRs (commits and diffs; or, with no links, every MR labelled `release::2026-10-22`) and writes a paste-ready title and description per MR to `.work/<id>/mr-details.md`. Never edits MRs. |
-| 2. Update MRs | (manual) | Paste each title and description into its MR. |
+| 1. MR details | `/mr-details 2026-10-22 <mr-link> <mr-link> …` | Reads the given MRs (commits and diffs; or, with no links, every MR labelled `release::2026-10-22`) and writes a title and description per MR to `.work/<id>/mr-details.md`, then runs step 2. |
+| 2. Update MRs | run by `/mr-details` (`npm run update-mrs -- <id>`) | Sets each MR's title and description from `mr-details.md`. It backs up the originals to `.work/<id>/previous-descriptions.json` first, skips MRs that already match and reads each one back. It never creates, merges or comments on MRs. |
 | 3. Merge and deploy | (manual) | As before. |
 | 4. Release notes | `/release-notes 2026-10-22` (same session) | Drafts `releases/<id>.json` for customers, validates it, previews the What's New and Slack versions, then opens a PR on your OK. **Merging the PR publishes the page and posts to Slack.** |
 
@@ -59,7 +59,7 @@ To use the skills from another folder, for example in the same session as steps 
 
 ```bash
 brew install glab gh
-glab auth login --hostname gitlab.com   # read_api is enough
+glab auth login --hostname gitlab.com   # api scope: step 2 writes MR titles and descriptions
 gh auth login                            # needs write access to VitraAI/releases
 npm ci
 ```
@@ -77,6 +77,7 @@ No Slack token is needed on laptops. The workflow posts with the repo secret.
 | `npm run build` | `dist/` for Pages; stops on any invalid file |
 | `npm run check` | All of the above plus Prettier |
 | `node scripts/collect-mrs.mjs <id> [--diffs] [--url <mr> …]` | Pull a release's MRs from GitLab into `.work/<id>/` |
+| `node scripts/update-mrs.mjs <id> [--dry-run]` | Set each MR's title and description from `.work/<id>/mr-details.md`, backing up the originals first. `--dry-run` only parses and checks the file |
 | `node scripts/post-slack.mjs <id> --dry-run [--public] [--layout=stacked\|spaced\|compact]` | Print the Slack payload and a Block Kit Builder preview link. `stacked` (default) puts each bold lead-in on its own line with the body under it, a blank line between items and a divider between sections |
 
 ## GitHub setup (once)

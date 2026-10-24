@@ -15,6 +15,7 @@
     "format:check": "prettier --check .",
     "check": "npm run validate && npm run format:check && npm test && npm run build",
     "collect": "node scripts/collect-mrs.mjs",
+    "update-mrs": "node scripts/update-mrs.mjs",
     "slack": "node scripts/post-slack.mjs"
   },
   "dependencies": {

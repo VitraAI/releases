@@ -14,6 +14,7 @@ import {
   readJson,
 } from '../scripts/lib/release.mjs';
 import { chunkBlocks, renderBlocks, sectionBlock } from '../scripts/post-slack.mjs';
+import { parseMrDetails } from '../scripts/update-mrs.mjs';
 import { validateRelease } from '../scripts/validate.mjs';
 
 const base = () => ({
@@ -244,5 +245,51 @@ describe('collect-mrs helpers', () => {
     assert.deepEqual(s.env, ['env.ts']);
     assert.deepEqual(s.infra, ['.gitlab-ci.yml']);
     assert.deepEqual(s.dependencies, ['package.json']);
+  });
+});
+
+describe('update-mrs parser', () => {
+  const F = '```';
+  const section = (
+    n,
+    iid,
+    { title = 'chore(release): 2026-10-24 — a, b', body = '## Summary\nText.' } = {},
+  ) =>
+    `## ${n}. repo-${n} — !${iid}\n\nMR: https://gitlab.com/g/repo-${n}/-/merge_requests/${iid}\n\n` +
+    `### Title\n\n${F}\n${title}\n${F}\n\n### Description\n\n${F}markdown\n${body}\n${F}\n`;
+  const doc = (...parts) => `# Release 2026-10-24\n\nIntro.\n\n---\n\n${parts.join('\n---\n\n')}`;
+
+  it('reads each section title and description', () => {
+    const mrs = parseMrDetails(
+      doc(section(1, 7), section(2, 8, { body: '## Summary\nTwo.\n\n- `x`' })),
+    );
+    assert.deepEqual(
+      mrs.map((m) => [m.repo, m.iid, m.title, m.description]),
+      [
+        ['repo-1', 7, 'chore(release): 2026-10-24 — a, b', '## Summary\nText.'],
+        ['repo-2', 8, 'chore(release): 2026-10-24 — a, b', '## Summary\nTwo.\n\n- `x`'],
+      ],
+    );
+  });
+
+  it('refuses malformed sections before anything is written', () => {
+    assert.throws(() => parseMrDetails('# nothing'), /no "## <n>/);
+    assert.throws(
+      () => parseMrDetails(doc(section(1, 7, { title: 'feat: x' }))),
+      /chore\(release\)/,
+    );
+    assert.throws(
+      () => parseMrDetails(doc(section(1, 7, { title: `chore(release): ${'x'.repeat(90)}` }))),
+      /100 characters/,
+    );
+    assert.throws(
+      () => parseMrDetails(doc(section(1, 7, { body: `## Summary\n${F}js\nx\n${F}` }))),
+      /nested/,
+    );
+    assert.throws(
+      () => parseMrDetails(doc(section(1, 7), section(2, 7).replaceAll('repo-2', 'repo-1'))),
+      /twice/,
+    );
+    assert.throws(() => parseMrDetails(doc(section(1, 7).replace('!7', '!9'))), /MR link is !7/);
   });
 });

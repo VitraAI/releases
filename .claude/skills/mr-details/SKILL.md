@@ -1,14 +1,15 @@
 ---
 name: mr-details
-description: Release SOP step 1. Analyze a release's GitLab MRs (commits and code diffs) and write one Markdown file with a paste-ready title and detailed description per MR, covering key changes, env/config, DevOps/infra, migrations, deploy prerequisites, post-deploy steps, dependencies and risks. Use when someone says "generate MR details", "write the release MR descriptions", "/mr-details <date>", or starts a Universe release. Never modifies or creates MRs.
+description: Release SOP step 1. Analyze a release's GitLab MRs (commits and code diffs) and write one Markdown file with a title and detailed description per MR, covering key changes, env/config, DevOps/infra, migrations, deploy prerequisites, post-deploy steps, dependencies and risks; then SOP step 2: set those titles and descriptions on the MRs, after backing up the originals. Use when someone says "generate MR details", "write the release MR descriptions", "/mr-details <date>", or starts a Universe release. Never creates, merges or comments on MRs; it only sets their title and description.
 argument-hint: <YYYY-MM-DD[.N]> <mr-link> [<mr-link> ...]
 ---
 
-# /mr-details: release MR titles and descriptions (SOP step 1)
+# /mr-details: release MR titles and descriptions (SOP steps 1–2)
 
-You write the titles and descriptions for a Universe release's staging → main MRs.
-The deployer pastes them into GitLab by hand (step 2), merges and deploys (step 3),
-then runs `/release-notes` (step 4), which reads the file you write here.
+You write the titles and descriptions for a Universe release's staging → main MRs
+(step 1) and set them on the MRs with `scripts/update-mrs.mjs` (step 2). The deployer
+merges and deploys (step 3), then runs `/release-notes` (step 4), which reads the file
+you write here.
 
 ## The rules (Prompt 1, verbatim intent: do not relax them)
 
@@ -22,7 +23,11 @@ then runs `/release-notes` (step 4), which reads the file you write here.
 - Include the **original MR link** in each section.
 - **Do not assume or invent details.** Clearly mark anything that needs verification
   with `⚠️ Verify:`.
-- **Do not modify or create any MRs.** No `glab mr update`, no API writes, no comments.
+- **Write to an MR's title and description only, and only through
+  `scripts/update-mrs.mjs`** (step 5 below). It backs up the originals first. Never create,
+  merge, close or comment on an MR, change its labels, assignees or branches, or write to
+  GitLab any other way (`glab mr update`, `glab api`, hand-made requests).
+  (Changed on 2026-10-24 at the deployer's request: step 2 used to be pasted by hand.)
 
 ## Arguments
 
@@ -49,7 +54,9 @@ node -e "process.exit(process.env.GITLAB_TOKEN ? 0 : 1)" || glab auth status
 ```
 
 If neither a token nor a `glab` login exists, stop and tell the deployer to run
-`! glab auth login --hostname gitlab.com` (scope `read_api`) or export `GITLAB_TOKEN`.
+`! brew install glab` if needed, then `! glab auth login --hostname gitlab.com`, or to
+add `export GITLAB_TOKEN=…` to their shell profile. Step 5 writes to the MRs, so the
+token needs scope `api`; `read_api` only covers steps 2–4.
 
 ### 2. Collect
 
@@ -97,7 +104,7 @@ Use exactly this structure. It matches the earlier release files, so reviewers k
 ````markdown
 # Release <YYYY-MM-DD> — MR titles and descriptions
 
-All MRs are release MRs from `staging` to `main`. Each section below has its own title and description, ready to paste.
+All MRs are release MRs from `staging` to `main`. Each section below has its own title and description; `scripts/update-mrs.mjs` sets them on the MRs.
 
 | Repo | MR | Commits (non-merge) |
 | --- | --- | --- |
@@ -168,20 +175,40 @@ Formatting rules:
 - Title: Conventional Commit, `chore(release): <date> — …`, under 100 characters.
 - Every heading under **Deploy notes** is always present. Write "None." rather than
   dropping it, so a reviewer can see each one was checked.
-- Both fences open and close cleanly so the text pastes into GitLab as-is. Nest the
+- Both fences open and close cleanly, so `update-mrs.mjs` can parse each section and
+  GitLab renders it as-is. Keep the headings exactly as shown; the script reads them. Nest the
   ```` ```markdown ```` block inside the outer document correctly.
 - Use repo-relative paths and `code` for identifiers. Don't paste secrets, tokens,
   hostnames from `.env` files or customer data from the diff.
 - Write plainly in British-neutral English, with no marketing tone. This audience is
   engineers and the deployer.
 
-### 5. Hand off
+### 5. Update the MRs (SOP step 2)
+
+```bash
+node scripts/update-mrs.mjs <id> --dry-run   # parse and check every section; no writes
+node scripts/update-mrs.mjs <id>             # set each MR's title and description
+```
+
+- Run the dry run first. It checks every section before anything is written: the
+  heading, the MR link, a `chore(release)` title under 100 characters, a `## Summary`
+  and no nested fence. Fix the file and run it again until it passes.
+- The real run saves each MR's live title and description to
+  `.work/<id>/previous-descriptions.json` before its first write. An MR that is already in
+  that file keeps its first saved copy, so running it again never loses the author's text.
+  It skips MRs that already match, reads each MR back after writing, and stops on any
+  mismatch.
+- Only the MRs in `mr-details.md` are touched. To re-run after editing one section, run
+  the same command; the unchanged MRs are skipped.
+- On a 401 or 403, the token lacks `api` scope: stop and tell the deployer (see Preflight).
+- If the deployer asks to restore the originals, set them back from
+  `previous-descriptions.json` with the same `PUT` and say which MRs changed.
+
+### 6. Hand off
 
 Tell the deployer:
 - the file path (`.work/<id>/mr-details.md`) and a 1-line summary per MR;
-- every `⚠️ Verify:` item, as a short list;
-- the next step: paste each Title and Description into its MR (step 2), then merge and
-  deploy (step 3). After that, `/release-notes <date>` writes the customer release notes
-  from this file.
-
-Do not edit any MR, even if asked in passing. Point back to step 2.
+- which MRs `update-mrs.mjs` updated or skipped, and the backup path;
+- every `⚠️ Verify:` item, as a short list (they are now in the MR descriptions too);
+- the next step: merge and deploy (step 3). After that, `/release-notes <date>` writes
+  the customer release notes from this file.
