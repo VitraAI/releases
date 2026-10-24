@@ -15,8 +15,7 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "The Canva app showed only \"Network error\".",
-          "body": "Its requests were blocked before they reached Universe. The Canva app now connects normally."
+          "body": "The Canva app connects again instead of showing \"Network error\""
         }
       ]
     }

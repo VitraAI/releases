@@ -57,11 +57,12 @@ export function publicRelease(release) {
   return { ...rest, highlights: release.highlights ?? [] };
 }
 
-/** Display order: highlighted sections first, the rest as written, fixes last. */
+/** Display order: highlighted sections first, the rest as written, then More updates, fixes last. */
 export function orderSections(release) {
   const highlights = release.highlights ?? [];
   const rank = (s) => {
     if (s.area === 'fixes') return 1e6;
+    if (s.area === 'improvements') return 1e5;
     const h = highlights.indexOf(s.id);
     return h === -1 ? 1e3 : h;
   };

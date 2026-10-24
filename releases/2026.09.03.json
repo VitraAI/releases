@@ -4,7 +4,7 @@
   "id": "2026.09.03",
   "date": "2026-09-03",
   "title": "Your organization opens on the product catalog",
-  "summary": "The product catalog as your home page, excluded areas for Hyperlocal broadcasts, Fast Mode image translations that finish in the background, renders at your image's exact size, and protected system directories in Assets.",
+  "summary": "The product catalog as your home page, excluded areas for Hyperlocal broadcasts, and exact-size Image Translator renders.",
   "tags": ["hyperlocal", "translate-photo", "image-translator", "home-page", "assets"],
   "backfill": true,
   "highlights": ["home-page", "hyperlocal", "image-translator"],
@@ -16,8 +16,7 @@
       "title": "Home page",
       "items": [
         {
-          "title": "Your organization now opens on the product catalog.",
-          "body": "The page listing every product is your home page, and the separate Galaxy item is gone from the side rail. Existing product links still work."
+          "body": "Your organization opens on the product catalog"
         }
       ]
     },
@@ -28,12 +27,10 @@
       "title": "Hyperlocal",
       "items": [
         {
-          "title": "Exclude areas from a broadcast.",
-          "body": "An **Exclude areas** list under State and Area in **Create broadcast** leaves out contacts in those areas. The contact count and cost estimate follow it, and an area can't be both included and excluded."
+          "body": "Exclude areas from a broadcast"
         },
         {
-          "title": "Template previews look like the real thing.",
-          "body": "WhatsApp previews show media at chat size without cropping, video headers play, and the Facebook post card keeps its real width."
+          "body": "Template previews look like the real thing"
         }
       ]
     },
@@ -44,36 +41,27 @@
       "title": "Image Translator",
       "items": [
         {
-          "title": "Fast Mode finishes without the tab open.",
-          "body": "A Fast Mode job now translates as soon as its analysis is done, even if you leave the page, and **Run in background** takes you to the job list."
+          "body": "Fast Mode finishes without the tab open"
         },
         {
-          "title": "Renders come back at your image's exact size.",
-          "body": "With the original framing kept, a 1920×1080 image now returns at 1920×1080, and a chosen ratio such as 16:9 comes out exact."
+          "body": "Renders come back at your image's exact size"
         },
         {
-          "title": "Text kept as-is is labelled.",
-          "body": "Brand names and locked text left in the source language show the source with a badge saying why, instead of looking untranslated."
+          "body": "Text kept as-is is labelled"
         },
         {
-          "title": "**Sync to TM** no longer needs a verified layer.",
-          "body": "Any translated layer can be pushed to the memory, and text kept as-is is left out."
-        },
-        {
-          "title": "Tidier process lists.",
-          "body": "Long language, memory and file names show in full on hover, and every row menu looks the same."
+          "body": "**Sync to TM** works for any translated layer"
         }
       ]
     },
     {
-      "id": "assets",
-      "area": "assets",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Assets",
+      "title": "More updates",
       "items": [
         {
-          "title": "Files in system directories are protected.",
-          "body": "Files inside the directories Universe manages for each product can no longer be moved out or deleted from Assets, so the product that made them can still find them."
+          "body": "Assets: files in system directories are protected"
         }
       ]
     },
@@ -84,23 +72,13 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Verifying a phrase looked like a rewrite in the proofreading log.",
-          "body": "The entry now shows the text once and says it only records a review-status change."
+          "body": "Hyperlocal template cards show their own title"
         },
         {
-          "title": "Hyperlocal template cards showed the wrong title.",
-          "body": "They now show the template's own title."
+          "body": "**Back to processes** opens the process list"
         },
         {
-          "title": "**Back to processes** on the Image Translator error screen led nowhere.",
-          "body": "It now opens the process list."
-        },
-        {
-          "title": "User Actions entries for image jobs had a dead link.",
-          "body": "**Open it** now opens the job."
-        },
-        {
-          "body": "A render that never arrived shows an empty tile instead of a broken image, and the compare table's header and row highlight now span its full width."
+          "body": "User Actions links for image jobs open the job"
         }
       ]
     }

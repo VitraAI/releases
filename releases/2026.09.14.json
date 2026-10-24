@@ -7,20 +7,23 @@
   "summary": "Support chat moves from a floating bubble to its own Support page, on desktop and mobile.",
   "tags": ["support", "platform"],
   "backfill": true,
+  "highlights": ["platform"],
   "sections": [
     {
       "id": "platform",
       "area": "platform",
       "kind": "changed",
-      "title": "Platform",
+      "title": "Support chat",
       "items": [
         {
-          "title": "Support chat has its own page.",
-          "body": "**Support** in the nav rail now opens a full-height chat page instead of a floating chat bubble over every page. On mobile, find it in the **More** menu.",
+          "body": "**Support** in the nav rail opens a full-page chat, not a bubble",
           "link": {
             "label": "Open Support",
             "path": "/support"
           }
+        },
+        {
+          "body": "On mobile, find it in the **More** menu"
         }
       ]
     }

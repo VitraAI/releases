@@ -4,7 +4,7 @@
   "id": "2026.09.28",
   "date": "2026-09-28",
   "title": "See the cost before every paid start",
-  "summary": "See the cost before every paid start, InDesign translation, a new Cosmos builder and workflow assistant, style-guide rules for many languages, folder shortcuts, and Translate Video keeps your video's frame rate and quality.",
+  "summary": "See the cost before every paid start, InDesign translation, a new Cosmos builder with an assistant, and per-rule style guides.",
   "tags": [
     "credits",
     "indesign-translation",
@@ -21,51 +21,16 @@
       "area": "billing",
       "kind": "changed",
       "title": "See the cost before you start",
+      "note": "Every paid action shows its credit cost before it starts.",
       "items": [
         {
-          "title": "Every paid action now shows its credit cost before it starts.",
-          "body": "Confirm, and the job begins. This covers:",
-          "children": [
-            {
-              "body": "Translate Video and Translate Photo"
-            },
-            {
-              "body": "Image Creator (including Quick Create) and Adapts"
-            },
-            {
-              "body": "Playground, QC and AI quality reports"
-            },
-            {
-              "body": "Cosmos and Hyperlocal"
-            }
-          ]
+          "body": "Credits are taken at the start and refunded if a job fails"
         },
         {
-          "title": "Credits are taken when a job starts,",
-          "body": "not when it finishes:",
-          "children": [
-            {
-              "body": "If a job fails on our side, the credits are **refunded automatically**."
-            },
-            {
-              "body": "If you cancel, stop or delete a job, the credits are not refunded."
-            }
-          ]
+          "body": "Not enough credits? A **Top up** link shows instead"
         },
         {
-          "title": "Not enough credits?",
-          "body": "The start button is disabled and a **Top up** link is shown, so nothing half-starts."
-        },
-        {
-          "title": "If your organization owes credits,",
-          "body": "for example because a job ended up costing more than your balance, nothing new can start until you top up. The message tells you how many credits you owe."
-        },
-        {
-          "title": "Paused plans can still spend the credits they hold."
-        },
-        {
-          "title": "Credit Activity is easier to read,",
-          "body": "with short type labels (hover for details) and readable operation names."
+          "body": "Credit Activity is easier to read"
         }
       ]
     },
@@ -74,25 +39,13 @@
       "area": "playground",
       "kind": "added",
       "title": "InDesign translation",
+      "note": "Translate .idml files in Playground. Styles, layout and images stay as they were.",
       "items": [
         {
-          "title": "Translate InDesign (.idml) files",
-          "body": "from the new **InDesign Translation** page in Playground. Only the text changes. Styles, layout, links and images stay exactly as they were."
+          "body": "Complex scripts like Hindi and Arabic render correctly"
         },
         {
-          "title": "Hindi, Bengali, Tamil, Arabic and other complex scripts render correctly.",
-          "body": "Fonts switch to the matching Noto family, and InDesign's World-Ready composer is turned on so letters join and shape properly."
-        },
-        {
-          "title": "Logos and icons are left alone,",
-          "body": "even when the document types them as letters."
-        },
-        {
-          "title": "Layout preview in the browser.",
-          "body": "See the translation in its pages and frames. A red box marks any frame where the text no longer fits."
-        },
-        {
-          "body": "Have an `.indd` file? Export it from InDesign as IDML first (File → Export → InDesign Markup)."
+          "body": "Preview the layout, with a red box where text doesn't fit"
         }
       ]
     },
@@ -103,152 +56,33 @@
       "title": "Cosmos: new builder and workflow assistant",
       "items": [
         {
-          "title": "A new, faster builder.",
-          "children": [
-            {
-              "body": "Add steps with the **+** picker, or drag from a step to create the next one."
-            },
-            {
-              "body": "Insert a step on any connection."
-            },
-            {
-              "body": "Undo/redo, copy/paste, a right-click menu and keyboard shortcuts."
-            },
-            {
-              "body": "A minimap and templates."
-            }
-          ]
+          "body": "A faster builder with undo, copy and paste, and templates"
         },
         {
-          "title": "Lay out top-to-bottom or left-to-right,",
-          "body": "and your choice is remembered."
+          "body": "Describe a workflow and the assistant builds it"
         },
         {
-          "title": "Describe a workflow and the assistant builds it.",
-          "body": "Open the assistant panel and type what you need. It proposes steps you can apply or discard, and asks a quick question when something is unclear."
-        },
-        {
-          "title": "Runs list.",
-          "body": "Paged, with filters for status, workflow, folder and search."
-        },
-        {
-          "title": "Run page.",
-          "body": "A timeline, a live canvas, each step's output, and every step that's waiting on someone."
+          "body": "A filterable runs list and a live run page"
         }
       ]
     },
     {
-      "id": "style-guides",
-      "area": "translation-memory",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Style guides: one rule at a time",
+      "title": "More updates",
       "items": [
         {
-          "title": "Each rule can apply to several languages,",
-          "body": "or to all of them. It is saved on its own, so editing one rule never overwrites another."
+          "body": "Style guides: rules apply to several languages and can be turned off"
         },
         {
-          "title": "Turn a rule off",
-          "body": "without deleting it. Rules that are off are not used in translation."
+          "body": "Folders: a process shows its input file in its folder"
         },
         {
-          "title": "Bulk actions:",
-          "body": "add or remove languages, turn rules on or off, or delete them."
+          "body": "Translate Video: uploads keep their frame rate and quality"
         },
         {
-          "title": "Drag to reorder."
-        },
-        {
-          "title": "Copy one language's rules to another language."
-        },
-        {
-          "title": "\"All rules\" and \"All languages\" views,",
-          "body": "next to the language dropdown."
-        },
-        {
-          "body": "Rules that were duplicated across languages have been merged into one rule."
-        },
-        {
-          "body": "Style-guide files can cover several languages, up to 25 MB each."
-        }
-      ]
-    },
-    {
-      "id": "folders",
-      "area": "projects",
-      "kind": "changed",
-      "title": "Folders",
-      "items": [
-        {
-          "title": "A process created in a Folder now shows its input file in that folder,",
-          "body": "as a shortcut. Deleting the shortcut never deletes the original."
-        },
-        {
-          "title": "Choose a Folder when you start a document translation.",
-          "body": "This works in the New Translation window, folder runs, and the Office and Text pages."
-        },
-        {
-          "title": "Playground \"Save to Assets\"",
-          "body": "can now save into any folder inside Playground's own folder."
-        }
-      ]
-    },
-    {
-      "id": "translate-video",
-      "area": "translate-video",
-      "kind": "changed",
-      "title": "Translate Video",
-      "items": [
-        {
-          "title": "Your video keeps its own settings.",
-          "body": "New uploads keep their original frame rate (24, 25, 30…). Exports match the upload's frame rate, sample rate and bitrate instead of fixed presets."
-        },
-        {
-          "title": "Uploads are compressed at a higher quality than before,",
-          "body": "so they look closer to the original."
-        },
-        {
-          "title": "New setting: Keep original video quality.",
-          "body": "Find it in Settings → Common settings → Translate Video. It is off by default. When it is on, uploads are not compressed at all unless they need repair. This uses more storage."
-        },
-        {
-          "title": "The editor timeline follows the video's frame rate,",
-          "body": "so edits land on the same frames as the export."
-        },
-        {
-          "title": "STL and EDL subtitle files use the video's real frame rate,",
-          "body": "so timecodes no longer drift."
-        }
-      ]
-    },
-    {
-      "id": "also",
-      "area": "platform",
-      "kind": "changed",
-      "title": "Also",
-      "items": [
-        {
-          "title": "AI quality report \"Fix all\"",
-          "body": "leaves alone any segment you edited after the report ran. It tells you how many it skipped. \"Apply fix\" on a single segment still works."
-        },
-        {
-          "title": "Onboarding:",
-          "body": "your new organization's name and web address are prefilled from your first name. You can still change both."
-        }
-      ]
-    },
-    {
-      "id": "pricing",
-      "area": "billing",
-      "kind": "changed",
-      "title": "Pricing",
-      "items": [
-        {
-          "title": "InDesign translation: 0.5 credits per source word,",
-          "body": "the same as the other document formats. Hidden layers, text outside the pages, and logo characters are not counted."
-        },
-        {
-          "title": "Generate All and bulk emotion in the Translate Video editor are now free."
+          "body": "Generate All and bulk emotion in Translate Video are free"
         }
       ]
     },
@@ -259,24 +93,13 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Translate Video: \"We couldn't read this file's length\".",
-          "body": "Starting a run from Cosmos or from a file picked in Assets no longer fails with this message."
+          "body": "Translate Video runs from Cosmos or Assets read the file length"
         },
         {
-          "title": "Text-to-speech:",
-          "body": "a card deleted in another tab no longer breaks saving in an editor that was already open."
+          "body": "The Translation Memory page shows the right number of rows"
         },
         {
-          "title": "AI quality report languages:",
-          "body": "with many languages, the language tabs now scroll instead of hiding the buttons."
-        },
-        {
-          "title": "The Translation Memory page showed fewer rows than it should",
-          "body": "after translations were deleted, at any page size. Units with no translation left are no longer listed or counted."
-        },
-        {
-          "title": "A failed image translation left its spinner running.",
-          "body": "It now stops and shows a clear message."
+          "body": "A failed image translation stops its spinner"
         }
       ]
     }

@@ -15,8 +15,7 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "A word's alias would not reopen after you cancelled it.",
-          "body": "In the Translate Video transcript, clicking an aliased word again did nothing once the **Alias Word** dialog had been cancelled. Each click now opens it."
+          "body": "Translate Video: a word's alias reopens after you cancel the **Alias Word** dialog"
         }
       ]
     }

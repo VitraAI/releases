@@ -4,7 +4,7 @@
   "id": "2026.09.23",
   "date": "2026-09-23",
   "title": "Translate PDFs and keep their layout",
-  "summary": "PDF translation that keeps the layout, translate a whole Drive folder, folder detail pages, choose the folder for Save to Assets, export preview and a lip-sync model per export.",
+  "summary": "PDF translation that keeps the layout, whole-folder translation, folder pages, export preview and a context field for memories.",
   "tags": [
     "pdf-translation",
     "folder-translation",
@@ -14,33 +14,23 @@
     "translate-photo"
   ],
   "backfill": true,
-  "highlights": ["pdf-translation", "translate-folder"],
+  "highlights": ["pdf-translation", "translate-folder", "folders"],
   "sections": [
     {
       "id": "pdf-translation",
       "area": "playground",
       "kind": "added",
       "title": "PDF translation",
+      "note": "Translate a PDF in Playground or Cosmos. Only the text changes, the layout stays.",
       "items": [
         {
-          "title": "Translate a PDF and keep its layout.",
-          "body": "Playground has a new **PDF Translation** page. Only the text changes. Images, graphics, backgrounds, tables and form fields stay exactly as they were."
+          "body": "Indian scripts, Arabic, Hebrew, Thai, Cyrillic and Greek render correctly"
         },
         {
-          "title": "Hindi, Bengali, Tamil and other Indian scripts render correctly,",
-          "body": "and so do Arabic, Hebrew, Thai, Cyrillic and Greek. Chinese, Japanese and Korean aren't supported yet. You'll see a clear message up front, not a broken file."
+          "body": "Original and translation scroll side by side"
         },
         {
-          "title": "Side-by-side preview.",
-          "body": "The original and the translation scroll together page by page, and selecting a segment jumps to its page."
-        },
-        {
-          "title": "Overflow flags.",
-          "body": "When a translation is too long for its box, the text is shrunk to fit first. Anything that still doesn't fit is flagged on its segment so a translator can shorten it. No text is ever dropped."
-        },
-        {
-          "title": "Also in Cosmos.",
-          "body": "Workflows have a new **PDF Translation** step."
+          "body": "Text that doesn't fit its box is flagged, never dropped"
         }
       ]
     },
@@ -49,52 +39,16 @@
       "area": "playground",
       "kind": "added",
       "title": "Translate a whole folder",
+      "note": "Pick a Drive folder and translate every file in it into each language.",
       "items": [
         {
-          "title": "Pick a Drive folder and translate everything in it.",
-          "body": "In \"Choose from Assets\", tick a folder instead of files. Every matching file is translated into each language you choose."
+          "body": "Preview files, word counts and cost before you run"
         },
         {
-          "title": "See it before you run it.",
-          "body": "A preview shows every file it will translate with its word count, every file it will skip and why, and the credit cost."
+          "body": "Output lands next to the source, in your i18n layout"
         },
         {
-          "title": "Output lands next to the source",
-          "body": "in a `{folder} (translated)` folder, in the layout your i18n setup expects:",
-          "children": [
-            {
-              "body": "One folder per language: `hi/emails/welcome.json`"
-            },
-            {
-              "body": "Or the language in the file name: `emails/welcome.hi.json`"
-            }
-          ]
-        },
-        {
-          "title": "Skip what you don't need",
-          "body": "with patterns like `**/fixtures/**` or `config*.json`."
-        },
-        {
-          "title": "Supported formats.",
-          "body": "Translate into up to 10 languages per run, from:",
-          "children": [
-            {
-              "body": "Text, JSON and XML/DITA"
-            },
-            {
-              "body": "HTML and XLIFF"
-            },
-            {
-              "body": "Word, PowerPoint and Excel"
-            },
-            {
-              "body": "CSV and PDF"
-            }
-          ]
-        },
-        {
-          "title": "Several languages at once in Text Translation.",
-          "body": "Choose more than one target language, and each gets its own tab of results."
+          "body": "Text Translation: several target languages at once"
         }
       ]
     },
@@ -105,141 +59,33 @@
       "title": "Folders",
       "items": [
         {
-          "title": "Open a folder to see what's in it.",
-          "body": "Click a folder card to see every process filed in it, across Translate Video, Translate Photo, Playground, QC and Cosmos, with a tab and count for each."
+          "body": "Open a folder to see every process filed in it"
         },
         {
-          "body": "Open any process from the list. You can also move it to another folder, remove it from the folder or delete it, depending on your permissions."
+          "body": "**Save to Assets** asks which folder to save in"
         }
       ]
     },
     {
-      "id": "save-to-assets",
-      "area": "assets",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Save to Assets: choose the folder",
+      "title": "More updates",
       "items": [
         {
-          "title": "\"Save to Assets\" now asks where to save.",
-          "body": "It opens on the usual default folder, so confirming without changing anything saves where it always did. This works in:",
-          "children": [
-            {
-              "body": "Quick Create and Image Creator, for one creation or a whole selection"
-            },
-            {
-              "body": "Image Translator"
-            },
-            {
-              "body": "Adapt variants"
-            },
-            {
-              "body": "Playground documents, text-to-speech and lip-sync"
-            }
-          ]
+          "body": "Translate Video: preview an export before downloading it"
         },
         {
-          "title": "Upload straight from the picker.",
-          "body": "New files go into the folder you're viewing and come back already selected."
-        }
-      ]
-    },
-    {
-      "id": "translate-video",
-      "area": "translate-video",
-      "kind": "changed",
-      "title": "Translate Video",
-      "items": [
-        {
-          "title": "Preview an export before downloading it.",
-          "body": "Each row in export History has a **Preview** button that plays the finished video."
+          "body": "Translate Video: choose the lip-sync model per export"
         },
         {
-          "title": "Downloads are named properly:",
-          "body": "`{Process name} - Hindi (India).mp4`. The same goes for audio and subtitle files, and names in Hindi, Tamil and other non-Latin scripts now download intact."
+          "body": "Translate Photo: retry a failed translation in place"
         },
         {
-          "title": "Choose the lip-sync model for each export.",
-          "body": "In **Settings → Provider Preferences**, lip-sync is now a list of providers (Sync.so, Fal), the same as text-to-speech. When more than one model is available, the export panel lets you pick one for that export."
+          "body": "Translation Memory: a **Context** field tells the AI what a memory is for"
         },
         {
-          "title": "QE picks up new languages.",
-          "body": "A language added in the editor now appears in the QE panel right away."
-        }
-      ]
-    },
-    {
-      "id": "translate-photo",
-      "area": "translate-photo",
-      "kind": "added",
-      "title": "Translate Photo",
-      "items": [
-        {
-          "title": "Retry a failed image translation in place.",
-          "body": "It reruns only the step that failed, adds no new version and charges you once."
-        },
-        {
-          "title": "Use a whole folder of images",
-          "body": "as sources in Image Translation. It tells you about anything it had to leave out."
-        }
-      ]
-    },
-    {
-      "id": "translation-memory",
-      "area": "translation-memory",
-      "kind": "added",
-      "title": "Translation Memory",
-      "items": [
-        {
-          "title": "Tell the AI what a memory is for.",
-          "body": "A VitraTM memory now has a **Context** field of up to 1,000 characters describing what it's for, and every AI translation, review pass and QE report for that memory uses it. It's required when you create a memory, and you can change it later from the **Context** button on the memory's page."
-        },
-        {
-          "title": "VitraTM settings.",
-          "body": "**Settings → Translation Memory** has a VitraTM card where you can switch the AI review pass on or off and pick a translation mode.",
-          "children": [
-            {
-              "body": "**Auto** picks the mode for each job."
-            },
-            {
-              "body": "**Batch**: background translation jobs and QE reports run in the lower-cost batch mode. Instant translations are unaffected."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "also",
-      "area": "platform",
-      "kind": "changed",
-      "title": "Also",
-      "items": [
-        {
-          "title": "Readable QE reports for Word and PowerPoint.",
-          "body": "The report no longer shows formatting markers in the source, translation or suggestions."
-        },
-        {
-          "title": "Any playback speed",
-          "body": "in Playground text-to-speech: type a value like 1.35x, and \"Apply to all\" uses it."
-        },
-        {
-          "title": "Draft text-to-speech sessions",
-          "body": "now appear in the process list and can be reopened."
-        },
-        {
-          "title": "Breadcrumbs",
-          "body": "on the Brand Kit and Image Creator pages."
-        }
-      ]
-    },
-    {
-      "id": "pricing",
-      "area": "billing",
-      "kind": "changed",
-      "title": "Pricing",
-      "items": [
-        {
-          "title": "PDF translation: 0.5 credits per source word,",
-          "body": "the same as the other document formats."
+          "body": "PDF translation costs 0.5 credits per source word"
         }
       ]
     }

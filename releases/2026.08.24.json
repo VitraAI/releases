@@ -21,25 +21,13 @@
       "area": "translation-memory",
       "kind": "added",
       "title": "Term base in your editors",
+      "note": "See approved terminology while you edit, in Translate Video, Translate Photo and Playground.",
       "items": [
         {
-          "title": "See approved terminology while you edit.",
-          "body": "A terminology panel shows the terms in your text and the full term base A to Z, with grammar and concept details. It works with Phrase memories and stays hidden for other providers.",
-          "children": [
-            {
-              "body": "Translate Video editor"
-            },
-            {
-              "body": "Translate Photo image translator"
-            },
-            {
-              "body": "Playground logs and playground text translation"
-            }
-          ]
+          "body": "Terms in your text and the full term base, A to Z"
         },
         {
-          "title": "Term hits are highlighted in Translate Video,",
-          "body": "and forbidden terms are struck through."
+          "body": "Term hits highlighted in Translate Video, forbidden terms struck through"
         }
       ]
     },
@@ -50,16 +38,13 @@
       "title": "Cosmos step owners",
       "items": [
         {
-          "title": "Choose who owns each step when you start a run.",
-          "body": "A new **Run settings** step in the run dialog has a searchable picker per step and can copy owners from the step above. Steps are listed in workflow order, matching the diagram beside them."
+          "body": "Choose who owns each step when you start a run"
         },
         {
-          "title": "Owners are notified",
-          "body": "in the app and by push when their step finishes and at approval gates."
+          "body": "Owners are notified when their step finishes and at approval gates"
         },
         {
-          "title": "Owners belong to the run.",
-          "body": "They show on the run detail and can be changed mid-run, without touching the workflow."
+          "body": "Change owners mid-run without touching the workflow"
         }
       ]
     },
@@ -67,33 +52,17 @@
       "id": "audio-tracks",
       "area": "translate-video",
       "kind": "added",
-      "title": "Translate Video",
+      "title": "Audio tracks in Translate Video",
+      "note": "Add music, sound effects and ambience to the timeline, mixed into the export.",
       "items": [
         {
-          "title": "Add music, sound effects and ambience to the timeline.",
-          "body": "Audio tracks belong to the whole process rather than a transcript card, and are mixed into the export. The timeline has collapsible Video, Dialogue and Audio sections."
+          "body": "Upload or record a track"
         },
         {
-          "title": "Upload or record a track.",
-          "body": "Review it before adding it. The full take is always kept."
+          "body": "Trim by dragging an edge"
         },
         {
-          "title": "Trim by dragging an edge.",
-          "body": "Times show milliseconds, and waveforms stay just as detailed when trimmed."
-        },
-        {
-          "title": "Mute is for preview only.",
-          "body": "To silence a track in the export, set its volume to 0."
-        },
-        {
-          "kind": "changed",
-          "title": "Speaker voice mapping redesigned.",
-          "body": "A Speakers toolbar with select all and an \"x of n assigned\" count, and a Clone or Library choice per speaker that stays put when the selection changes. All speakers start unselected, and the video panel stays in view on narrow screens."
-        },
-        {
-          "kind": "changed",
-          "title": "Subtitle translation has its own icon",
-          "body": "in process tables, so it no longer looks like subtitle generation."
+          "body": "Redesigned speaker voice mapping"
         }
       ]
     },
@@ -104,20 +73,13 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Edit Folder opened blank.",
-          "body": "The dialog now shows the folder's details. The same fix applies to editing Memory categories and Prompt library categories."
+          "body": "Edit Folder opens with the folder's details"
         },
         {
-          "title": "Subtitle Translation cards opened the Video upload tab.",
-          "body": "The cards on the dashboard and the Translate Video page now open the Subtitle tab, and it stays selected after a reload."
+          "body": "Subtitle Translation cards open the Subtitle tab"
         },
         {
-          "title": "Transcript cards overlapped after changing page.",
-          "body": "Cards now sit at their real height on every page, and filtered language and voice lists no longer keep the previous list's row sizes."
-        },
-        {
-          "title": "Verifying cards on one transcript page added them to another.",
-          "body": "Each page now shows only its own cards."
+          "body": "Transcript cards no longer overlap after changing page"
         }
       ]
     }

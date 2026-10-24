@@ -14,22 +14,16 @@
       "area": "translate-video",
       "kind": "changed",
       "title": "Translate Video",
+      "note": "Voice-overs get one timeline row per speaker.",
       "items": [
         {
-          "title": "One voice-over row per speaker.",
-          "body": "The Target lane on the timeline splits into a row for each speaker, named after them. Mute a speaker's row to drop only their dubs from the preview.",
-          "children": [
-            {
-              "body": "With two or more speakers, the **Row per speaker** switch in the timeline legend merges them back into one Target row."
-            },
-            {
-              "body": "The timeline is more compact, so more rows fit on screen."
-            }
-          ]
+          "body": "Mute one speaker's row to drop only their dubs"
         },
         {
-          "title": "See the cut while you trim an audio track.",
-          "body": "The clip shows the waveform of the whole file and stays pinned in place as you drag either edge. Audio clips now match the other lanes, in their own purple colour."
+          "body": "**Row per speaker** merges them back into one Target row"
+        },
+        {
+          "body": "See the whole waveform while you trim an audio track"
         }
       ]
     },
@@ -40,16 +34,13 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Audio-only exports downloaded with an .mp4 name.",
-          "body": "The download now takes its extension from the exported file, in the automatic download, Recently Exported and Export History."
+          "body": "Audio-only exports download with the right file extension"
         },
         {
-          "title": "A muted Target row stayed muted after splitting into speakers,",
-          "body": "while each speaker row looked audible with no way to undo it. Speaker rows now follow the Target mute while it is on."
+          "body": "Speaker rows follow a muted Target row"
         },
         {
-          "title": "Audio clips jumped for a moment",
-          "body": "when you started dragging them."
+          "body": "Audio clips no longer jump when you start dragging them"
         }
       ]
     }

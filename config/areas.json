@@ -140,6 +140,12 @@
       "icon": "settings"
     },
     {
+      "id": "improvements",
+      "label": "More updates",
+      "emoji": "sparkles",
+      "icon": "sparkles"
+    },
+    {
       "id": "fixes",
       "label": "Fixes",
       "emoji": "hammer_and_wrench",

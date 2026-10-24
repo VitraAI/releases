@@ -4,7 +4,7 @@
   "id": "2026.08.17",
   "date": "2026-08-17",
   "title": "Set speed and volume for each text-to-speech card",
-  "summary": "Speed and volume per text-to-speech card, cloned voices in any language, one edit for a repeated phrase in Playground translations, and proofreading rates per language pair.",
+  "summary": "Speed and volume per text-to-speech card, cloned voices in any language, and one edit for a repeated phrase.",
   "tags": ["playground", "text-to-speech", "voice-clone", "proofreading-rates"],
   "backfill": true,
   "highlights": ["text-to-speech", "playground-translation"],
@@ -14,22 +14,19 @@
       "area": "playground",
       "kind": "added",
       "title": "Text to speech and voice cloning",
+      "note": "Tune each text-to-speech card on its own, and use cloned voices in any language.",
       "items": [
         {
-          "title": "Set speed and volume per card.",
-          "body": "Each text-to-speech card has its own playback speed and volume, kept with the card. **Apply to all cards** copies a setting across the session."
+          "body": "Set speed and volume per card, or use **Apply to all cards**"
         },
         {
-          "title": "Download at a different speed.",
-          "body": "Pick a speed when you download a session's audio."
+          "body": "Pick a speed when you download a session's audio"
         },
         {
-          "title": "Cloned voices speak any language.",
-          "body": "The **Cloned** tab in the voice picker now shows for every language, and creating a clone no longer asks for the sample's language."
+          "body": "Cloned voices now speak any language"
         },
         {
-          "title": "A page for each cloned voice.",
-          "body": "Open a voice clone from the Playground process list to listen to it and download its audio."
+          "body": "Open a cloned voice to listen to it and download its audio"
         }
       ]
     },
@@ -40,27 +37,24 @@
       "title": "Document and text translation",
       "items": [
         {
-          "title": "Edit a repeated phrase once.",
-          "body": "Changing a phrase in a document translation updates every other occurrence of it that still has the old wording. Occurrences you translated differently are left alone, and the updated copies go back to unverified."
+          "body": "Edit a repeated phrase once and every matching copy updates"
         },
         {
-          "title": "See the back translation in text translation.",
-          "body": "When you ask for one, it shows under the translated text."
+          "body": "See the back translation under the translated text"
         }
       ]
     },
     {
-      "id": "proofreading-rates",
-      "area": "billing",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Proofreading rates",
+      "title": "More updates",
       "items": [
         {
-          "title": "Set rates per language pair.",
-          "body": "Member language rates now have a direction, from a source language to a target language, in your profile and in the organization's member rates."
+          "body": "Proofreading rates are now set per language pair"
         },
         {
-          "body": "The proofreading Activity tab counts words instead of characters."
+          "body": "Proofreading activity counts words instead of characters"
         }
       ]
     }

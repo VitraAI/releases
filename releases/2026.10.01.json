@@ -16,8 +16,10 @@
       "title": "Welcome video",
       "items": [
         {
-          "title": "A short welcome video on your first visit.",
-          "body": "The organization dashboard shows a \"Welcome to Vitra.ai Universe\" video once per person, with **Skip to get started**. Watch it again any time with the **Watch welcome video** command in Cmd+K."
+          "body": "New members see a short welcome video on their first dashboard visit"
+        },
+        {
+          "body": "Watch it again with **Watch welcome video** in Cmd+K"
         }
       ]
     },
@@ -28,16 +30,13 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Video exports with lip-sync on failed before they started.",
-          "body": "They now run, and a lip-sync clip that was already paid for is still never charged twice."
+          "body": "Lip-sync video exports run again, and a clip is never charged twice"
         },
         {
-          "title": "Lip-synced cards were silent in audio-only exports.",
-          "body": "Audio-only exports now play each card's dub, and no longer need a lip-sync key."
+          "body": "Lip-synced cards play their dub in audio-only exports"
         },
         {
-          "title": "Video exports with lip-sync off could fail",
-          "body": "on projects that had lip-synced cards. Those cards now play their own dub."
+          "body": "Exports with lip-sync off work on projects with lip-synced cards"
         }
       ]
     }

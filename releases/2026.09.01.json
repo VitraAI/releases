@@ -21,22 +21,16 @@
       "area": "translation-memory",
       "kind": "added",
       "title": "Term bases in VitraTM",
+      "note": "Manage terminology as concepts, beside your translation memories.",
       "items": [
         {
-          "title": "Manage terminology as concepts.",
-          "body": "A **Term bases** tab sits beside Translation memories, with a 19-field concept editor and language and status filters."
+          "body": "Import and export as XLSX, CSV or TBX"
         },
         {
-          "title": "Import and export",
-          "body": "term bases as XLSX, CSV or TBX."
+          "body": "Attach term bases to memories"
         },
         {
-          "title": "Attach term bases to memories",
-          "body": "from either the term base or the memory."
-        },
-        {
-          "title": "The terminology drawer in editors now covers VitraTM,",
-          "body": "not just Phrase."
+          "body": "The terminology drawer now covers VitraTM"
         }
       ]
     },
@@ -47,8 +41,7 @@
       "title": "Command palette",
       "items": [
         {
-          "title": "Press Cmd+K to search and jump anywhere.",
-          "body": "Search memory translations and term-base concepts, open memories, folders, workflows, files and any page you can reach, and start creating. Results include only what your plan and role allow."
+          "body": "Press Cmd+K to search and jump anywhere"
         }
       ]
     },
@@ -59,55 +52,24 @@
       "title": "Translate Video",
       "items": [
         {
-          "title": "Bring your own script.",
-          "body": "Upload a TXT or subtitle file beside the video and it runs as one process instead of two.",
-          "children": [
-            {
-              "body": "An SRT file gets a single speaker and emotion pass."
-            },
-            {
-              "body": "A TXT script is aligned to the audio afterwards, so no word can land on a moment where it wasn't spoken."
-            },
-            {
-              "body": "A video uploaded without a script works exactly as before."
-            }
-          ]
+          "body": "Upload your own TXT or subtitle script beside the video"
         },
         {
-          "kind": "changed",
-          "title": "Dubbing is now part of Translate Video,",
-          "body": "instead of a separate process type."
+          "body": "Dubbing is now part of Translate Video"
         }
       ]
     },
     {
-      "id": "playground",
-      "area": "playground",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Playground",
+      "title": "More updates",
       "items": [
         {
-          "title": "Folders and Drive files in Playground.",
-          "children": [
-            {
-              "body": "Folders."
-            },
-            {
-              "body": "Pick Drive files for lip-sync, voice cloning and document translation."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "translate-photo",
-      "area": "translate-photo",
-      "kind": "added",
-      "title": "Translate Photo",
-      "items": [
+          "body": "Playground: folders and Drive files"
+        },
         {
-          "title": "Folders and verification status.",
-          "body": "Image jobs can be filed in folders, and process rows show a verification bar."
+          "body": "Translate Photo: folders and a verification bar per job"
         }
       ]
     },
@@ -118,12 +80,10 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Transcription could save half a transcript.",
-          "body": "A cut-off response now fails instead of saving silently, and overlapping segment boundaries are fixed."
+          "body": "Transcription no longer saves half a transcript"
         },
         {
-          "title": "Subtitle-only runs failed at the last stage.",
-          "body": "They now finish."
+          "body": "Subtitle-only runs finish"
         }
       ]
     }

@@ -15,8 +15,7 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "The Adobe and Figma plugins couldn't send a sign-in code.",
-          "body": "Since the sign-in upgrade, asking for an email code from a plugin panel was refused. Plugin panels can send the code again, and every other sign-in step keeps its checks."
+          "body": "The Adobe and Figma plugins can send a sign-in code again"
         }
       ]
     }

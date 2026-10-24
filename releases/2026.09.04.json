@@ -16,11 +16,13 @@
       "title": "Hyperlocal",
       "items": [
         {
-          "title": "Choose more than one state.",
-          "body": "The State filter in **Create broadcast** is now a multi-select, and the Area list covers every state you pick. Areas you already chose stay selected when you change states."
+          "body": "Pick more than one state in **Create broadcast**"
         },
         {
-          "body": "States now match regardless of capitalisation in your imported contacts."
+          "body": "The Area list covers every state you pick"
+        },
+        {
+          "body": "States match regardless of capitalisation in imported contacts"
         }
       ]
     }

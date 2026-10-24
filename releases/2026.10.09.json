@@ -4,7 +4,7 @@
   "id": "2026.10.09",
   "date": "2026-10-09",
   "title": "Translate Video exports match your source video",
-  "summary": "Translate Video exports follow the uploaded video's real frame rate and quality, phone and rotated videos no longer export stretched or juddering, and child organizations inherit Keep original video quality.",
+  "summary": "Translate Video exports match your source video's frame rate and quality, and rotated or phone videos no longer export stretched.",
   "tags": ["translate-video", "export", "video-quality"],
   "backfill": true,
   "highlights": ["translate-video"],
@@ -14,26 +14,19 @@
       "area": "translate-video",
       "kind": "changed",
       "title": "Translate Video",
+      "note": "Exports follow the frame rate, audio and quality of the video you uploaded.",
       "items": [
         {
-          "title": "Exports follow the video you uploaded.",
-          "body": "Frame rate, audio and bitrate come from the upload.",
-          "children": [
-            {
-              "body": "Phone videos with a variable frame rate export at their real, measured rate."
-            },
-            {
-              "body": "Videos at a standard rate of 60 fps or lower keep it, so screen recordings keep every frame of motion."
-            }
-          ]
+          "body": "Phone videos export at their real, measured frame rate"
         },
         {
-          "title": "Keep original video quality now carries through to the export.",
-          "body": "With the setting on, exports are encoded at the source video's bitrate instead of a fixed preset, so they look as close to the original as possible."
+          "body": "Screen recordings up to 60 fps keep every frame"
         },
         {
-          "title": "Child organizations follow their parent's setting.",
-          "body": "Keep original video quality now applies to child organizations that never set it themselves. A child organization's own choice, on or off, still wins."
+          "body": "**Keep original video quality** now carries through to the export"
+        },
+        {
+          "body": "Child organizations inherit their parent's setting"
         }
       ]
     },
@@ -44,8 +37,7 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Some uploads exported stretched or juddering.",
-          "body": "Rotated videos, files that aren't MP4 or MOV, and videos whose timing doesn't start at zero are now re-encoded on upload, so they export at the right shape and pace."
+          "body": "Rotated and non-MP4 uploads no longer export stretched or juddering"
         }
       ]
     }

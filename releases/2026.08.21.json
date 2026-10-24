@@ -4,7 +4,7 @@
   "id": "2026.08.21",
   "date": "2026-08-21",
   "title": "Folders group your work across every product",
-  "summary": "Folders group work across every product, Drive files can be used as inputs, audio-only and 4K exports, Microsoft Translator for memories, bulk review status and a User Actions log.",
+  "summary": "Folders across every product, audio-only and 4K exports, Microsoft Translator for memories, Drive files as inputs and a User Actions log.",
   "tags": [
     "folders",
     "assets",
@@ -21,18 +21,16 @@
       "area": "projects",
       "kind": "added",
       "title": "Folders",
+      "note": "Group work from every product in one folder, with a matching Drive folder.",
       "items": [
         {
-          "title": "Group work from every product in one folder.",
-          "body": "Folders belong to your organization, each with a name, colour and description. Translate Video and Translate Photo processes, Adapts, QC decisions and Cosmos runs can all be filed in the same folder."
+          "body": "File Translate Video, Translate Photo, QC and Cosmos work together"
         },
         {
-          "title": "Pick a folder when you start work.",
-          "body": "Choose one when uploading to Translate Video, creating image adaptives in Translate Photo, classifying in QC or starting a Cosmos run. Process lists filter by folder, and **Move to folder** refiles existing work."
+          "body": "Pick a folder when you start work, or use **Move to folder**"
         },
         {
-          "title": "Every folder has a matching Drive folder.",
-          "body": "Creating, renaming or deleting a folder updates its Drive copy, and deliverables saved to Assets are filed there. A folder that still holds work can't be deleted."
+          "body": "Filter process lists by folder"
         }
       ]
     },
@@ -43,20 +41,16 @@
       "title": "Translate Video export",
       "items": [
         {
-          "title": "Export audio only.",
-          "body": "Pick **Audio** in the Export panel to get just the mixed voice-over or dub as a WAV file. It replaces the old **Download audio (wav)** menu item and isn't offered for subtitles-only processes."
+          "body": "Export audio only as a WAV file"
         },
         {
-          "title": "4K and 2K exports.",
-          "body": "Both resolutions can now be chosen when you export."
+          "body": "Export in 4K or 2K"
         },
         {
-          "title": "Export with issues.",
-          "body": "When a selected language has a detected transcript issue, tick **Export with issues** to export anyway. Lines with missing or invalid dub audio play as silence."
+          "body": "Tick **Export with issues** to export despite transcript issues"
         },
         {
-          "title": "Separate history for video and audio exports.",
-          "body": "A video export and an audio export for the same language no longer overwrite each other. **Select all** and **Download all** cover both."
+          "body": "Video and audio exports keep separate histories"
         }
       ]
     },
@@ -64,86 +58,37 @@
       "id": "translation-memory",
       "area": "translation-memory",
       "kind": "added",
-      "title": "Translation Memory",
+      "title": "Microsoft Translator for memories",
+      "note": "VitraTM memories can translate with Azure instead of Gemini.",
       "items": [
         {
-          "title": "Choose Microsoft Translator per memory.",
-          "body": "VitraTM memories can translate with Azure (Microsoft Translator) instead of Gemini, set when you create or edit the memory. Add the Translator key and region under **Settings → AI Keys**; it is not the Azure Speech key used by Voice & Lipsync.",
-          "children": [
-            {
-              "body": "Azure translates without your style guide, extra prompt or examples from the memory. Exact memory matches still apply on both engines."
-            },
-            {
-              "body": "Language lists show only what the memory's engine supports, and an unsupported target language is skipped instead of failing the whole request."
-            },
-            {
-              "body": "A key without its region, or a region without its key, is rejected when you save, and the **Test** button now checks Translator too."
-            },
-            {
-              "body": "A wrong key or region shows as a configuration error instead of a generic failure."
-            },
-            {
-              "body": "The memory list shows a badge on memories that run Azure."
-            },
-            {
-              "body": "Hyperlocal uses the same organization Translator key."
-            },
-            {
-              "body": "Smart Match still needs a Gemini key, because its lookups use Gemini."
-            }
-          ]
+          "body": "Add the Translator key and region under **Settings → AI Keys**"
         },
         {
-          "title": "Set review status in bulk.",
-          "body": "Status buttons on a memory's terms table and on the Translate Video transcript toolbar set one status across many translations at once, up to 500 per batch. A large run reports how far it got if part of it fails."
+          "body": "Exact memory matches still apply on both engines"
+        },
+        {
+          "body": "Set review status on up to 500 translations at once"
         }
       ]
     },
     {
-      "id": "assets",
-      "area": "assets",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Assets",
+      "title": "More updates",
       "items": [
         {
-          "title": "Use files already in Drive as inputs.",
-          "body": "A Drive file picker is available in Translate Video upload, Translate Photo new translations and image adaptives, QC classify and the Cosmos run form."
+          "body": "Use files already in Drive as inputs across products"
         },
         {
-          "title": "The Asset Manager sidebar lists your folders,",
-          "body": "each in its own colour, in place of the project tree. Reloading the page or opening a shared folder link now shows the full path instead of only \"My Drive\"."
-        }
-      ]
-    },
-    {
-      "id": "platform",
-      "area": "platform",
-      "kind": "added",
-      "title": "Platform",
-      "items": [
-        {
-          "title": "See who did what in your organization.",
-          "body": "**Settings → User Actions** lists actions across every product, with filters, a detail view and links to the affected page. Sign-in and account changes are included, naming the person affected and the previous value."
-        }
-      ]
-    },
-    {
-      "id": "proofreading-report",
-      "area": "billing",
-      "kind": "changed",
-      "title": "Proofreading usage report",
-      "items": [
-        {
-          "title": "Scope a report to one folder.",
-          "body": "Pick a folder beside the dates and members, or choose no folder. A folder-scoped report bills only work in that folder; leaving it empty bills everything in the date range, as before."
+          "body": "See who did what in **Settings → User Actions**"
         },
         {
-          "title": "Filter the proofreading report by folder.",
-          "body": "The entries table, member summary and export filter by folder, and the filter is kept in the link so a filtered report can be shared."
+          "body": "Scope or filter a proofreading report by folder"
         },
         {
-          "title": "Full language names on invoice PDFs.",
-          "body": "Each line shows one direction, such as English (United States) → Hindi (India), instead of a bare \"English → English\". Names with special characters no longer lose letters."
+          "body": "Invoice PDFs show full language names"
         }
       ]
     },
@@ -154,35 +99,19 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Moving between Asset Manager folders could crash the page",
-          "body": "with \"Too many re-renders\". Navigating between folders now works."
+          "body": "Moving between Asset Manager folders no longer crashes the page"
         },
         {
-          "title": "Quick Create could wipe your first message.",
-          "body": "Typing the first message in the image creator could clear it with \"That chat no longer exists\". The chat link is now set only after the message is accepted."
+          "body": "Quick Create no longer wipes your first message"
         },
         {
-          "title": "Inserting alias text added double spaces.",
-          "body": "Aliases in text-to-speech input now insert with single spacing."
+          "body": "Profile language rates refresh right after an edit"
         },
         {
-          "title": "Profile language rates didn't refresh after an edit.",
-          "body": "They now update right away, and sit in an accordion."
+          "body": "Notifications appear on top of other content"
         },
         {
-          "title": "Notifications could show behind other content.",
-          "body": "They now appear on top, with clearer message text."
-        },
-        {
-          "title": "Some permission checks blocked work they shouldn't have.",
-          "body": "Subtitle export, sync, the Adapts editor page and tooltips now respect permissions correctly. Translate Video export and permission errors explain more clearly what's missing."
-        },
-        {
-          "title": "Review status in the Translate Photo demo editor snapped back.",
-          "body": "Changing a segment's status now sticks."
-        },
-        {
-          "body": "The export popover no longer shows doubled borders and shadows."
+          "body": "Permission checks no longer block subtitle export and sync"
         }
       ]
     }
