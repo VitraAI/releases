@@ -14,14 +14,16 @@
       "area": "translate-photo",
       "kind": "added",
       "title": "Logo replacement in the Image Translator",
+      "note": "Swap a detected logo for one of your own.",
       "items": [
         {
-          "title": "Replace a detected logo.",
-          "body": "Pick a replacement from your organization's logo library, upload one, or browse Drive. A preview shows how it fits the original's spot, and warns if it is too low-resolution or the wrong shape, before you spend credits."
+          "body": "Pick one from your logo library, upload it or browse Drive"
         },
         {
-          "title": "Move and resize it by hand.",
-          "body": "The new logo starts where the old one was. Drag or scale it to adjust; it never stretches, and **Reset** puts it back."
+          "body": "Preview the fit, with a warning for low-resolution or odd-shaped logos"
+        },
+        {
+          "body": "Drag or resize it by hand, and **Reset** to start over"
         }
       ]
     }

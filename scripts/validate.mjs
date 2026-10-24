@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Validates release files against schema/release.schema.json plus the rules a
 // schema can't express (file name = id, date matches id, known areas, unique
-// section ids, highlights that exist, parseable inline Markdown).
+// section ids, highlights that exist, parseable inline Markdown) and the
+// brevity limits of the house style (LIMITS).
 //
 //   node scripts/validate.mjs                 every file in releases/
 //   node scripts/validate.mjs 2026.10.13 ...  just these ids
@@ -70,6 +71,63 @@ export function validateRelease(release, fileName) {
     }
   }
 
+  return [...errors, ...styleErrors(release)];
+}
+
+/**
+ * The house style: short, headline-only notes. Up to
+ * three feature sections with a one-sentence pitch, then "More updates" and
+ * "Fixes", every item one line.
+ */
+export const LIMITS = {
+  summaryChars: 160,
+  featureSections: 3,
+  itemsPerSection: 5,
+  itemWords: 15,
+  noteWords: 25,
+  releaseWords: 220,
+};
+
+const words = (s) => (s ? s.trim().split(/\s+/).length : 0);
+
+function styleErrors(release) {
+  const errors = [];
+  if (release.summary.length > LIMITS.summaryChars) {
+    errors.push(
+      `/summary: ${release.summary.length} characters, keep it to ${LIMITS.summaryChars}`,
+    );
+  }
+  const features = release.sections.filter((s) => !['improvements', 'fixes'].includes(s.area));
+  if (features.length > LIMITS.featureSections) {
+    errors.push(
+      `${features.length} feature sections, keep ${LIMITS.featureSections} and move the rest to "More updates"`,
+    );
+  }
+  let total = 0;
+  release.sections.forEach((s, i) => {
+    const at = `/sections/${i} (${s.id})`;
+    total += words(s.note);
+    if (words(s.note) > LIMITS.noteWords) {
+      errors.push(`${at}/note: ${words(s.note)} words, keep it to ${LIMITS.noteWords}`);
+    }
+    if (s.items.length > LIMITS.itemsPerSection) {
+      errors.push(
+        `${at}: ${s.items.length} items, keep the ${LIMITS.itemsPerSection} that matter most`,
+      );
+    }
+    s.items.forEach((item, j) => {
+      const n = words(item.title) + words(item.body);
+      total += n;
+      if (n > LIMITS.itemWords) {
+        errors.push(`${at}/items/${j}: ${n} words, keep it to one line of ${LIMITS.itemWords}`);
+      }
+      if (item.children)
+        errors.push(`${at}/items/${j}: no sub-lists, make each point its own item`);
+    });
+  });
+  if (total > LIMITS.releaseWords) {
+    errors.push(`${total} words in sections, keep the release to ${LIMITS.releaseWords}`);
+  }
   return errors;
 }
 

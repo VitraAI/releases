@@ -57,41 +57,49 @@ Start from the shape of the newest file in `releases/`, and follow
 
 - `id`, `date` (YYYY-MM-DD, IST), `schema: 1`, `"$schema": "../schema/release.schema.json"`.
 - `title`: the single biggest customer-facing change, ≤ 80 characters, e.g. "Projects replace Folders".
-- `summary`: one sentence listing the main changes. It's the Slack notification text
-  and the feed summary.
+- `summary`: one short sentence naming the main changes, ≤ 160 characters. It's the
+  Slack notification text and the feed summary.
 - `tags`: kebab-case area/feature tags.
-- `highlights`: up to 3 section ids shown first.
-- `sections[]`: one per product area: `id`, `area` (must be an id in
-  `config/areas.json`), `kind` (Keep a Changelog: `added` | `changed` | `deprecated` |
-  `removed` | `fixed` | `security`), `title`, optional `note`, `items[]`.
-- `items[]`: `title` (bold lead-in) + `body`, optional `children[]` (sub-points, one
-  level), optional `link` (`{ label, path: "/projects" }`, in-app and org-relative),
-  optional per-item `kind`.
+- `highlights`: the feature section ids, in order.
+- `sections[]`: `id`, `area` (must be an id in `config/areas.json`), `kind` (Keep a
+  Changelog: `added` | `changed` | `deprecated` | `removed` | `fixed` | `security`),
+  `title`, optional `note`, `items[]`.
+- `items[]`: one line each, as `body` (plain) or `title` (bold, for a UI label or a
+  feature name that leads the line), optional `link` (`{ label, path: "/projects" }`,
+  in-app and org-relative). No `children`.
 - **This repo is PUBLIC.** Everything you write in the file is readable by anyone,
   so the file holds customer-facing content only. There is no internal flag: the
   schema rejects `audience` and `repos`. Leave internal and hidden changes out.
 
-### Writing rules (the house style of every release note since 09-16)
+### Writing rules: short, headline-only notes
+
+People skim a release in ten seconds. A release is **80–200 words**, and `npm run validate` enforces the limits
+(`LIMITS` in `scripts/validate.mjs`).
 
 **Audience.** Customers read What's New. The team reads Slack. Write every public line
 for a customer.
 
-1. **Benefit first.** Say what someone can now do or what changed for them, not how it
-   was built. "Boards update as runs move", not "added socket.io room for runs".
-2. **No internals in public text**: no MR numbers, table, column or class names,
-   migrations, env vars, workers, queues, library versions or ticket ids. If an
-   internal change matters to the team, it belongs in the MR description, not here.
-3. **One section per product area**, in this order: highlights, then the rest as they
-   matter to customers. **Fixes always come last** in a single `fixes` section
-   (`area: "fixes"`, `kind: "fixed"`).
-4. **Each item is a bold lead-in, then 1–3 short sentences.** The lead-in is a full
-   sentence ending in a period ("Run it on a folder of files."), or a phrase that
-   continues into the body. Keep it under ~10 words.
-5. **Use `children` for lists inside an item** (tabs, options, sub-features), so Slack
-   and the page render a properly indented sub-list. Never cram a list into a sentence
-   of 6+ commas, and never nest deeper than one level.
-6. **Fixes say what was wrong, then what happens now.** "Burned-in subtitles used the
-   wrong language." + "Each export now burns in the language you exported."
+1. **Pick, don't list.** A release has three kinds of section, in this order:
+   - **Up to 3 feature sections**, the changes a customer would notice first. Each
+     `title` names the feature ("DeepL for translation memories"), its `note` is a
+     one-sentence pitch (≤ 25 words) and it has 1–5 headline items. Put a `link` on an
+     item when there's a page to open.
+   - **More updates** (`id: "more"`, `area: "improvements"`, `kind: "changed"`): up to
+     5 headlines for the next most useful changes, each naming its galaxy where that
+     helps ("Content Research: drag ideas between stages").
+   - **Fixes** (`id: "fixes"`, `area: "fixes"`, `kind: "fixed"`): up to 5 headlines,
+     always last.
+   Everything else is left out. The MR descriptions keep the full detail.
+2. **Each item is one line, ≤ 15 words.** A headline, not a paragraph: what someone
+   can now do. "Use your own DeepL Free or Pro key", not how it works or edge cases.
+   No sub-lists. If a point needs a second sentence, it's two items or it's cut.
+3. **Benefit first.** "Boards update as runs move", not "added socket.io room for runs".
+4. **Fixes say what works now**, in one line: "Lists no longer ignore clicks while
+   refreshing", "Subtitles burn in the language you exported".
+5. **A small release is a small note.** A release with one fix is a single Fixes item.
+   Don't pad it into a feature section.
+6. **No internals in public text**: no MR numbers, table, column or class names,
+   migrations, env vars, workers, queues, library versions or ticket ids.
 7. **Hidden features** (feature-flagged, off for customers, staff-only, "coming soon"
    — today that includes Deals, Performance Marketing and the MCP connector): leave them
    **out completely**. Don't name them anywhere in the file, including the title and
@@ -100,9 +108,8 @@ for a customer.
    `` `code` `` for commands the user types, `_italic_` sparingly, and
    `[label](https://…)` links. No HTML, no `<` `>`, no line breaks, no emoji in text
    (areas carry the emoji).
-9. **Plain, specific English.** Use exact numbers ("1 hour to 30 days"), spelling as in
-   the earlier notes ("colour", "organization"), and no hype words ("revolutionary",
-   "seamless", "exciting").
+9. **Plain, specific English.** Spelling as in the earlier notes ("colour",
+   "organization"), and no hype words ("revolutionary", "seamless", "exciting").
 10. **Nothing invented.** Every line must trace to an MR. If you're unsure whether
     something is customer-visible, ask the deployer instead of guessing.
 

@@ -4,7 +4,7 @@
   "id": "2026.10.15",
   "date": "2026-10-15",
   "title": "Magic Layers makes any image editable",
-  "summary": "Magic Layers turns an image into editable text and objects, Blog gets multiple reviewers and version history for every translation, Image Creator reads attached documents, and Playground shows XLIFF tags and a code view.",
+  "summary": "Magic Layers makes any image editable, Blog gets several reviewers and translation history, and Image Creator reads documents.",
   "tags": ["magic-layers", "image-creator", "brand-kit", "blog", "playground", "xliff"],
   "backfill": true,
   "highlights": ["magic-layers", "blog"],
@@ -14,44 +14,20 @@
       "area": "translate-photo",
       "kind": "added",
       "title": "Magic Layers",
+      "note": "Turn any image into editable text and objects, then translate and export it.",
       "items": [
         {
-          "title": "Turn any image into editable layers.",
-          "body": "Upload a design and Magic Layers reads its text and cuts out its objects. The background is rebuilt only under the objects, so a design you don't touch still looks exactly like the original.",
+          "body": "Move, hide or reorder objects",
           "link": {
             "label": "Open Magic Layers",
             "path": "/galaxy/translate-photo/magic-layers"
           }
         },
         {
-          "title": "Edit, translate and export.",
-          "body": "Each text keeps its original letters until you change it, then becomes live text in a matched font.",
-          "children": [
-            {
-              "body": "Move, hide or reorder objects."
-            },
-            {
-              "body": "Change a text's font straight from the font field."
-            },
-            {
-              "body": "Translate the texts, then export the design."
-            },
-            {
-              "body": "**Use brand fonts** sets the texts in your brand kit's fonts. A wide brand face keeps its own spacing and is sized to fit."
-            }
-          ]
+          "body": "**Use brand fonts** sets text in your brand kit's fonts"
         },
         {
-          "title": "Start from Image Creator.",
-          "body": "**Edit in Magic Layers** on a chat image opens it as a Magic Layers design, after you confirm the cost."
-        },
-        {
-          "title": "Make text on products editable, if you want.",
-          "body": "Text printed on a product normally stays part of it. Tick **Also make text on products editable** for a packshot whose pack is the design."
-        },
-        {
-          "title": "Charged when it starts.",
-          "body": "A split that fails is refunded, and a retry is never charged alongside the failed attempt."
+          "body": "Open Image Creator images with **Edit in Magic Layers**"
         }
       ]
     },
@@ -62,121 +38,33 @@
       "title": "Blog",
       "items": [
         {
-          "title": "Several reviewers.",
-          "body": "Pick more than one default reviewer for a website, or several people for a review request. Everyone is notified, any of them can approve, and the post list and editor show who is reviewing."
+          "body": "Several reviewers per post"
         },
         {
-          "title": "Version history for every translation.",
-          "body": "Each translated language keeps its own saved versions, and you can restore one. Restoring asks first and keeps any unsaved edits until you confirm."
+          "body": "Version history for every translation"
         },
         {
-          "title": "Sync new translated text to your memory.",
-          "body": "Text you add to a translation can now go to the translation memory once you give its source wording. The editor says which new text still needs one."
+          "body": "New posts link to your own pages"
         },
         {
-          "title": "Links to your own pages.",
-          "body": "A newly generated post links up to three of your published pages from the website's sitemap. A free action in the editor adds matching links to a saved post."
-        },
-        {
-          "title": "Pick the website when you run a Blog workflow.",
-          "body": "The run form fills in the saved website and lets you choose a different one for each run."
-        },
-        {
-          "title": "Authors and publishers per language.",
-          "body": "Set the public author and publisher for each language. They go into the post's structured data and are kept when a version is restored."
-        },
-        {
-          "title": "The SEO score puts content first.",
-          "body": "Content length and readability now carry most of the on-page score, while links, image alt text and FAQs carry less. Complete core content scores 96 before any extras."
-        },
-        {
-          "title": "Native-script suggestions while you type",
-          "body": "in the Blog editor, for every language except English."
-        },
-        {
-          "title": "Exports and assets.",
-          "children": [
-            {
-              "body": "Word exports include the hero and body images."
-            },
-            {
-              "body": "**Save to Assets** asks which folder to save a post or hero image in."
-            }
-          ]
-        },
-        {
-          "title": "A clearer content calendar.",
-          "children": [
-            {
-              "body": "The next publishing slot shows in the website's time zone, apart from the daily calendar check (renamed from **Next run**)."
-            },
-            {
-              "body": "Automatic generation needs a weekly budget above zero."
-            },
-            {
-              "body": "Planned entries that wait for budget say why, including when a post costs more than the whole weekly budget."
-            },
-            {
-              "body": "The preview spreads posts across the publishing days you pick."
-            }
-          ]
-        },
-        {
-          "title": "Unsaved changes are protected.",
-          "body": "Leaving the editor with unsaved changes asks first, whether you use the sidebar, Back and Forward, Cmd+K or a notification link."
-        },
-        {
-          "title": "Website defaults use shared context.",
-          "body": "A website's default memories and prompts must be shared ones, so every member can use them. Private ones stay available for individual posts."
+          "body": "Set authors and publishers per language"
         }
       ]
     },
     {
-      "id": "image-creator",
-      "area": "translate-photo",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Image Creator and Brand Kit",
+      "title": "More updates",
       "items": [
         {
-          "title": "Attach documents to a chat.",
-          "body": "**Add image or file** takes PDF, Word, PowerPoint, Excel, CSV and text files. The assistant reads them for the brief and never uses them as image references."
+          "body": "Image Creator: attach documents to a chat"
         },
         {
-          "title": "Edit only the images you select.",
-          "body": "Actions on selected images redo and charge just those images, and say so."
+          "body": "Brand Kit: upload your own fonts"
         },
         {
-          "title": "Exact sizes.",
-          "body": "A pixel size you type in the chat is kept, and the brief card shows it along with each product's real-world size. Products keep that size in the image."
-        },
-        {
-          "title": "Edits replace their tile.",
-          "body": "A version made in the edit modal, or a crop, replaces its source in the chat."
-        },
-        {
-          "title": "Upload your brand's own fonts.",
-          "body": "Add font files (TTF, OTF, WOFF or WOFF2, up to 5 MB) for the brand kit's heading and body fonts. They preview in their own face."
-        }
-      ]
-    },
-    {
-      "id": "playground",
-      "area": "playground",
-      "kind": "changed",
-      "title": "Playground",
-      "items": [
-        {
-          "title": "XLIFF tags you can read.",
-          "body": "Inline tags in XLIFF segments show as small chips instead of raw markup. While editing they become numbered tokens you can insert from the source, you're warned about missing ones, and the original markup is written back on save."
-        },
-        {
-          "title": "A new Code tab.",
-          "body": "See the source and translated files side by side, line by line, with changed lines tinted, **Hide unchanged lines** and Cmd/Ctrl+F search.",
-          "children": [
-            {
-              "body": "XLIFF files also get a checks strip (well-formed, version, targets written, target language, tag problems) and a structure tree that jumps to a unit."
-            }
-          ]
+          "body": "Playground: readable XLIFF tags and a side-by-side Code tab"
         }
       ]
     },
@@ -187,60 +75,19 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Image Creator renders with a brand kit failed on the default model.",
-          "body": "They now go through."
+          "body": "Image Creator renders with a brand kit go through"
         },
         {
-          "title": "Blog: **Choose another** topic did nothing.",
-          "body": "It now shows other topics and keeps the word count you asked for."
+          "body": "Blog: **Choose another** topic works"
         },
         {
-          "title": "Blog: Localised SEO could say \"Failed: No output generated\"",
-          "body": "even though the SEO was written. It now finishes cleanly."
+          "body": "Language lists no longer show the previous memory"
         },
         {
-          "title": "Blog: recording a translation could reuse the source language's voice.",
-          "body": "The voice is now picked for the language you're viewing, and a regional voice works for a language set without a region."
+          "body": "Translate Video aliases are saved"
         },
         {
-          "title": "Blog: website addresses without a valid domain were accepted.",
-          "body": "Adding or editing a website now checks the address."
-        },
-        {
-          "title": "Blog: smaller fixes.",
-          "children": [
-            {
-              "body": "The hero image can be generated from any language view."
-            },
-            {
-              "body": "Toggling Localise SEO no longer shifts the Settings layout."
-            },
-            {
-              "body": "Reviewer names no longer get cut off under the editor toolbar."
-            },
-            {
-              "body": "The default reviewers field lists names, not names run into email addresses."
-            },
-            {
-              "body": "**Add a language** shows each language's flag."
-            }
-          ]
-        },
-        {
-          "title": "Language lists could show the previous memory's languages.",
-          "body": "The memory picker now comes first, and languages wait for its answer, with loading and error states."
-        },
-        {
-          "title": "Translate Video: adding or removing an alias wasn't saved,",
-          "body": "and an alias next to punctuation left a stray space. Both are fixed."
-        },
-        {
-          "title": "Cosmos: a step's toolbar buttons could close their own panel.",
-          "body": "They now work without closing it."
-        },
-        {
-          "title": "Assets: a folder that failed to load looked empty.",
-          "body": "It now says it couldn't load and offers to retry."
+          "body": "Assets says when a folder couldn't load"
         }
       ]
     }

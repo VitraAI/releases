@@ -7,6 +7,7 @@
   "summary": "The credit rates page now shows the prices agreed for your organization instead of the standard ones.",
   "tags": ["credits", "billing"],
   "backfill": true,
+  "highlights": ["billing"],
   "sections": [
     {
       "id": "billing",
@@ -15,8 +16,7 @@
       "title": "Credits and billing",
       "items": [
         {
-          "title": "Your own prices on the rates page.",
-          "body": "If your organization has agreed prices for some operations, the rates page now shows those prices instead of the standard ones. Tiered rates are unchanged."
+          "body": "The rates page shows your organization's agreed prices, not the standard ones"
         }
       ]
     }

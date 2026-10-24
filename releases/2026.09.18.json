@@ -4,7 +4,7 @@
   "id": "2026.09.18",
   "date": "2026-09-18",
   "title": "Glossaries and QE quality reports",
-  "summary": "Glossaries beside term bases and style guides, MQM quality reports across Translate Video, Translate Photo and Playground, Brand Kit as its own page, multi-file Playground translation and versioned prompts.",
+  "summary": "Glossaries, MQM quality reports where you translate, Brand Kit as its own page, multi-file Playground translation and versioned prompts.",
   "tags": ["translation-memory", "glossaries", "quality", "brand-kit", "playground", "prompts"],
   "backfill": true,
   "highlights": ["translation-memory", "quality", "brand-kit"],
@@ -13,38 +13,17 @@
       "id": "translation-memory",
       "area": "translation-memory",
       "kind": "added",
-      "title": "Translation Memory",
+      "title": "Glossaries",
+      "note": "Keep names verbatim and wordings fixed, beside term bases and style guides.",
       "items": [
         {
-          "title": "Glossaries.",
-          "body": "A new **Glossaries** tab beside term bases and style guides holds names to keep verbatim and fixed wordings. Each entry has one wording per language and can be marked do-not-translate or case-sensitive.",
-          "children": [
-            {
-              "body": "Import and export CSV and Excel files, with a template to start from."
-            },
-            {
-              "body": "Link a glossary to memories from either side."
-            },
-            {
-              "body": "Where a glossary and a term base cover the same wording, the glossary wins."
-            }
-          ]
+          "body": "Mark entries do-not-translate or case-sensitive"
         },
         {
-          "title": "Start a style guide without files.",
-          "body": "Files are now optional, so a team that already knows its rules can create an empty guide and write them by hand."
+          "body": "Import and export CSV and Excel"
         },
         {
-          "title": "A clearer term base table.",
-          "body": "A collapsed concept shows its languages, its first term and a count per status, so you can tell a finished entry from unreviewed synonyms without opening it. Terms show the date and time they changed, and columns no longer shift when a row expands."
-        },
-        {
-          "title": "Import samples and templates.",
-          "body": "The import dialogs offer TBX and TMX samples beside the spreadsheet templates, and a term base's import dialog has .xlsx and .csv templates to download."
-        },
-        {
-          "title": "A **Link to TM** button",
-          "body": "in the toolbar of every term base, glossary and style guide page replaces the panel at the foot of the page."
+          "body": "Start a style guide without files"
         }
       ]
     },
@@ -53,28 +32,16 @@
       "area": "quality",
       "kind": "added",
       "title": "QE quality reports",
+      "note": "Score a translation with MQM in Translate Video, Translate Photo and Playground.",
       "items": [
         {
-          "title": "MQM quality reports.",
-          "body": "Run a QE report on a translation to get an overall score, errors by severity and category, adherence to your terminology, glossary and style guide, and an executive summary. QE reports need a VitraTM translation memory.",
-          "children": [
-            {
-              "body": "A segment explorer highlights each error and shows the corrected text."
-            },
-            {
-              "body": "Evaluate every segment, or only the ones not yet verified."
-            },
-            {
-              "body": "Apply the suggested fixes straight from the report."
-            },
-            {
-              "body": "Download the report as a PDF."
-            }
-          ]
+          "body": "Errors by severity, with corrected text per segment"
         },
         {
-          "title": "Available where you translate.",
-          "body": "The Translate Video editor can run a QE report and shows a score on each card. Translate Photo image, DITA and document reviews have it too, and in Playground the QE report replaces the old AI QC report."
+          "body": "Apply the suggested fixes from the report"
+        },
+        {
+          "body": "Download the report as a PDF"
         }
       ]
     },
@@ -83,83 +50,29 @@
       "area": "platform",
       "kind": "changed",
       "title": "Brand Kit",
-      "emoji": "art",
       "items": [
         {
-          "title": "Brand Kit has its own page.",
-          "body": "Your brand's colours, fonts, tone and logo now live under **Brand Kit** in the nav rail instead of inside Image Creator, so you no longer need Image Translation to reach them. Saved kits can be edited."
+          "body": "Brand Kit has its own page in the nav rail"
         }
       ]
     },
     {
-      "id": "playground",
-      "area": "playground",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Playground",
+      "title": "More updates",
       "items": [
         {
-          "title": "Translate several files at once.",
-          "body": "Add more than one file to a new translation. They queue up and run side by side, and each shows its own status."
+          "body": "Playground: translate several files at once, with live progress"
         },
         {
-          "title": "Live progress.",
-          "body": "Playground jobs update on screen as they run, without a refresh."
+          "body": "Prompts and memories keep every version"
         },
         {
-          "title": "**Go to Process**",
-          "body": "on each Playground tool opens the process list already filtered to that tool's runs."
+          "body": "Translate Photo: send Quick Create images straight to translation"
         },
         {
-          "kind": "removed",
-          "body": "The react-1 lip-sync model is no longer offered. It is limited to 15 seconds of audio."
-        }
-      ]
-    },
-    {
-      "id": "ai-assistant",
-      "area": "ai-assistant",
-      "kind": "changed",
-      "title": "Prompts and memory",
-      "items": [
-        {
-          "title": "Prompts and memories keep their history.",
-          "body": "They open in a full-page editor. Every save is a new version, and **Set as active version** brings back an earlier one without editing. Each shows who created it."
-        }
-      ]
-    },
-    {
-      "id": "translate-photo",
-      "area": "translate-photo",
-      "kind": "added",
-      "title": "Translate Photo",
-      "items": [
-        {
-          "title": "Translate your creations.",
-          "body": "Select images in Quick Create or a collection and send them straight to Image Translation."
-        }
-      ]
-    },
-    {
-      "id": "translate-video",
-      "area": "translate-video",
-      "kind": "changed",
-      "title": "Translate Video",
-      "items": [
-        {
-          "title": "Vocals are always separated with AudioShake.",
-          "body": "The Demucs option is gone from **Provider Preferences**."
-        }
-      ]
-    },
-    {
-      "id": "navigation",
-      "area": "platform",
-      "kind": "changed",
-      "title": "Navigation",
-      "items": [
-        {
-          "title": "New names in the nav rail.",
-          "body": "Dashboard is now **Home**, and Translation Memory is now **TMS**. Pages and links work as before."
+          "body": "Dashboard is now **Home**, and Translation Memory is now **TMS**"
         }
       ]
     },
@@ -170,24 +83,16 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Running out of credits in the video editor showed a generic error.",
-          "body": "Every editor action now explains the shortfall, and the export panel reports it for the whole batch."
+          "body": "Running out of credits in the video editor explains the shortfall"
         },
         {
-          "title": "Progress at the voice review step was wrong.",
-          "body": "Transcription is now marked done when the review opens, and steps that run after the review keep their real status."
+          "body": "The memory picker lists your memories"
         },
         {
-          "title": "The memory picker showed no memories.",
-          "body": "The dialog for linking to a translation memory now lists your memories."
+          "body": "Re-importing a term base no longer duplicates concepts"
         },
         {
-          "title": "Re-importing a term base created duplicate concepts.",
-          "body": "Existing concepts are now matched instead of added again."
-        },
-        {
-          "title": "Re-importing TM segments could wipe their metadata.",
-          "body": "A segment keeps its stored metadata when the file leaves it out."
+          "body": "Re-imported TM segments keep their metadata"
         }
       ]
     }

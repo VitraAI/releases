@@ -4,7 +4,7 @@
   "id": "2026.10.07",
   "date": "2026-10-07",
   "title": "Plan limits and a usage page",
-  "summary": "Plan limits and a usage page, smoother plan upgrades, organization analytics, export to any shape with Fit/Fill and crop, multi-language zip downloads, a live Cosmos assistant, and a redesigned Translation Memory.",
+  "summary": "Plan limits and a usage page, organization analytics, export to any shape, multi-language zip downloads and a live Cosmos assistant.",
   "tags": [
     "plans",
     "usage",
@@ -23,52 +23,13 @@
       "area": "billing",
       "kind": "added",
       "title": "Plan limits and usage",
+      "note": "Every plan has seat and storage limits, shown on **Settings → Usage**.",
       "items": [
         {
-          "title": "Every plan now has seat and storage limits.",
-          "body": "See where you stand on the new **Settings → Usage** page, with seat and storage meters."
+          "body": "Uploads that won't fit are stopped before they start"
         },
         {
-          "title": "Uploads that won't fit are stopped before they start.",
-          "body": "The message tells you how much space the file needs and how much is left. A batch is checked as a whole, so you're never left with half of it uploaded."
-        },
-        {
-          "title": "Deleted files count until the trash is emptied.",
-          "body": "The storage figure now shows how much of it is in the trash."
-        },
-        {
-          "title": "\"Save to Asset\" is paused while storage is full.",
-          "body": "You'll see an Upgrade prompt. Outputs of paid jobs are always kept."
-        },
-        {
-          "title": "One-seat plans",
-          "body": "(Free and Starter) no longer show a \"seats full\" warning. They say \"Your plan includes 1 seat. Upgrade to invite your team.\""
-        },
-        {
-          "body": "Vitra team members in your organization are tagged **\"No seat\"**. They don't use one of your seats."
-        }
-      ]
-    },
-    {
-      "id": "plans-billing",
-      "area": "billing",
-      "kind": "changed",
-      "title": "Plans and billing",
-      "items": [
-        {
-          "title": "An upgrade takes effect once it's paid.",
-          "body": "If Stripe needs a payment, it opens in a new tab and Credits waits for it. If you back out, nothing changes."
-        },
-        {
-          "title": "A plan change shows immediately,",
-          "body": "with its new limits and no page refresh needed."
-        },
-        {
-          "title": "Top up, Compare plans and Upgrade plan",
-          "body": "now take you straight to the right section of Credits."
-        },
-        {
-          "body": "Plan dates are spelled out (\"7 Nov 2026\"), so they read the same in every locale."
+          "body": "Upgrades take effect once paid, with no refresh"
         }
       ]
     },
@@ -77,39 +38,16 @@
       "area": "platform",
       "kind": "added",
       "title": "Organization analytics",
+      "note": "Parent organizations get an Analytics page across all their organizations.",
       "items": [
         {
-          "title": "A new Analytics page for parent organizations",
-          "body": "(owners and admins). See all your organizations together, or one at a time."
+          "body": "Build your own dashboard from widgets and templates"
         },
         {
-          "title": "Build your own dashboard:",
-          "body": "drag and resize widgets, change chart types, and start from ready-made templates. Admins can save a shared default layout."
+          "body": "Set budgets and track them"
         },
         {
-          "title": "Widgets.",
-          "children": [
-            {
-              "body": "Credits and spend, jobs, people and budgets"
-            },
-            {
-              "body": "Year-over-year, health and unit cost"
-            },
-            {
-              "body": "A credit-flow chart and a calendar heatmap"
-            },
-            {
-              "body": "Linguist productivity, language pairs, post-edit effort and review funnel"
-            }
-          ]
-        },
-        {
-          "title": "Set budgets",
-          "body": "and track them with gauges."
-        },
-        {
-          "title": "Export to Excel or CSV.",
-          "body": "Estimated linguist pay is shown only to members with the analytics pay permission."
+          "body": "Export to Excel or CSV"
         }
       ]
     },
@@ -120,142 +58,36 @@
       "title": "Translate Video",
       "items": [
         {
-          "title": "Export to any shape:",
-          "body": "Original, 1:1, 16:9, 9:16, 4:5 or 21:9.",
-          "children": [
-            {
-              "body": "**Fit** shows the whole video. **Fill** crops it to fill the frame, and you choose which part stays in view."
-            },
-            {
-              "body": "The player previews exactly what the export will look like."
-            }
-          ]
+          "body": "Export to any shape, with **Fit** or **Fill** and crop"
         },
         {
-          "title": "Multi-language exports download as one zip.",
-          "body": "A single toast shows the progress and gives you a Download button when it's ready. Everyone with the process open gets it too. The zip is available for 1 hour."
+          "body": "Multi-language exports download as one zip"
         },
         {
-          "title": "History \"Download all\"",
-          "body": "and multi-format subtitle downloads also arrive as one zip."
-        },
-        {
-          "title": "Process Hub shows where exports stand,",
-          "body": "such as \"3 of 4 exports ready\", and flags any row that hasn't moved for 3 minutes as \"Taking longer than usual\". History has a **Recent zips** list with each zip's size and time left."
-        },
-        {
-          "title": "Faster exports.",
-          "body": "More parts of an export now run in parallel."
-        },
-        {
-          "title": "Faster editing.",
-          "body": "Deleting, splitting and merging cards apply at once, without waiting for the list to reload."
+          "body": "Faster exports and editing"
         }
       ]
     },
     {
-      "id": "cosmos",
-      "area": "cosmos",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Cosmos",
+      "title": "More updates",
       "items": [
         {
-          "title": "The workflow assistant is smarter and replies live.",
-          "body": "You see its steps as they're planned and its answer as it's written, and you can **Stop** it at any time. It handles branches (Switch, Parallel and Merge)."
+          "body": "Cosmos: the workflow assistant replies live and handles branches"
         },
         {
-          "kind": "removed",
-          "title": "The Dub Video step is retired.",
-          "body": "Existing workflows and open runs move to **Instant Clone** automatically."
-        }
-      ]
-    },
-    {
-      "id": "translation-memory",
-      "area": "translation-memory",
-      "kind": "changed",
-      "title": "Translation Memory",
-      "items": [
-        {
-          "title": "Redesigned memory, term base, glossary and style-guide pages,",
-          "body": "with status pills and tidier lists."
+          "body": "Translation Memory: redesigned pages and a provider filter"
         },
         {
-          "title": "Filter memories by provider,",
-          "body": "with counts for each."
+          "body": "Image Creator: custom output sizes"
         },
         {
-          "title": "Context is now optional",
-          "body": "when you create a memory, and you can clear it later."
+          "body": "Assets: filter by person"
         },
         {
-          "title": "Azure memories",
-          "body": "can't use term bases, glossaries or style guides. Those options are greyed out, and hovering shows why. Any linked before the switch to Azure stay linked, and you can still unlink them."
-        }
-      ]
-    },
-    {
-      "id": "photo-playground-assets",
-      "area": "translate-photo",
-      "kind": "changed",
-      "title": "Translate Photo, Playground and Assets",
-      "items": [
-        {
-          "title": "Live progress",
-          "body": "in Translate Photo and Playground. Status updates as the job runs, with no refresh needed."
-        },
-        {
-          "title": "Image Creator: custom output sizes.",
-          "body": "Make an image at the exact width and height you need."
-        },
-        {
-          "title": "Text-to-speech: import from Excel (.xlsx)."
-        },
-        {
-          "title": "Assets: filter by person.",
-          "body": "Search also matches job names, and files in trashed folders are hidden."
-        }
-      ]
-    },
-    {
-      "id": "hyperlocal",
-      "area": "hyperlocal",
-      "kind": "changed",
-      "title": "Hyperlocal",
-      "items": [
-        {
-          "title": "WhatsApp and Facebook template mapping,",
-          "body": "plus a language setting for Facebook templates."
-        },
-        {
-          "title": "Improved broadcast screens",
-          "body": "and better handling of languages."
-        },
-        {
-          "title": "Overlay editor improvements."
-        },
-        {
-          "title": "Remove a contact's logo",
-          "body": "from the contact form."
-        },
-        {
-          "title": "Localized templates remember where they came from."
-        }
-      ]
-    },
-    {
-      "id": "also",
-      "area": "platform",
-      "kind": "added",
-      "title": "Also",
-      "items": [
-        {
-          "title": "Public API docs",
-          "body": "at **developer.vitra.ai**, with guides and a full API reference."
-        },
-        {
-          "title": "Sign-up",
-          "body": "now records basic, non-identifying details about where a new account came from."
+          "body": "Public API docs at developer.vitra.ai"
         }
       ]
     },
@@ -266,31 +98,16 @@
       "title": "Fixes",
       "items": [
         {
-          "body": "4:5 exports no longer squeeze portrait videos."
+          "body": "4:5 exports no longer squeeze portrait videos"
         },
         {
-          "body": "Burned-in subtitles now span the full width at 480p and 360p."
+          "body": "Exports retry instead of dropping burned-in subtitles"
         },
         {
-          "body": "An export no longer finishes without its subtitles when burn-in fails. It retries instead."
+          "body": "Two quick edits on the same video no longer overwrite each other"
         },
         {
-          "body": "Splitting a card in the dubbing or subtitle editor shows the right text straight away."
-        },
-        {
-          "body": "Two quick edits on the same video no longer overwrite each other."
-        },
-        {
-          "body": "A stuck waveform no longer blocks the timeline."
-        },
-        {
-          "body": "Closing the crop dialog with × or Escape left the abandoned crop on the player and in the next export. Every way out now puts the previous crop back."
-        },
-        {
-          "body": "A paid upgrade could end in an error even though Stripe had charged, and trying again could charge a second month. The upgrade is now always recorded once it's paid."
-        },
-        {
-          "body": "Security and reliability fixes across the platform."
+          "body": "A paid upgrade is always recorded, and never charged twice"
         }
       ]
     }

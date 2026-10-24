@@ -4,7 +4,7 @@
   "id": "2026.08.27",
   "date": "2026-08-27",
   "title": "A redesigned Image Translator",
-  "summary": "A redesigned Image Translator with Regenerate, a full-page QC report and Sync from TM, style guides beside your terms, and 500 MB uploads for Word and PowerPoint translation.",
+  "summary": "A redesigned Image Translator with Regenerate, a full-page QC report and Sync from TM, plus style guides beside your terms.",
   "tags": [
     "translate-photo",
     "image-translator",
@@ -19,70 +19,20 @@
       "id": "image-translator",
       "area": "translate-photo",
       "kind": "changed",
-      "title": "Image Translator",
+      "title": "A redesigned Image Translator",
+      "note": "New analyze and review pages, with resizable columns and side-by-side compare.",
       "items": [
         {
-          "title": "A redesigned analyze page.",
-          "body": "The image is on the left, layers in the middle and controls on the right, in columns you can resize or collapse.",
-          "children": [
-            {
-              "body": "An aspect ratio dropdown that shows each option's output size."
-            },
-            {
-              "body": "A **Restyle with AI** panel with starter prompts."
-            },
-            {
-              "body": "Undo and redo for the brush, and an enlarged preview of the image."
-            },
-            {
-              "body": "Layers whose text or colour you edited are marked."
-            }
-          ]
+          "body": "**Regenerate** renders your corrections"
         },
         {
-          "title": "A redesigned review page.",
-          "body": "Tabs switch between Compare, Image view, Version history and Usage, with **Back Translation** and **AI Report** beside them.",
-          "children": [
-            {
-              "body": "AI Suggestions and AI Proofreading are their own tabs and follow the layer you select."
-            },
-            {
-              "body": "Source and translation side by side, with synced zoom and pan."
-            },
-            {
-              "body": "Every phrase in one scrolling list, with a sticky header."
-            },
-            {
-              "body": "Change a translated layer's colour straight from Compare."
-            },
-            {
-              "body": "Add a language without leaving the page."
-            }
-          ]
+          "body": "A full-page QC report with **Fix all**"
         },
         {
-          "title": "Regenerate after you edit.",
-          "body": "A **Regenerate** button renders your corrections and shows how many edits are waiting."
+          "body": "**Sync from TM** pulls your memory's wording onto every layer"
         },
         {
-          "title": "A full-page QC report.",
-          "body": "Confirm the run first, then read the Report and Issues tabs, with **Fix all** on Issues. Check only unverified layers or all of them."
-        },
-        {
-          "title": "Sync from TM.",
-          "body": "Pull your memory's wording and review status onto every layer it knows, after a confirm. Layers the memory hasn't seen are left as they are."
-        },
-        {
-          "title": "Usage shows words alongside credits,",
-          "body": "with a Proofreaders contribution panel."
-        },
-        {
-          "title": "A focused view for proofreaders.",
-          "body": "Members assigned to a language don't see Add language, Assign or Usage, and open on the latest version."
-        },
-        {
-          "title": "Assign by the language on screen.",
-          "body": "The assign dialog in the image translator covers only the language you're looking at. The process list and the editor now share the same searchable member picker."
+          "body": "A focused view for proofreaders"
         }
       ]
     },
@@ -93,31 +43,21 @@
       "title": "Style guides beside your terms",
       "items": [
         {
-          "title": "Read a memory's style guide in the app.",
-          "body": "A **Style guide** tab sits beside the terms in the editor drawer. VitraTM style guides display in the app; Phrase style guides open through a direct link."
-        },
-        {
-          "body": "A memory on the Microsoft Translator engine warns that its style guide is ignored."
+          "body": "Read a memory's style guide in the editor drawer"
         }
       ]
     },
     {
-      "id": "office-translation",
-      "area": "playground",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Word and PowerPoint translation",
+      "title": "More updates",
       "items": [
         {
-          "title": "Upload files up to 500 MB.",
-          "body": "Word and PowerPoint files upload straight to storage with a progress bar, up to 500 MB each and 2 GB per batch."
+          "body": "Word and PowerPoint: upload files up to 500 MB"
         },
         {
-          "title": "The preview docks beside the editor.",
-          "body": "Selecting a phrase scrolls the preview to its slide."
-        },
-        {
-          "title": "Indic text displays in translated decks.",
-          "body": "Translated Telugu, Hindi, Bengali and other Indic text now uses a font that has those scripts, instead of the deck's own font, which couldn't show them."
+          "body": "Word and PowerPoint: Indic text displays in translated decks"
         }
       ]
     },
@@ -128,65 +68,19 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "**Sync to TM** stayed disabled after QC Fix All, AI Suggestions or AI Proofreading.",
-          "body": "It's now available after each of these, and so is **Regenerate**."
+          "body": "Undo and redo work in the Image Translator"
         },
         {
-          "title": "Picking a version in Version history did nothing,",
-          "body": "worst in Fast Mode. Selecting one now switches back to the image."
+          "body": "Text edits stay in the language you made them in"
         },
         {
-          "title": "Undo and redo were always disabled.",
-          "body": "They now cover text, colour, lock and delete edits, and an undone edit stays undone after a reload."
+          "body": "Picking a version in Version history switches the image"
         },
         {
-          "title": "Text edits leaked into other languages.",
-          "body": "An edit now stays with the language you made it in."
+          "body": "The QC report PDF keeps its layout and source image"
         },
         {
-          "title": "AI Suggestions could show another layer.",
-          "body": "The panel now follows the layer you selected."
-        },
-        {
-          "title": "Untranslated layers showed the source text as their translation.",
-          "body": "They are now empty, with the source as a hint."
-        },
-        {
-          "title": "The downloaded QC report PDF was squashed and missing the source image.",
-          "body": "It now keeps the desktop layout with both images, and scrolling during the download no longer reveals a copy of the report."
-        },
-        {
-          "title": "Smaller Image Translator fixes.",
-          "children": [
-            {
-              "body": "A failed re-analysis no longer clears your master prompt."
-            },
-            {
-              "body": "**Apply changes** appears once, in the side panel, and re-analyses instead of re-translating the whole image."
-            },
-            {
-              "body": "Back Translation shows a run in progress instead of offering a new one."
-            },
-            {
-              "body": "Adding a language shows as \"Translated to\" in Version history, not \"Annotation edit\"."
-            },
-            {
-              "body": "Point and area annotations have a box to type your instruction."
-            },
-            {
-              "body": "**Run in background** no longer lands on \"Analysis result not found\"."
-            },
-            {
-              "body": "The Approved badge keeps its colour under your organization's branding."
-            },
-            {
-              "body": "Compare columns no longer squeeze when the side navigation is open."
-            }
-          ]
-        },
-        {
-          "title": "The Translate Photo dashboard's Recent list was empty,",
-          "body": "and a failed analysis showed as in progress. Recent work, including image translations, now lists, and a failed analysis shows as failed."
+          "body": "The Translate Photo dashboard lists recent work again"
         }
       ]
     }

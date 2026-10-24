@@ -141,18 +141,18 @@
       ],
       "properties": {
         "title": {
-          "description": "Bold one-sentence lead-in.",
+          "description": "One line, shown bold. Use it or body, not both.",
           "$ref": "#/$defs/text"
         },
         "body": {
-          "description": "One to three short sentences after the lead-in.",
+          "description": "One line of at most 15 words.",
           "$ref": "#/$defs/text"
         },
         "kind": {
           "$ref": "#/$defs/kind"
         },
         "children": {
-          "description": "Sub-points, rendered as an indented list. One level only.",
+          "description": "Sub-points, one level. Kept for older releases; the validator rejects them in new notes.",
           "type": "array",
           "minItems": 1,
           "items": {

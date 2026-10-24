@@ -24,7 +24,8 @@ Slack #channel (once per release, tag slack/<id>)
 - **Ids** are calendar versions: `YYYY.MM.DD`, plus `.2` for a second release on the same day.
 - **Schema**: [`schema/release.schema.json`](schema/release.schema.json) (JSON Schema 2020-12). Point your editor at it with `"$schema": "../schema/release.schema.json"`.
 - **Sections** carry a Keep a Changelog `kind` (`added`, `changed`, `deprecated`, `removed`, `fixed`, `security`) and an `area` from [`config/areas.json`](config/areas.json), which sets the icon and the Slack emoji.
-- **Items** are a bold `title` lead-in plus a `body`, with optional `children` (one indented level), `link` and `media`. Text is a small inline Markdown subset: `**bold**`, `_italic_`, `` `code` `` and `[label](https://…)`.
+- **Short by design**, so a release reads in seconds: up to 3 feature sections (a one-sentence `note` plus headline items), then **More updates** (area `improvements`) and **Fixes**, at most 5 items each. Every item is one line of ≤ 15 words, and a release is ≤ 220 words. `npm run validate` enforces this (`LIMITS` in `scripts/validate.mjs`); the full detail lives in the MR descriptions.
+- **Items** are one line: a `body`, or a bold `title`, with optional `link` and `media`. The schema still accepts `children` for older consumers, but the validator rejects them. Text is a small inline Markdown subset: `**bold**`, `_italic_`, `` `code` `` and `[label](https://…)`.
 - **This repo is public, so every line in a release file is customer-facing.** Hidden or unlaunched features (feature-flagged, staff-only, "coming soon") and team-only notes are **left out entirely**: no MR numbers, no internal sections. The schema rejects `audience` and `repos` fields. Deploy details belong in the GitLab MR descriptions.
 - **`backfill: true`** marks a release written after the fact. It shows on What's New like any other but is never posted to Slack; the flag itself is not published.
 

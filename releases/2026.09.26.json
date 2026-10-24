@@ -7,27 +7,23 @@
   "summary": "New translation memories follow built-in rules for the target language, including numbers and plurals, in AI translation, review and QE reports.",
   "tags": ["translation-memory", "style-guides"],
   "backfill": true,
+  "highlights": ["translation-memory"],
   "sections": [
     {
       "id": "translation-memory",
       "area": "translation-memory",
       "kind": "added",
-      "title": "Translation Memory",
+      "title": "Built-in language rules",
+      "note": "New VitraTM memories follow built-in rules for 1,175 target languages, including numbers and plurals.",
       "items": [
         {
-          "title": "Built-in rules for 1,175 languages.",
-          "body": "New VitraTM memories now follow built-in rules for the target language, including how it writes numbers and plurals, in AI translation, the review pass and QE reports. It works with or without a linked style guide.",
-          "children": [
-            {
-              "body": "Your own style guide rules come after the built-in ones and win where they disagree."
-            },
-            {
-              "body": "The built-in rules show alongside yours in the memory's style guide."
-            },
-            {
-              "body": "Memories created before this release keep translating as they did."
-            }
-          ]
+          "body": "Used in AI translation, the review pass and QE reports"
+        },
+        {
+          "body": "Your own style guide rules win where they disagree"
+        },
+        {
+          "body": "Memories created earlier keep translating as before"
         }
       ]
     }

@@ -38,13 +38,7 @@ const base = () => ({
       area: 'projects',
       kind: 'added',
       title: 'Projects',
-      items: [
-        {
-          title: 'Lead.',
-          body: 'Body with `code`.',
-          children: [{ body: 'First child.' }, { body: 'Second child.' }],
-        },
-      ],
+      items: [{ title: 'Lead.', body: 'Body with `code`.' }],
     },
     {
       id: 'cosmos',
@@ -151,6 +145,29 @@ describe('validateRelease', () => {
     assert.notDeepEqual(validateRelease(withRepos), []);
   });
 
+  it('keeps notes short: one-line items, no sub-lists, capped sections', () => {
+    const r = base();
+    r.summary = 'x'.repeat(161);
+    r.sections[1].items[0].body = Array.from({ length: 15 }, () => 'word').join(' ');
+    r.sections[1].items[0].children = [{ body: 'A child.' }];
+    r.sections[2].items = Array.from({ length: 6 }, () => ({ body: 'An item.' }));
+    r.sections.push(
+      ...['a', 'b'].map((id) => ({
+        id,
+        area: 'projects',
+        kind: 'added',
+        title: `Section ${id}`,
+        items: [{ body: 'An item.' }],
+      })),
+    );
+    const errors = validateRelease(r, '2026.10.22.json').join('\n');
+    assert.match(errors, /\/summary: 161 characters/);
+    assert.match(errors, /items\/0: 16 words/);
+    assert.match(errors, /no sub-lists/);
+    assert.match(errors, /6 items/);
+    assert.match(errors, /4 feature sections/);
+  });
+
   it('accepts every committed release file', () => {
     for (const file of listReleaseFiles()) {
       const name = file.split('/').pop();
@@ -160,6 +177,22 @@ describe('validateRelease', () => {
 });
 
 describe('build', () => {
+  it('puts More updates after the other sections and before fixes', () => {
+    const r = base();
+    r.sections.splice(1, 0, {
+      id: 'more',
+      area: 'improvements',
+      kind: 'changed',
+      title: 'More updates',
+      items: [{ body: 'An update.' }],
+    });
+    r.highlights = [];
+    assert.deepEqual(
+      orderSections(r).map((s) => s.id),
+      ['projects', 'cosmos', 'more', 'fixes'],
+    );
+  });
+
   it('orders highlights first and fixes last', () => {
     assert.deepEqual(
       orderSections(base()).map((s) => s.id),
@@ -170,7 +203,7 @@ describe('build', () => {
   it('emits a JSON Feed 1.1 item and publishes only the areas it uses', () => {
     const item = feedItem(base());
     assert.equal(item.date_published, '2026-10-22T12:00:00+05:30');
-    assert.ok(item.content_html.includes('<li>First child.</li>'));
+    assert.ok(item.content_html.includes('<code>code</code>'));
     assert.deepEqual(
       buildFeed([base()])._universe.areas.map((a) => a.id),
       ['projects', 'cosmos', 'fixes'],
@@ -192,7 +225,9 @@ describe('build', () => {
 
 describe('slack', () => {
   it('nests children one level in', () => {
-    const block = sectionBlock(base().sections[1]);
+    const section = base().sections[1];
+    section.items[0].children = [{ body: 'First child.' }, { body: 'Second child.' }];
+    const block = sectionBlock(section);
     const lists = block.elements.filter((e) => e.type === 'rich_text_list');
     assert.deepEqual(
       lists.map((l) => l.indent),

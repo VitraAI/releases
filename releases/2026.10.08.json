@@ -4,7 +4,7 @@
   "id": "2026.10.08",
   "date": "2026-10-08",
   "title": "Blog: write, translate and plan SEO blog posts",
-  "summary": "Blog arrives for writing, translating and planning SEO posts, Chinese, Japanese, Thai and other languages without spaces are counted by characters, and Hyperlocal overlays use the template's own language.",
+  "summary": "Blog for writing, translating and planning SEO posts, character-based word counts for languages without spaces, and Hyperlocal fixes.",
   "tags": ["blog", "billing", "word-count", "hyperlocal", "cosmos"],
   "backfill": true,
   "highlights": ["blog", "word-counts"],
@@ -14,67 +14,23 @@
       "area": "blog",
       "kind": "added",
       "title": "Blog",
+      "note": "Plan, write and translate SEO blog posts in one place, and track how they perform.",
       "items": [
         {
-          "title": "Write and translate SEO blog posts in one place.",
-          "body": "Blog plans topics from your website, drafts posts, translates them with your Translation Memory and tracks how they perform.",
+          "body": "Start from a title or a four-step brief",
           "link": {
             "label": "Open Blog",
             "path": "/galaxy/blog"
           }
         },
         {
-          "title": "Start from a title or a brief.",
-          "body": "Paste a title under **Start from a title** and the editor opens while the whole draft is written to it. Or use **Create blog**, a four-step flow (topic, angle, context, extras) with a Google result preview and the cost kept in view. You can write posts before you add a website."
+          "body": "Autopilot plans topics from your website"
         },
         {
-          "title": "Autopilot plans your topics.",
-          "body": "It reads your website's sitemap, groups topics into clusters by depth and suggests what to write next, with priority, pillar keyword and reasoning. The run form estimates the cost up front, and a run keeps going until it reaches the number of topics you asked for, showing \"13 of 20\" as it goes."
+          "body": "Translate posts with your Translation Memory"
         },
         {
-          "title": "An editor built for SEO.",
-          "children": [
-            {
-              "body": "**Ask AI** actions, an SEO pack, follow-up topic ideas, an on-page score and version history."
-            },
-            {
-              "body": "Hero images: generate one, choose one from Assets, save it to Assets or download it."
-            },
-            {
-              "body": "Brand-voice and glossary checks."
-            },
-            {
-              "body": "Export to Markdown, Word, PDF or text, or save the post to Assets."
-            }
-          ]
-        },
-        {
-          "title": "Translate posts with your Translation Memory.",
-          "body": "Add a language or retranslate one; Retranslate asks before it overwrites your edits. **Sync to TM** sends your corrections back to the memory, and **Sync from TM** pulls the memory's latest wording in."
-        },
-        {
-          "title": "Calendar.",
-          "body": "Set a publishing cadence, choose the post length (the topic's suggestion, or 500 to 3,000 words) and let it write on schedule, or press **Generate now**."
-        },
-        {
-          "title": "Analytics from Google.",
-          "body": "Connect Google Analytics 4 and Search Console to see top pages and queries, insights and topics that are close to ranking. Owners, admins and project managers connect Google."
-        },
-        {
-          "title": "Work as a team.",
-          "body": "Assign a whole post or one translated language, see your posts in the Personal or Org view, review posts in a queue, and file posts in folders."
-        },
-        {
-          "title": "Cosmos steps.",
-          "body": "**Generate blog** and **Translate blog** steps let a workflow write and translate posts."
-        },
-        {
-          "title": "Pricing.",
-          "body": "Writing and translating cost 0.5 credits per word and a hero image costs 300 credits. Every paid action shows its cost before it starts. Blog uses the model set in **Settings → Provider preferences**."
-        },
-        {
-          "title": "Blog API.",
-          "body": "Every Blog action is in the public API, with a guide at [developer.vitra.ai](https://developer.vitra.ai)."
+          "body": "A publishing calendar, and analytics from Google"
         }
       ]
     },
@@ -85,47 +41,24 @@
       "title": "Word counts for languages without spaces",
       "items": [
         {
-          "title": "Languages written without spaces are counted by characters.",
-          "body": "Chinese, Japanese, Thai, Khmer, Lao, Burmese and other languages written without spaces between words are now counted as characters divided by 3, the same way everywhere. Before, a whole sentence could count as one word.",
-          "children": [
-            {
-              "body": "This raises charges for those languages only. Languages that use spaces are counted exactly as before."
-            },
-            {
-              "body": "It applies to Playground documents, quality checks and AI quality reports, Translate Photo, Translate Video rewrites and Blog."
-            }
-          ]
+          "body": "Chinese, Japanese, Thai and similar languages count as characters divided by 3"
         },
         {
-          "title": "The word count you see is the one you pay for.",
-          "body": "Word counts in Playground, quality control, Blog, Translate Photo and the Translate Video editor now match the billed count."
-        },
-        {
-          "body": "The rates list shows prices only for the products your organization has."
+          "body": "The word count you see is the one you pay for"
         }
       ]
     },
     {
-      "id": "hyperlocal",
-      "area": "hyperlocal",
+      "id": "more",
+      "area": "improvements",
       "kind": "changed",
-      "title": "Hyperlocal",
+      "title": "More updates",
       "items": [
         {
-          "title": "New contact fields on an overlay start as localized.",
-          "body": "They use the contact's localization for the overlay's language, and fall back to the raw field when there isn't one."
-        }
-      ]
-    },
-    {
-      "id": "cosmos",
-      "area": "cosmos",
-      "kind": "changed",
-      "title": "Cosmos",
-      "items": [
+          "body": "Hyperlocal: new overlay contact fields start localized"
+        },
         {
-          "title": "The AI model step needs Chat access.",
-          "body": "To add or run it, a member needs permission to use Chat, and the organization needs Chat."
+          "body": "Cosmos: the AI model step needs Chat access"
         }
       ]
     },
@@ -136,23 +69,13 @@
       "title": "Fixes",
       "items": [
         {
-          "title": "Hyperlocal overlays showed English details in the template's own language.",
-          "body": "A Hindi template sent to dealers in Hindi-speaking states showed their English details. Overlays now use the saved localization for the template's base language too."
+          "body": "Hyperlocal overlays use the template's language for dealer details"
         },
         {
-          "title": "An organization's first Hyperlocal broadcast could fail for lack of credits",
-          "body": "even with credits available. It now starts."
+          "body": "An organization's first Hyperlocal broadcast starts"
         },
         {
-          "title": "Playground: following a PowerPoint slide lifted the whole app,",
-          "body": "and long XLIFF tags or URLs pushed rows past the panel. The preview now scrolls on its own and rows wrap."
-        },
-        {
-          "title": "A Translation Memory's languages could show as empty",
-          "body": "after the language list had loaded. They now show."
-        },
-        {
-          "body": "In the audit log, an automatic action reads \"Automatic\" instead of \"Removed user\"."
+          "body": "A Translation Memory shows its languages"
         }
       ]
     }
