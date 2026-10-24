@@ -1,0 +1,92 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.08.21.2",
+  "date": "2026-08-21",
+  "title": "Set one emotion across a whole language",
+  "summary": "Bulk emotion in Translate Video, process assignment per target language, and more accurate Image Translator renders.",
+  "tags": [
+    "translate-video",
+    "emotion",
+    "process-assignment",
+    "translate-photo",
+    "image-translator"
+  ],
+  "backfill": true,
+  "highlights": ["bulk-emotion", "process-assignment", "image-translator"],
+  "sections": [
+    {
+      "id": "bulk-emotion",
+      "area": "translate-video",
+      "kind": "added",
+      "title": "Bulk emotion in Translate Video",
+      "note": "Set one emotion for the selected cards or a whole language.",
+      "items": [
+        {
+          "body": "**Apply & Regenerate** shows how many cards will change first"
+        },
+        {
+          "body": "Only lines that can be spoken get new audio"
+        },
+        {
+          "body": "Progress bars move during speech generation"
+        }
+      ]
+    },
+    {
+      "id": "process-assignment",
+      "area": "platform",
+      "kind": "added",
+      "title": "Assign members per target language",
+      "note": "Assigned members see and hear about only their own languages.",
+      "items": [
+        {
+          "body": "One row per target language in the assign dialog"
+        },
+        {
+          "body": "Each member appears once, with their languages in the tooltip"
+        }
+      ]
+    },
+    {
+      "id": "image-translator",
+      "area": "translate-photo",
+      "kind": "changed",
+      "title": "Image Translator",
+      "items": [
+        {
+          "body": "Rotated and vertical text stays at its angle"
+        },
+        {
+          "body": "GPT Image renders match your image's size"
+        },
+        {
+          "body": "Proofreaders see only their languages' versions"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Analyze-step crops and edits carry through to translation"
+        },
+        {
+          "body": "Phrase locks stay locked after translation"
+        },
+        {
+          "body": "Every target language can be staffed on an image job"
+        },
+        {
+          "body": "Usage records words for AI Proofreading, QC and Suggestions"
+        },
+        {
+          "body": "Keep Source cards play at normal speed in the editor"
+        }
+      ]
+    }
+  ]
+}

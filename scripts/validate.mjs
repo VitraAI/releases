@@ -5,7 +5,7 @@
 // brevity limits of the house style (LIMITS).
 //
 //   node scripts/validate.mjs                 every file in releases/
-//   node scripts/validate.mjs 2026.10.13 ...  just these ids
+//   node scripts/validate.mjs 26.10.13 ...  just these ids
 import { basename, join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -13,7 +13,14 @@ import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 
 import { parseInline } from './lib/inline.mjs';
-import { ROOT, listReleaseFiles, loadAreas, readJson, releasePath } from './lib/release.mjs';
+import {
+  ROOT,
+  idForDate,
+  listReleaseFiles,
+  loadAreas,
+  readJson,
+  releasePath,
+} from './lib/release.mjs';
 
 const ajv = new Ajv2020({ allErrors: true, strict: true, strictRequired: false });
 addFormats(ajv);
@@ -30,7 +37,7 @@ export function validateRelease(release, fileName) {
   if (fileName && fileName !== `${release.id}.json`) {
     errors.push(`file name must be ${release.id}.json`);
   }
-  if (release.id.slice(0, 10) !== release.date.replaceAll('-', '.')) {
+  if (release.id.slice(0, 8) !== idForDate(release.date)) {
     errors.push(`date ${release.date} does not match id ${release.id}`);
   }
 

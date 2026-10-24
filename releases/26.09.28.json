@@ -1,0 +1,107 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.09.28",
+  "date": "2026-09-28",
+  "title": "See the cost before every paid start",
+  "summary": "See the cost before every paid start, InDesign translation, a new Cosmos builder with an assistant, and per-rule style guides.",
+  "tags": [
+    "credits",
+    "indesign-translation",
+    "cosmos",
+    "style-guides",
+    "folders",
+    "translate-video"
+  ],
+  "backfill": true,
+  "highlights": ["cost-before-start", "indesign-translation", "cosmos-builder"],
+  "sections": [
+    {
+      "id": "cost-before-start",
+      "area": "billing",
+      "kind": "changed",
+      "title": "See the cost before you start",
+      "note": "Every paid action shows its credit cost before it starts.",
+      "items": [
+        {
+          "body": "Credits are taken at the start and refunded if a job fails"
+        },
+        {
+          "body": "Not enough credits? A **Top up** link shows instead"
+        },
+        {
+          "body": "Credit Activity is easier to read"
+        }
+      ]
+    },
+    {
+      "id": "indesign-translation",
+      "area": "playground",
+      "kind": "added",
+      "title": "InDesign translation",
+      "note": "Translate .idml files in Playground. Styles, layout and images stay as they were.",
+      "items": [
+        {
+          "body": "Complex scripts like Hindi and Arabic render correctly"
+        },
+        {
+          "body": "Preview the layout, with a red box where text doesn't fit"
+        }
+      ]
+    },
+    {
+      "id": "cosmos-builder",
+      "area": "cosmos",
+      "kind": "added",
+      "title": "Cosmos: new builder and workflow assistant",
+      "items": [
+        {
+          "body": "A faster builder with undo, copy and paste, and templates"
+        },
+        {
+          "body": "Describe a workflow and the assistant builds it"
+        },
+        {
+          "body": "A filterable runs list and a live run page"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Style guides: rules apply to several languages and can be turned off"
+        },
+        {
+          "body": "Folders: a process shows its input file in its folder"
+        },
+        {
+          "body": "Translate Video: uploads keep their frame rate and quality"
+        },
+        {
+          "body": "Generate All and bulk emotion in Translate Video are free"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Translate Video runs from Cosmos or Assets read the file length"
+        },
+        {
+          "body": "The Translation Memory page shows the right number of rows"
+        },
+        {
+          "body": "A failed image translation stops its spinner"
+        }
+      ]
+    }
+  ]
+}

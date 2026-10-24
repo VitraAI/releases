@@ -34,8 +34,8 @@ you write here.
 `$ARGUMENTS` is the release date, then the release MRs' links (the normal way):
 
 - `2026-10-22 https://gitlab.com/…/universe-3-0-server/-/merge_requests/572 https://gitlab.com/…/universe-3-0-webapp/-/merge_requests/600 …`
-  → id `2026.10.22`, exactly these MRs, one per repo in the release.
-- `2026-10-22.2 <links…>` → the day's second release, id `2026.10.22.2`.
+  → id `26.10.22`, exactly these MRs, one per repo in the release.
+- `2026-10-22.2 <links…>` → the day's second release, id `26.10.22.2`.
 - `2026-10-22` with no links → falls back to the MRs labelled `release::2026-10-22`.
 
 If no date is given, ask for it; don't guess today's date. If neither links nor a label

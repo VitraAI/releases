@@ -1,0 +1,94 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.09.16",
+  "date": "2026-09-16",
+  "title": "Style guides and terminology reach AI translation",
+  "summary": "Style guides, terminology-aware AI translation, TM file import and export, a Cosmos LLM node and a choice of lip-sync models.",
+  "tags": ["translation-memory", "style-guides", "terminology", "cosmos", "lip-sync", "api-keys"],
+  "backfill": true,
+  "highlights": ["translation-memory", "cosmos"],
+  "sections": [
+    {
+      "id": "translation-memory",
+      "area": "translation-memory",
+      "kind": "added",
+      "title": "Translation Memory",
+      "note": "AI translation now follows your style guides and terminology.",
+      "items": [
+        {
+          "body": "Upload up to 10 files and the rules are extracted for you"
+        },
+        {
+          "body": "Approved terms are binding, forbidden ones never used"
+        },
+        {
+          "body": "Import and export TMX, XLIFF, XLSX, CSV and TSV"
+        },
+        {
+          "body": "VitraTM covers all 1,175 languages in the catalogue"
+        }
+      ]
+    },
+    {
+      "id": "cosmos",
+      "area": "cosmos",
+      "kind": "added",
+      "title": "Cosmos",
+      "items": [
+        {
+          "body": "A generic LLM node: pick the model, modalities and instructions"
+        },
+        {
+          "body": "Text and Office inputs can feed image and video models"
+        },
+        {
+          "body": "Preview any step with **View output**"
+        },
+        {
+          "body": "Refreshed GPT, Gemini and image model catalogue"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Choose your lip-sync model, with its price shown on export"
+        },
+        {
+          "body": "OpenAI is the default for new image translation and Image Creator users"
+        },
+        {
+          "body": "Office translation handles CSV and XLSX"
+        },
+        {
+          "body": "Organization API keys for agents and scripts"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Bengali and Hindi terms are matched"
+        },
+        {
+          "body": "Languages that shared a name resolve to the right code"
+        },
+        {
+          "body": "Lip-sync exports use the organization's chosen model"
+        },
+        {
+          "body": "Large Gemini batch translations no longer fail after payment"
+        }
+      ]
+    }
+  ]
+}

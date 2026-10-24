@@ -1,0 +1,86 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.09.03",
+  "date": "2026-09-03",
+  "title": "Your organization opens on the product catalog",
+  "summary": "The product catalog as your home page, excluded areas for Hyperlocal broadcasts, and exact-size Image Translator renders.",
+  "tags": ["hyperlocal", "translate-photo", "image-translator", "home-page", "assets"],
+  "backfill": true,
+  "highlights": ["home-page", "hyperlocal", "image-translator"],
+  "sections": [
+    {
+      "id": "home-page",
+      "area": "platform",
+      "kind": "changed",
+      "title": "Home page",
+      "items": [
+        {
+          "body": "Your organization opens on the product catalog"
+        }
+      ]
+    },
+    {
+      "id": "hyperlocal",
+      "area": "hyperlocal",
+      "kind": "added",
+      "title": "Hyperlocal",
+      "items": [
+        {
+          "body": "Exclude areas from a broadcast"
+        },
+        {
+          "body": "Template previews look like the real thing"
+        }
+      ]
+    },
+    {
+      "id": "image-translator",
+      "area": "translate-photo",
+      "kind": "changed",
+      "title": "Image Translator",
+      "items": [
+        {
+          "body": "Fast Mode finishes without the tab open"
+        },
+        {
+          "body": "Renders come back at your image's exact size"
+        },
+        {
+          "body": "Text kept as-is is labelled"
+        },
+        {
+          "body": "**Sync to TM** works for any translated layer"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Assets: files in system directories are protected"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Hyperlocal template cards show their own title"
+        },
+        {
+          "body": "**Back to processes** opens the process list"
+        },
+        {
+          "body": "User Actions links for image jobs open the job"
+        }
+      ]
+    }
+  ]
+}

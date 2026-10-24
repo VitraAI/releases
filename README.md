@@ -21,7 +21,7 @@ Slack #channel (once per release, tag slack/<id>)
 
 ## Format
 
-- **Ids** are calendar versions: `YYYY.MM.DD`, plus `.2` for a second release on the same day.
+- **Ids** are calendar versions (CalVer) `YY.0M.0D`: the release day, e.g. `26.10.24`, plus `.2` for a second release on the same day. They show as `v26.10.24`. GitLab labels keep the full date (`release::2026-10-24`).
 - **Schema**: [`schema/release.schema.json`](schema/release.schema.json) (JSON Schema 2020-12). Point your editor at it with `"$schema": "../schema/release.schema.json"`.
 - **Sections** carry a Keep a Changelog `kind` (`added`, `changed`, `deprecated`, `removed`, `fixed`, `security`) and an `area` from [`config/areas.json`](config/areas.json), which sets the icon and the Slack emoji.
 - **Short by design**, so a release reads in seconds: up to 3 feature sections (a one-sentence `note` plus headline items), then **More updates** (area `improvements`) and **Fixes**, at most 5 items each. Every item is one line of ≤ 15 words, and a release is ≤ 220 words. `npm run validate` enforces this (`LIMITS` in `scripts/validate.mjs`); the full detail lives in the MR descriptions.
@@ -35,7 +35,7 @@ The published feed is a standard JSON Feed. Each release is one `item`, with the
 {
   "version": "https://jsonfeed.org/version/1.1",
   "items": [{
-    "id": "2026.10.13", "title": "…", "summary": "…",
+    "id": "26.10.13", "title": "…", "summary": "…",
     "content_html": "…", "date_published": "2026-10-13T12:00:00+05:30",
     "_universe": { "schema": 1, "date": "2026-10-13", "highlights": [], "sections": [ … ] }
   }],

@@ -2,9 +2,9 @@
 // Collects a release's GitLab MRs into .work/<id>/ (gitignored: MR text and
 // diffs carry infra, env and migration details that must never be published).
 //
-//   node scripts/collect-mrs.mjs 2026.10.22                    MRs labelled release::2026-10-22
-//   node scripts/collect-mrs.mjs 2026.10.22 --diffs            …plus commits, diffs and signals
-//   node scripts/collect-mrs.mjs 2026.10.22 --url <mr-url> …   these MRs instead of the label
+//   node scripts/collect-mrs.mjs 26.10.22                    MRs labelled release::2026-10-22
+//   node scripts/collect-mrs.mjs 26.10.22 --diffs            …plus commits, diffs and signals
+//   node scripts/collect-mrs.mjs 26.10.22 --url <mr-url> …   these MRs instead of the label
 //
 // Auth: GITLAB_TOKEN (read_api), else the token `glab auth login` stored (see lib/gitlab.mjs).
 //
@@ -66,8 +66,8 @@ async function main(argv) {
   const flags = new Set(argv.filter((a) => a === '--diffs'));
   const urls = argv.flatMap((a, i) => (argv[i - 1] === '--url' ? [a] : []));
   const [id] = argv.filter((a, i) => !a.startsWith('--') && argv[i - 1] !== '--url');
-  if (!id || !/^\d{4}\.\d{2}\.\d{2}(\.\d)?$/.test(id)) {
-    console.error('usage: collect-mrs.mjs <YYYY.MM.DD[.N]> [--diffs] [--url <mr-url> ...]');
+  if (!id || !/^\d{2}\.\d{2}\.\d{2}(\.\d)?$/.test(id)) {
+    console.error('usage: collect-mrs.mjs <YY.MM.DD[.N]> [--diffs] [--url <mr-url> ...]');
     process.exit(2);
   }
   const { get } = api(gitlabToken());

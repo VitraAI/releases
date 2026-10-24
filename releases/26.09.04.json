@@ -1,0 +1,30 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.09.04",
+  "date": "2026-09-04",
+  "title": "Pick several states for a Hyperlocal broadcast",
+  "summary": "Create broadcast now takes more than one state, with areas from every state you pick.",
+  "tags": ["hyperlocal", "broadcast"],
+  "backfill": true,
+  "highlights": ["hyperlocal"],
+  "sections": [
+    {
+      "id": "hyperlocal",
+      "area": "hyperlocal",
+      "kind": "added",
+      "title": "Hyperlocal",
+      "items": [
+        {
+          "body": "Pick more than one state in **Create broadcast**"
+        },
+        {
+          "body": "The Area list covers every state you pick"
+        },
+        {
+          "body": "States match regardless of capitalisation in imported contacts"
+        }
+      ]
+    }
+  ]
+}

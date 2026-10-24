@@ -1,0 +1,109 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.10.19",
+  "date": "2026-10-19",
+  "title": "Integrations: connect your accounts and move files",
+  "summary": "A new Integrations page, image steps in Cosmos, translation of text inside document pictures, and Chat spaces.",
+  "tags": ["integrations", "cosmos", "playground", "chat", "magic-layers", "image-creator", "api"],
+  "backfill": true,
+  "highlights": ["integrations", "cosmos-images", "document-images"],
+  "sections": [
+    {
+      "id": "integrations",
+      "area": "integrations",
+      "kind": "added",
+      "title": "Integrations",
+      "note": "Connect your storage, social and content accounts in one place.",
+      "items": [
+        {
+          "body": "Import from and save to Dropbox, Drive, OneDrive, SharePoint or Box",
+          "link": {
+            "label": "Open Integrations",
+            "path": "/integrations"
+          }
+        },
+        {
+          "body": "Connect Instagram, YouTube, LinkedIn, WordPress, HubSpot and more"
+        },
+        {
+          "body": "Request a service that isn't listed"
+        }
+      ]
+    },
+    {
+      "id": "cosmos-images",
+      "area": "cosmos",
+      "kind": "added",
+      "title": "Cosmos: image and file steps",
+      "items": [
+        {
+          "body": "Create, translate and resize images in a workflow"
+        },
+        {
+          "body": "Four ready-made image workflows"
+        },
+        {
+          "body": "Import from and save to cloud storage"
+        },
+        {
+          "body": "An InDesign translation step"
+        }
+      ]
+    },
+    {
+      "id": "document-images",
+      "area": "playground",
+      "kind": "added",
+      "title": "Playground",
+      "items": [
+        {
+          "body": "Translate the text inside a document's pictures"
+        },
+        {
+          "body": "Find and replace in text-to-speech"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Chat: spaces with shared instructions, and a clearer model picker"
+        },
+        {
+          "body": "Magic Layers: faster splits, and brand fonts fit the original"
+        },
+        {
+          "body": "Hyperlocal: copy one language's overlay style to another"
+        },
+        {
+          "body": "API keys have a rate limit"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Magic Layers erases all the original text"
+        },
+        {
+          "body": "Magic Layers **Export PNG** works, and faster"
+        },
+        {
+          "body": "Image Creator briefs no longer show as raw JSON"
+        },
+        {
+          "body": "Image Creator keeps a custom size"
+        }
+      ]
+    }
+  ]
+}

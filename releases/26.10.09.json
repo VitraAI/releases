@@ -1,0 +1,45 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.10.09",
+  "date": "2026-10-09",
+  "title": "Translate Video exports match your source video",
+  "summary": "Translate Video exports match your source video's frame rate and quality, and rotated or phone videos no longer export stretched.",
+  "tags": ["translate-video", "export", "video-quality"],
+  "backfill": true,
+  "highlights": ["translate-video"],
+  "sections": [
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "changed",
+      "title": "Translate Video",
+      "note": "Exports follow the frame rate, audio and quality of the video you uploaded.",
+      "items": [
+        {
+          "body": "Phone videos export at their real, measured frame rate"
+        },
+        {
+          "body": "Screen recordings up to 60 fps keep every frame"
+        },
+        {
+          "body": "**Keep original video quality** now carries through to the export"
+        },
+        {
+          "body": "Child organizations inherit their parent's setting"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Rotated and non-MP4 uploads no longer export stretched or juddering"
+        }
+      ]
+    }
+  ]
+}

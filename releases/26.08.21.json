@@ -1,0 +1,119 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.08.21",
+  "date": "2026-08-21",
+  "title": "Folders group your work across every product",
+  "summary": "Folders across every product, audio-only and 4K exports, Microsoft Translator for memories, Drive files as inputs and a User Actions log.",
+  "tags": [
+    "folders",
+    "assets",
+    "translate-video",
+    "translation-memory",
+    "audit-log",
+    "proofreading-report"
+  ],
+  "backfill": true,
+  "highlights": ["folders", "video-export", "translation-memory"],
+  "sections": [
+    {
+      "id": "folders",
+      "area": "projects",
+      "kind": "added",
+      "title": "Folders",
+      "note": "Group work from every product in one folder, with a matching Drive folder.",
+      "items": [
+        {
+          "body": "File Translate Video, Translate Photo, QC and Cosmos work together"
+        },
+        {
+          "body": "Pick a folder when you start work, or use **Move to folder**"
+        },
+        {
+          "body": "Filter process lists by folder"
+        }
+      ]
+    },
+    {
+      "id": "video-export",
+      "area": "translate-video",
+      "kind": "added",
+      "title": "Translate Video export",
+      "items": [
+        {
+          "body": "Export audio only as a WAV file"
+        },
+        {
+          "body": "Export in 4K or 2K"
+        },
+        {
+          "body": "Tick **Export with issues** to export despite transcript issues"
+        },
+        {
+          "body": "Video and audio exports keep separate histories"
+        }
+      ]
+    },
+    {
+      "id": "translation-memory",
+      "area": "translation-memory",
+      "kind": "added",
+      "title": "Microsoft Translator for memories",
+      "note": "VitraTM memories can translate with Azure instead of Gemini.",
+      "items": [
+        {
+          "body": "Add the Translator key and region under **Settings → AI Keys**"
+        },
+        {
+          "body": "Exact memory matches still apply on both engines"
+        },
+        {
+          "body": "Set review status on up to 500 translations at once"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Use files already in Drive as inputs across products"
+        },
+        {
+          "body": "See who did what in **Settings → User Actions**"
+        },
+        {
+          "body": "Scope or filter a proofreading report by folder"
+        },
+        {
+          "body": "Invoice PDFs show full language names"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Moving between Asset Manager folders no longer crashes the page"
+        },
+        {
+          "body": "Quick Create no longer wipes your first message"
+        },
+        {
+          "body": "Profile language rates refresh right after an edit"
+        },
+        {
+          "body": "Notifications appear on top of other content"
+        },
+        {
+          "body": "Permission checks no longer block subtitle export and sync"
+        }
+      ]
+    }
+  ]
+}

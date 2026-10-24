@@ -28,14 +28,18 @@ export function listReleaseFiles() {
 
 export const releasePath = (id) => join(RELEASES_DIR, `${id}.json`);
 
-/** release::2026-10-22 ↔ 2026.10.22 (and .2 for a second release that day). */
+/**
+ * Ids are CalVer YY.0M.0D (26.10.22), plus .2 for a second release that day.
+ * GitLab labels keep the full date: release::2026-10-22 ↔ 26.10.22.
+ */
 export function labelForId(id) {
   const [y, m, d, n] = id.split('.');
-  return `release::${y}-${m}-${d}${n ? `.${n}` : ''}`;
+  return `release::20${y}-${m}-${d}${n ? `.${n}` : ''}`;
 }
 
+/** 2026-10-22 → 26.10.22 */
 export function idForDate(date, n) {
-  return `${date.replaceAll('-', '.')}${n && n > 1 ? `.${n}` : ''}`;
+  return `${date.slice(2).replaceAll('-', '.')}${n && n > 1 ? `.${n}` : ''}`;
 }
 
 /** Newest first: by date, then by same-day suffix. */
