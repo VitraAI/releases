@@ -1,0 +1,115 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.10.07",
+  "date": "2026-10-07",
+  "title": "Plan limits and a usage page",
+  "summary": "Plan limits and a usage page, organization analytics, export to any shape, multi-language zip downloads and a live Cosmos assistant.",
+  "tags": [
+    "plans",
+    "usage",
+    "billing",
+    "analytics",
+    "translate-video",
+    "cosmos",
+    "translation-memory",
+    "hyperlocal"
+  ],
+  "backfill": true,
+  "highlights": ["plan-limits", "org-analytics", "translate-video"],
+  "sections": [
+    {
+      "id": "plan-limits",
+      "area": "billing",
+      "kind": "added",
+      "title": "Plan limits and usage",
+      "note": "Every plan has seat and storage limits, shown on **Settings → Usage**.",
+      "items": [
+        {
+          "body": "Uploads that won't fit are stopped before they start"
+        },
+        {
+          "body": "Upgrades take effect once paid, with no refresh"
+        }
+      ]
+    },
+    {
+      "id": "org-analytics",
+      "area": "platform",
+      "kind": "added",
+      "title": "Organization analytics",
+      "note": "Parent organizations get an Analytics page across all their organizations.",
+      "items": [
+        {
+          "body": "Build your own dashboard from widgets and templates"
+        },
+        {
+          "body": "Set budgets and track them"
+        },
+        {
+          "body": "Export to Excel or CSV"
+        }
+      ]
+    },
+    {
+      "id": "translate-video",
+      "area": "translate-video",
+      "kind": "changed",
+      "title": "Translate Video",
+      "items": [
+        {
+          "body": "Export to any shape, with **Fit** or **Fill** and crop"
+        },
+        {
+          "body": "Multi-language exports download as one zip"
+        },
+        {
+          "body": "Faster exports and editing"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Cosmos: the workflow assistant replies live and handles branches"
+        },
+        {
+          "body": "Translation Memory: redesigned pages and a provider filter"
+        },
+        {
+          "body": "Image Creator: custom output sizes"
+        },
+        {
+          "body": "Assets: filter by person"
+        },
+        {
+          "body": "Public API docs at developer.vitra.ai"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "4:5 exports no longer squeeze portrait videos"
+        },
+        {
+          "body": "Exports retry instead of dropping burned-in subtitles"
+        },
+        {
+          "body": "Two quick edits on the same video no longer overwrite each other"
+        },
+        {
+          "body": "A paid upgrade is always recorded, and never charged twice"
+        }
+      ]
+    }
+  ]
+}

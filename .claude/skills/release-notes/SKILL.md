@@ -13,7 +13,7 @@ GitHub Action posts it to Slack when the PR merges. **Never write a Slack script
 ## Arguments
 
 `$ARGUMENTS` is the release date, optionally followed by the release MRs' links:
-`2026-10-22 <mr-link> <mr-link> …` → id `2026.10.22`. `2026-10-22.2` → `2026.10.22.2`
+`2026-10-22 <mr-link> <mr-link> …` → id `26.10.22`. `2026-10-22.2` → `26.10.22.2`
 for the day's second release. If the date is missing, ask.
 
 The links are only needed when `/mr-details` didn't run for this release (its
@@ -55,7 +55,7 @@ Release notes describe what is live.
 Start from the shape of the newest file in `releases/`, and follow
 `schema/release.schema.json`. The fields:
 
-- `id`, `date` (YYYY-MM-DD, IST), `schema: 1`, `"$schema": "../schema/release.schema.json"`.
+- `id` (CalVer `YY.0M.0D`, e.g. `26.10.22`), `date` (YYYY-MM-DD, IST), `schema: 1`, `"$schema": "../schema/release.schema.json"`.
 - `title`: the single biggest customer-facing change, ≤ 80 characters, e.g. "Projects replace Folders".
 - `summary`: one short sentence naming the main changes, ≤ 160 characters. It's the
   Slack notification text and the feed summary.

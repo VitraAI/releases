@@ -1,0 +1,93 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.09.23",
+  "date": "2026-09-23",
+  "title": "Translate PDFs and keep their layout",
+  "summary": "PDF translation that keeps the layout, whole-folder translation, folder pages, export preview and a context field for memories.",
+  "tags": [
+    "pdf-translation",
+    "folder-translation",
+    "folders",
+    "save-to-assets",
+    "translate-video",
+    "translate-photo"
+  ],
+  "backfill": true,
+  "highlights": ["pdf-translation", "translate-folder", "folders"],
+  "sections": [
+    {
+      "id": "pdf-translation",
+      "area": "playground",
+      "kind": "added",
+      "title": "PDF translation",
+      "note": "Translate a PDF in Playground or Cosmos. Only the text changes, the layout stays.",
+      "items": [
+        {
+          "body": "Indian scripts, Arabic, Hebrew, Thai, Cyrillic and Greek render correctly"
+        },
+        {
+          "body": "Original and translation scroll side by side"
+        },
+        {
+          "body": "Text that doesn't fit its box is flagged, never dropped"
+        }
+      ]
+    },
+    {
+      "id": "translate-folder",
+      "area": "playground",
+      "kind": "added",
+      "title": "Translate a whole folder",
+      "note": "Pick a Drive folder and translate every file in it into each language.",
+      "items": [
+        {
+          "body": "Preview files, word counts and cost before you run"
+        },
+        {
+          "body": "Output lands next to the source, in your i18n layout"
+        },
+        {
+          "body": "Text Translation: several target languages at once"
+        }
+      ]
+    },
+    {
+      "id": "folders",
+      "area": "projects",
+      "kind": "added",
+      "title": "Folders",
+      "items": [
+        {
+          "body": "Open a folder to see every process filed in it"
+        },
+        {
+          "body": "**Save to Assets** asks which folder to save in"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Translate Video: preview an export before downloading it"
+        },
+        {
+          "body": "Translate Video: choose the lip-sync model per export"
+        },
+        {
+          "body": "Translate Photo: retry a failed translation in place"
+        },
+        {
+          "body": "Translation Memory: a **Context** field tells the AI what a memory is for"
+        },
+        {
+          "body": "PDF translation costs 0.5 credits per source word"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.09.26",
+  "date": "2026-09-26",
+  "title": "Built-in language rules for AI translation",
+  "summary": "New translation memories follow built-in rules for the target language, including numbers and plurals, in AI translation, review and QE reports.",
+  "tags": ["translation-memory", "style-guides"],
+  "backfill": true,
+  "highlights": ["translation-memory"],
+  "sections": [
+    {
+      "id": "translation-memory",
+      "area": "translation-memory",
+      "kind": "added",
+      "title": "Built-in language rules",
+      "note": "New VitraTM memories follow built-in rules for 1,175 target languages, including numbers and plurals.",
+      "items": [
+        {
+          "body": "Used in AI translation, the review pass and QE reports"
+        },
+        {
+          "body": "Your own style guide rules win where they disagree"
+        },
+        {
+          "body": "Memories created earlier keep translating as before"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.09.24",
+  "date": "2026-09-24",
+  "title": "The rates page shows your organization's prices",
+  "summary": "The credit rates page now shows the prices agreed for your organization instead of the standard ones.",
+  "tags": ["credits", "billing"],
+  "backfill": true,
+  "highlights": ["billing"],
+  "sections": [
+    {
+      "id": "billing",
+      "area": "billing",
+      "kind": "changed",
+      "title": "Credits and billing",
+      "items": [
+        {
+          "body": "The rates page shows your organization's agreed prices, not the standard ones"
+        }
+      ]
+    }
+  ]
+}

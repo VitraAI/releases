@@ -2,8 +2,8 @@
 // SOP step 2: sets each release MR's title and description from the file
 // /mr-details wrote (.work/<id>/mr-details.md).
 //
-//   node scripts/update-mrs.mjs 2026.10.22             update every MR in the file
-//   node scripts/update-mrs.mjs 2026.10.22 --dry-run   parse and check only, no writes
+//   node scripts/update-mrs.mjs 26.10.22             update every MR in the file
+//   node scripts/update-mrs.mjs 26.10.22 --dry-run   parse and check only, no writes
 //
 // Auth: GITLAB_TOKEN (api), else the token `glab auth login` stored.
 //
@@ -69,8 +69,8 @@ export function parseMrDetails(md) {
 async function main(argv) {
   const dryRun = argv.includes('--dry-run');
   const [id] = argv.filter((a) => !a.startsWith('--'));
-  if (!id || !/^\d{4}\.\d{2}\.\d{2}(\.\d)?$/.test(id)) {
-    console.error('usage: update-mrs.mjs <YYYY.MM.DD[.N]> [--dry-run]');
+  if (!id || !/^\d{2}\.\d{2}\.\d{2}(\.\d)?$/.test(id)) {
+    console.error('usage: update-mrs.mjs <YY.MM.DD[.N]> [--dry-run]');
     process.exit(2);
   }
   const dir = join(ROOT, '.work', id);

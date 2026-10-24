@@ -15,9 +15,9 @@
       "const": 1
     },
     "id": {
-      "description": "Calendar version: YYYY.MM.DD, plus .N for a second release on the same day.",
+      "description": "Calendar version (CalVer) YY.0M.0D: the release day, e.g. 26.10.24, plus .N for a second release on the same day.",
       "type": "string",
-      "pattern": "^\\d{4}\\.(0[1-9]|1[0-2])\\.(0[1-9]|[12]\\d|3[01])(\\.[2-9])?$"
+      "pattern": "^\\d{2}\\.(0[1-9]|1[0-2])\\.(0[1-9]|[12]\\d|3[01])(\\.[2-9])?$"
     },
     "date": {
       "description": "Release day (IST), YYYY-MM-DD. Must match the id.",

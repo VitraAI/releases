@@ -19,7 +19,7 @@ import { validateRelease } from '../scripts/validate.mjs';
 
 const base = () => ({
   schema: 1,
-  id: '2026.10.22',
+  id: '26.10.22',
   date: '2026-10-22',
   title: 'A release',
   summary: 'A summary that is long enough.',
@@ -92,15 +92,21 @@ describe('inline markdown', () => {
 
 describe('ids and labels', () => {
   it('maps ids to labels and back', () => {
-    assert.equal(labelForId('2026.10.22'), 'release::2026-10-22');
-    assert.equal(labelForId('2026.10.22.2'), 'release::2026-10-22.2');
-    assert.equal(idForDate('2026-10-22'), '2026.10.22');
-    assert.equal(idForDate('2026-10-22', 2), '2026.10.22.2');
+    assert.equal(labelForId('26.10.22'), 'release::2026-10-22');
+    assert.equal(labelForId('26.10.22.2'), 'release::2026-10-22.2');
+    assert.equal(idForDate('2026-10-22'), '26.10.22');
+    assert.equal(idForDate('2026-10-22', 2), '26.10.22.2');
+  });
+
+  it('accepts only CalVer YY.0M.0D ids', () => {
+    const long = base();
+    long.id = '2026.10.22';
+    assert.match(validateRelease(long).join('\n'), /\/id must match pattern/);
   });
 
   it('sorts newest first, same-day suffix after the plain id', () => {
-    const ids = ['2026.09.28', '2026.10.13', '2026.09.28.2'];
-    assert.deepEqual(ids.sort(compareIdsDesc), ['2026.10.13', '2026.09.28.2', '2026.09.28']);
+    const ids = ['26.09.28', '26.10.13', '26.09.28.2'];
+    assert.deepEqual(ids.sort(compareIdsDesc), ['26.10.13', '26.09.28.2', '26.09.28']);
   });
 });
 
@@ -115,7 +121,7 @@ describe('publicRelease', () => {
 
 describe('validateRelease', () => {
   it('accepts a good release', () => {
-    assert.deepEqual(validateRelease(base(), '2026.10.22.json'), []);
+    assert.deepEqual(validateRelease(base(), '26.10.22.json'), []);
   });
 
   it('rejects a mismatched file name, date, area and highlight', () => {
@@ -160,7 +166,7 @@ describe('validateRelease', () => {
         items: [{ body: 'An item.' }],
       })),
     );
-    const errors = validateRelease(r, '2026.10.22.json').join('\n');
+    const errors = validateRelease(r, '26.10.22.json').join('\n');
     assert.match(errors, /\/summary: 161 characters/);
     assert.match(errors, /items\/0: 16 words/);
     assert.match(errors, /no sub-lists/);

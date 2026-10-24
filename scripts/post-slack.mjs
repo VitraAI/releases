@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // Renders a release to Slack Block Kit and posts it with chat.postMessage.
 //
-//   node scripts/post-slack.mjs 2026.10.13 --dry-run   print the payload + a Block Kit Builder link
-//   SLACK_TOKEN=xoxb-… SLACK_CHANNEL=C0123456789 node scripts/post-slack.mjs 2026.10.13
+//   node scripts/post-slack.mjs 26.10.13 --dry-run   print the payload + a Block Kit Builder link
+//   SLACK_TOKEN=xoxb-… SLACK_CHANNEL=C0123456789 node scripts/post-slack.mjs 26.10.13
 //
 // Flags:
 //   --dry-run   don't post; print the blocks and a Block Kit Builder URL
@@ -138,7 +138,7 @@ export function renderBlocks(release, { layout = DEFAULT_LAYOUT } = {}) {
     elements: [
       {
         type: 'mrkdwn',
-        text: `Release ${release.id} · <${SITE_URL}/#${release.id}|What's new>`,
+        text: `Release v${release.id} · <${SITE_URL}/#${release.id}|What's new>`,
       },
     ],
   });

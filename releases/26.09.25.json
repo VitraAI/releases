@@ -1,0 +1,23 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.09.25",
+  "date": "2026-09-25",
+  "title": "Word aliases reopen after you cancel",
+  "summary": "A fix for the Translate Video transcript editor, where a word's alias could not be reopened after cancelling.",
+  "tags": ["translate-video", "pronunciation"],
+  "backfill": true,
+  "sections": [
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Translate Video: a word's alias reopens after you cancel the **Alias Word** dialog"
+        }
+      ]
+    }
+  ]
+}

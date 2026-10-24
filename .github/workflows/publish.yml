@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
     inputs:
       repost:
-        description: Release id to post to Slack again (e.g. 2026.10.22). Leave empty to only redeploy.
+        description: Release id to post to Slack again (e.g. 26.10.22). Leave empty to only redeploy.
         required: false
 
 concurrency:
