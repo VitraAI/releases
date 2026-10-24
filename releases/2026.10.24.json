@@ -1,0 +1,211 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "2026.10.24",
+  "date": "2026-10-24",
+  "title": "DeepL for translation memories",
+  "summary": "DeepL joins Gemini and Azure as a translation memory engine, language pickers offer only what the engine can translate, a What's New page in the app, a workflow picker that previews each workflow, Content Research and Slate models in Provider Preferences, and faster moves between sections.",
+  "tags": [
+    "translation-memory",
+    "deepl",
+    "whats-new",
+    "projects",
+    "cosmos",
+    "content-research",
+    "slate",
+    "platform"
+  ],
+  "highlights": ["deepl", "whats-new", "workflow-picker"],
+  "sections": [
+    {
+      "id": "deepl",
+      "area": "translation-memory",
+      "kind": "added",
+      "title": "DeepL for translation memories",
+      "items": [
+        {
+          "title": "Choose DeepL as a memory's engine.",
+          "body": "VitraTM memories can now translate with DeepL as well as Gemini and Azure. Like Azure, DeepL is classic machine translation, so style guides, term bases and glossaries can't be linked to a DeepL memory."
+        },
+        {
+          "title": "Use your own DeepL key.",
+          "body": "Add a DeepL Free or Pro key in **AI Keys** settings, then test or unlink it there like your other keys. A Free key ends in `:fx`."
+        },
+        {
+          "title": "Only languages the engine can translate.",
+          "body": "With Azure or DeepL selected, the source and target pickers list only the languages that engine supports.",
+          "children": [
+            {
+              "body": "Languages it can't translate are named in a warning with a **Remove them** button, and the memory can't be saved until they're gone."
+            },
+            {
+              "body": "A memory can't switch to an engine that can't translate its languages."
+            },
+            {
+              "body": "In the Translate dialog, targets the engine can't translate are shown greyed out and are not sent."
+            }
+          ]
+        },
+        {
+          "title": "Every memory shows its engine.",
+          "body": "Each VitraTM memory in the list carries a chip: Gemini, Azure MT or DeepL."
+        },
+        {
+          "title": "Azure memories cover every Microsoft Translator language.",
+          "body": "Languages Azure used to refuse, such as Armenian, Welsh, Irish and Basque, now translate. Regional variants go to their own version where Microsoft has one, so Mexican Spanish is translated as Mexican Spanish. A language written in a script Microsoft doesn't translate, such as Punjabi in Pakistan, now gets memory matches only instead of a translation in the wrong script."
+        },
+        {
+          "title": "New translations show up on their own.",
+          "body": "After you translate, the memory's terms refresh as the results are saved, so there's no need to reload."
+        }
+      ]
+    },
+    {
+      "id": "whats-new",
+      "area": "platform",
+      "kind": "added",
+      "title": "What's New",
+      "items": [
+        {
+          "title": "Release notes inside Universe.",
+          "body": "A megaphone next to the notification bell opens **What's new**: every release, newest first, with a filter by product area. A dot on the megaphone means there's a release you haven't seen.",
+          "link": {
+            "label": "Open What's New",
+            "path": "/whats-new"
+          }
+        }
+      ]
+    },
+    {
+      "id": "workflow-picker",
+      "area": "projects",
+      "kind": "changed",
+      "title": "Choosing a workflow",
+      "items": [
+        {
+          "title": "See a workflow before you pick it.",
+          "body": "When you create a project or attach a workflow, the picker shows the workflow's diagram and the inputs it will ask for when it runs. Inputs shared between steps are highlighted."
+        },
+        {
+          "title": "Build one without losing your place.",
+          "body": "Open a workflow in Cosmos, or start a new one, straight from the picker. A **Back to** bar returns you to the project form with what you'd already filled in."
+        },
+        {
+          "title": "Ready-made workflows become your own copy.",
+          "body": "Attaching a ready-made workflow to a project adds your organization's own copy to your Cosmos workflows, and later projects reuse that copy."
+        }
+      ]
+    },
+    {
+      "id": "content-research",
+      "area": "content-research",
+      "kind": "changed",
+      "title": "Content Research",
+      "items": [
+        {
+          "title": "Pick the research model in Provider Preferences.",
+          "body": "Choose the model and how hard it thinks, or leave it on **Inherit**. The page warns when a model can't search the web. Content Research settings show the model in force with a link there. Choices you made before carry over."
+        },
+        {
+          "title": "Drag ideas between stages.",
+          "body": "Move idea cards across the pipeline board with the mouse or the keyboard. Screen readers announce each move."
+        },
+        {
+          "title": "Plan an idea on several days.",
+          "body": "In the calendar's agenda, clicking a plan opens it for editing, and clicking a holiday or moment opens its day. Report dates already on your calendar show as added."
+        },
+        {
+          "title": "Profiles show the site's name and icon."
+        },
+        {
+          "title": "Cleaner text.",
+          "body": "Citation links that the AI adds inline are removed from ideas and moments, and tracking parameters are removed from links. Word downloads use real numbered and bulleted lists."
+        }
+      ]
+    },
+    {
+      "id": "slate",
+      "area": "slate",
+      "kind": "changed",
+      "title": "Slate",
+      "items": [
+        {
+          "title": "Slate's models moved to Provider Preferences.",
+          "body": "Choose the creative director's model, how hard it thinks and the key visual model there, or leave them on **Inherit**. The old Slate settings page takes you there. Choices you made before carry over."
+        },
+        {
+          "title": "Choose where a brief is saved.",
+          "body": "**Save to Assets** now opens a folder picker, starting in the board's own folder under slate."
+        }
+      ]
+    },
+    {
+      "id": "hyperlocal",
+      "area": "hyperlocal",
+      "kind": "changed",
+      "title": "Hyperlocal",
+      "items": [
+        {
+          "title": "More languages translated.",
+          "body": "Hyperlocal uses the same Microsoft Translator language list as Azure memories, so it now translates the newly supported languages. Where Microsoft doesn't write a language's script, the source text is kept."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "area": "platform",
+      "kind": "changed",
+      "title": "Platform",
+      "items": [
+        {
+          "title": "Faster moves between sections.",
+          "body": "The top bar, side rail and command palette stay in place as you move around, instead of reloading. A thin bar at the top shows a page is on its way, and side panels open at the width you left them."
+        },
+        {
+          "title": "Cards open from anywhere you click.",
+          "body": "Click anywhere on a project, task, brand kit, Cosmos workflow or board card to open it. Clicking another card while a panel is open switches to it, and selection checkboxes no longer catch taps on touch screens."
+        },
+        {
+          "title": "Signing in brings you back.",
+          "body": "If you're asked to sign in, you return to the page you were on."
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "title": "Lists ignored clicks while refreshing in the background.",
+          "body": "Translation memories, glossaries, term bases, assets and many other lists now lock only while a new page is loading."
+        },
+        {
+          "title": "A closing dialog or drawer could swallow your next click.",
+          "body": "It now lets clicks through as soon as it starts closing."
+        },
+        {
+          "title": "Cancelling an upload could leave an empty blurred screen.",
+          "body": "The upload window now shows **Cancelling…** until the cancel is confirmed, then closes."
+        },
+        {
+          "title": "Translate Video's term base could show the wrong language.",
+          "body": "The term base drawer and term search now use the language shown on screen, and list only that language's terms."
+        },
+        {
+          "title": "The Slate brief editor could report unsaved changes",
+          "body": "when nothing had changed. It now only does so after a real edit."
+        },
+        {
+          "title": "The page could go blank for a moment",
+          "body": "while your organization list refreshed. It now stays on screen."
+        },
+        {
+          "title": "Side panels in Playground and Translate Photo jumped on opening.",
+          "body": "They now open at their final width."
+        }
+      ]
+    }
+  ]
+}
