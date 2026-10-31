@@ -1,0 +1,154 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.10.31",
+  "date": "2026-10-31",
+  "title": "Quality, linguists and time tracking",
+  "summary": "Quality scoring, linguists and feedback, time tracking, feature switches for admins, and a confirm-before-spending dialog.",
+  "tags": [
+    "quality",
+    "linguists",
+    "time-tracking",
+    "projects",
+    "platform",
+    "credits",
+    "playground",
+    "translate-photo",
+    "pricing"
+  ],
+  "highlights": ["quality", "time-tracking", "control"],
+  "sections": [
+    {
+      "id": "quality",
+      "area": "quality",
+      "kind": "added",
+      "title": "Quality and linguists",
+      "note": "Score translations, manage your linguists and settle feedback in one place.",
+      "items": [
+        {
+          "body": "A **Quality** tab on every project"
+        },
+        {
+          "body": "Linguist profiles, and preferred linguists for your work",
+          "link": {
+            "label": "Open Linguists",
+            "path": "/linguists"
+          }
+        },
+        {
+          "body": "Feedback threads, ratings and disputes on projects"
+        },
+        {
+          "body": "Set up LQA and QE scoring in **Settings → Quality**",
+          "link": {
+            "label": "Open Quality settings",
+            "path": "/settings/quality"
+          }
+        },
+        {
+          "body": "Run QE on a sample, and ignore or reclassify findings"
+        }
+      ]
+    },
+    {
+      "id": "time-tracking",
+      "area": "projects",
+      "kind": "added",
+      "title": "Time tracking",
+      "note": "See where time goes, per person and per project.",
+      "items": [
+        {
+          "body": "A timesheet for your own time",
+          "link": {
+            "label": "Open Timesheet",
+            "path": "/projects/timesheet"
+          }
+        },
+        {
+          "body": "Team time and project time views"
+        },
+        {
+          "body": "Set it up in **Settings → Time tracking**",
+          "link": {
+            "label": "Open Time tracking settings",
+            "path": "/settings/time-tracking"
+          }
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "area": "platform",
+      "kind": "added",
+      "title": "Control features and spending",
+      "items": [
+        {
+          "body": "Owners and admins switch modules off in **Settings → Features**",
+          "link": {
+            "label": "Open Features",
+            "path": "/settings/features"
+          }
+        },
+        {
+          "body": "Confirm before a job spends credits"
+        },
+        {
+          "body": "See the QE price before you start"
+        },
+        {
+          "body": "Fairer word counts, with no punctuation surcharge"
+        },
+        {
+          "body": "Hyperlocal: agent videos cost a flat 25 credits"
+        }
+      ],
+      "note": "Choose which modules your team sees, and approve credit spend before it happens."
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Playground: edit in OneDrive, translate speaker notes, restart stalled runs"
+        },
+        {
+          "body": "Translate Photo: live image previews and a choice of image model"
+        },
+        {
+          "body": "Glossary and term base terms now take priority in translations"
+        },
+        {
+          "body": "Better text reading from scanned PDFs"
+        },
+        {
+          "body": "Bring back removed members, and request organization deletion by form"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Fixed right-to-left and Urdu exports"
+        },
+        {
+          "body": "Fixed XLIFF placeholders shifting after translation"
+        },
+        {
+          "body": "Cancelled dubs no longer show as ready"
+        },
+        {
+          "body": "Fixed blog hero images and deleting blogs"
+        },
+        {
+          "body": "Fixed PDF forms and ASS and SSA subtitle files"
+        }
+      ]
+    }
+  ]
+}
