@@ -1,0 +1,132 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.11.02",
+  "date": "2026-11-02",
+  "title": "Several workflows per project, and a shared work pool",
+  "summary": "Several workflows per project, assignment rules and a work pool, a weekly timesheet, and reference mode for VitraTM memories.",
+  "tags": [
+    "projects",
+    "workflows",
+    "assignment",
+    "time-tracking",
+    "translation-memory",
+    "translate-video",
+    "quality"
+  ],
+  "highlights": ["projects", "time-tracking", "translation-memory"],
+  "sections": [
+    {
+      "id": "projects",
+      "area": "projects",
+      "kind": "added",
+      "title": "Run and assign project work",
+      "note": "Several workflows per project, and rules for who picks up each step.",
+      "items": [
+        {
+          "body": "A **Flow** tab with several workflows per project"
+        },
+        {
+          "body": "Assignment rules by language pair, and bulk assign"
+        },
+        {
+          "body": "Claim open tasks from **Available to claim** in **My work**"
+        },
+        {
+          "body": "Change step settings for a single run"
+        },
+        {
+          "body": "Link Assets directories to a project, including files added later"
+        }
+      ]
+    },
+    {
+      "id": "time-tracking",
+      "area": "projects",
+      "kind": "changed",
+      "title": "Time on tasks",
+      "note": "Log time against tasks in a weekly grid.",
+      "items": [
+        {
+          "body": "A weekly timesheet of your tasks",
+          "link": {
+            "label": "Open Timesheet",
+            "path": "/projects/timesheet"
+          }
+        },
+        {
+          "body": "A start and stop timer on every task"
+        },
+        {
+          "body": "Suggestions from your activity, if you opt in"
+        },
+        {
+          "body": "Approve, send back or reopen each person's week"
+        },
+        {
+          "body": "See the cost of time with hourly rates"
+        }
+      ],
+      "emoji": "stopwatch"
+    },
+    {
+      "id": "translation-memory",
+      "area": "translation-memory",
+      "kind": "added",
+      "title": "Reference mode for translation memories",
+      "note": "For Gemini memories: exact matches are reviewed and corrected, and new translations are not saved back.",
+      "items": [
+        {
+          "body": "Choose **Match** or **Reference** mode for each VitraTM memory"
+        },
+        {
+          "body": "Memory pages show linked term bases, glossaries and style guides"
+        },
+        {
+          "body": "A **Glossary** tab in **Linguistic assets**"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Projects: a **Portfolio** page across your projects",
+          "link": {
+            "label": "Open Portfolio",
+            "path": "/projects/portfolio"
+          }
+        },
+        {
+          "body": "Translate Video: exports match the preview frame for frame"
+        },
+        {
+          "body": "Quality: LQA profiles now score with DQF"
+        },
+        {
+          "body": "Uploads: clearer errors, and one failed file no longer stops the rest"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Translate Video: subtitles stay in sync at any speed or frame rate"
+        },
+        {
+          "body": "Translate Video: right-to-left subtitles keep their order"
+        },
+        {
+          "body": "Translate Video: uploaded audio stays in place when speed changes"
+        }
+      ]
+    }
+  ]
+}
