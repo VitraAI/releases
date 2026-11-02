@@ -36,6 +36,8 @@ const slackEscape = (s) =>
 const SPACER = { type: 'rich_text_section', elements: [{ type: 'text', text: '\n' }] };
 /** A blank line between two items of a spaced layout. */
 const GAP = { type: 'rich_text_section', elements: [{ type: 'text', text: ' ' }] };
+/** Items sit one level in, under the section title rather than at its left edge. */
+const ITEM_INDENT = 1;
 
 /**
  * How a section's items are laid out:
@@ -44,7 +46,7 @@ const GAP = { type: 'rich_text_section', elements: [{ type: 'text', text: ' ' }]
  *   stacked  spaced, and the bold lead-in on its own line with the body under it
  */
 export const LAYOUTS = ['compact', 'spaced', 'stacked'];
-export const DEFAULT_LAYOUT = 'stacked';
+export const DEFAULT_LAYOUT = 'compact';
 
 /** Bold lead-in, then the body, as one list line's elements. */
 function lineElements(entry, { stacked } = {}) {
@@ -77,7 +79,11 @@ export function sectionBlock(section, layout = DEFAULT_LAYOUT) {
     },
   ];
   if (section.note) {
-    elements.push({ type: 'rich_text_quote', elements: toSlackElements(section.note) });
+    // An italic line rather than a quote: Slack draws a quote with a bar beside it.
+    elements.push({
+      type: 'rich_text_section',
+      elements: toSlackElements(section.note, { italic: true }),
+    });
   }
 
   // Consecutive top-level items share one list; an item's children break it
@@ -86,7 +92,7 @@ export function sectionBlock(section, layout = DEFAULT_LAYOUT) {
   // between: Slack has no list spacing of its own.
   let run = [];
   const flush = () => {
-    if (run.length) elements.push(list(0, run));
+    if (run.length) elements.push(list(ITEM_INDENT, run));
     run = [];
   };
   section.items.forEach((item, i) => {
@@ -95,7 +101,7 @@ export function sectionBlock(section, layout = DEFAULT_LAYOUT) {
       flush();
       elements.push(
         list(
-          1,
+          ITEM_INDENT + 1,
           item.children.map((c) => lineElements(c)),
         ),
       );

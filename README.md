@@ -79,7 +79,7 @@ No Slack token is needed on laptops. The workflow posts with the repo secret.
 | `npm run check` | All of the above plus Prettier |
 | `node scripts/collect-mrs.mjs <id> [--diffs] [--url <mr> …]` | Pull a release's MRs from GitLab into `.work/<id>/` |
 | `node scripts/update-mrs.mjs <id> [--dry-run]` | Set each MR's title and description from `.work/<id>/mr-details.md`, backing up the originals first. `--dry-run` only parses and checks the file |
-| `node scripts/post-slack.mjs <id> --dry-run [--public] [--layout=stacked\|spaced\|compact]` | Print the Slack payload and a Block Kit Builder preview link. `stacked` (default) puts each bold lead-in on its own line with the body under it, a blank line between items and a divider between sections |
+| `node scripts/post-slack.mjs <id> --dry-run [--public] [--layout=stacked\|spaced\|compact]` | Print the Slack payload and a Block Kit Builder preview link. `compact` (default) keeps each section's items in one tight list, with a divider before Fixes; `stacked` puts each bold lead-in on its own line with the body under it, a blank line between items and a divider between sections |
 
 ## GitHub setup (once)
 

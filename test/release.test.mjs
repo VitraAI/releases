@@ -237,19 +237,19 @@ describe('slack', () => {
     const lists = block.elements.filter((e) => e.type === 'rich_text_list');
     assert.deepEqual(
       lists.map((l) => l.indent),
-      [0, 1],
+      [1, 2],
     );
   });
 
-  it('stacked (default) puts the body under the lead-in and divides every section', () => {
-    const block = sectionBlock(base().sections[1]);
+  it('stacked puts the body under the lead-in and divides every section', () => {
+    const block = sectionBlock(base().sections[1], 'stacked');
     assert.ok(JSON.stringify(block).includes('{"type":"text","text":"\\n"}'));
-    const types = renderBlocks(base()).map((b) => b.type);
+    const types = renderBlocks(base(), { layout: 'stacked' }).map((b) => b.type);
     assert.equal(types.filter((t) => t === 'divider').length, 2);
   });
 
-  it('compact renders a divider only before fixes', () => {
-    const blocks = renderBlocks(base(), { layout: 'compact' });
+  it('compact (default) renders a divider only before fixes', () => {
+    const blocks = renderBlocks(base());
     const types = blocks.map((b) => b.type);
     assert.equal(types[0], 'header');
     assert.equal(types.at(-1), 'context');
