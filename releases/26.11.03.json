@@ -1,0 +1,118 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.11.03",
+  "date": "2026-11-03",
+  "title": "Linguist invoices, with a Finance queue to approve and pay them",
+  "summary": "Linguists invoice their own work and Finance approves and pays it, tasks link to any process, and projects link single Assets files.",
+  "tags": [
+    "invoices",
+    "finance",
+    "projects",
+    "tasks",
+    "assets",
+    "translation-memory",
+    "quality",
+    "time-tracking"
+  ],
+  "highlights": ["invoices", "projects"],
+  "sections": [
+    {
+      "id": "invoices",
+      "area": "projects",
+      "kind": "added",
+      "title": "Linguist invoices",
+      "note": "Linguists invoice the work they did, and Finance approves and pays it.",
+      "emoji": "receipt",
+      "items": [
+        {
+          "body": "Preview and send an invoice for your work from **My invoices**",
+          "link": {
+            "label": "Open My invoices",
+            "path": "/projects/my-invoices"
+          }
+        },
+        {
+          "body": "Approve, reject or mark invoices paid in **Finance**",
+          "link": {
+            "label": "Open Finance",
+            "path": "/finance"
+          }
+        },
+        {
+          "body": "Approve or mark many invoices paid at once"
+        },
+        {
+          "body": "Download any invoice as a PDF"
+        },
+        {
+          "body": "A new **Finance** role for the people who handle invoices"
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "area": "projects",
+      "kind": "added",
+      "title": "Link more work into projects",
+      "note": "Bring a process or a single file into a project without copying it.",
+      "items": [
+        {
+          "body": "Link a process from any galaxy to a task you made by hand"
+        },
+        {
+          "body": "Link single Assets files to a project, not only directories"
+        },
+        {
+          "body": "Linked files and directories are pinned at the top of **Files**"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Projects: locked actions show a lock and the reason"
+        },
+        {
+          "body": "Projects: open a task's file straight from the task"
+        },
+        {
+          "body": "Projects: deleting a project cancels its open runs"
+        },
+        {
+          "body": "Quality: a report with findings but no words shows as not scored"
+        },
+        {
+          "body": "Translation Memory: CSV exports are safe to open in spreadsheets"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Translation Memory: English to English (UK) and other regional pairs are localised"
+        },
+        {
+          "body": "Translation Memory: right-to-left text displays correctly"
+        },
+        {
+          "body": "Glossaries and term bases: Excel imports find the right sheet and keep dates"
+        },
+        {
+          "body": "Projects: language picks save reliably and no longer flash back"
+        },
+        {
+          "body": "Time: a deleted task's timer keeps its time on the project"
+        }
+      ]
+    }
+  ]
+}
