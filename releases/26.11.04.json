@@ -1,0 +1,136 @@
+{
+  "$schema": "../schema/release.schema.json",
+  "schema": 1,
+  "id": "26.11.04",
+  "date": "2026-11-04",
+  "title": "Words and costs in project analytics",
+  "summary": "Projects show words, proofreading and costs, routine emails arrive as one summary, and Playground gets Word and PowerPoint pages.",
+  "tags": [
+    "projects",
+    "analytics",
+    "notifications",
+    "playground",
+    "pdf",
+    "quality",
+    "translation-memory",
+    "brand-kit"
+  ],
+  "highlights": ["project-analytics", "email-summaries", "playground"],
+  "sections": [
+    {
+      "id": "project-analytics",
+      "area": "projects",
+      "kind": "added",
+      "title": "Words and costs in project analytics",
+      "note": "See what a project translates, who proofreads it and what it costs.",
+      "items": [
+        {
+          "body": "Analytics shows words delivered and proofread, by language and linguist"
+        },
+        {
+          "body": "See a project's cost so far and the work still owed"
+        },
+        {
+          "body": "Count words per file with **Word counts** in Files"
+        },
+        {
+          "body": "Track proofreading across every project from the Portfolio",
+          "link": {
+            "label": "Open Portfolio",
+            "path": "/projects/portfolio"
+          }
+        }
+      ]
+    },
+    {
+      "id": "email-summaries",
+      "area": "notifications",
+      "kind": "changed",
+      "title": "Email summaries",
+      "note": "Routine notification emails now arrive together.",
+      "items": [
+        {
+          "body": "Routine emails come as one hourly summary by default"
+        },
+        {
+          "body": "Choose immediately, every 30 or 60 minutes, or off",
+          "link": {
+            "label": "Open Notifications",
+            "path": "/settings/notifications"
+          }
+        },
+        {
+          "body": "Admins set the default for the organization"
+        },
+        {
+          "body": "Approvals and mentions are still emailed straight away"
+        }
+      ]
+    },
+    {
+      "id": "playground",
+      "area": "playground",
+      "kind": "added",
+      "title": "Office and PDF documents in Playground",
+      "note": "Word and PowerPoint get their own pages, and scanned PDFs read better.",
+      "items": [
+        {
+          "body": "Translate Word and PowerPoint files from their own pages",
+          "link": {
+            "label": "Open Word translation",
+            "path": "/galaxy/playground/word-translation"
+          }
+        },
+        {
+          "body": "Edits made in Word, PowerPoint or Excel update the segments"
+        },
+        {
+          "body": "Scanned and photographed PDFs, even tilted ones, are read more accurately"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "area": "improvements",
+      "kind": "changed",
+      "title": "More updates",
+      "items": [
+        {
+          "body": "Segment editors: keyboard shortcuts to move, save and set status"
+        },
+        {
+          "body": "Quality: QE, AI LQA and Human LQA reports open in one dialog"
+        },
+        {
+          "body": "Translation Memory: options DeepL and Azure ignore are locked"
+        },
+        {
+          "body": "Brand kit: upload a whole font family as a ZIP or several files"
+        }
+      ]
+    },
+    {
+      "id": "fixes",
+      "area": "fixes",
+      "kind": "fixed",
+      "title": "Fixes",
+      "items": [
+        {
+          "body": "Image Creator: images keep their size after a chat edit"
+        },
+        {
+          "body": "Translated PDFs keep pictures that were not translated"
+        },
+        {
+          "body": "Playground: Retry and Restart charge the price they showed"
+        },
+        {
+          "body": "Image Translator: review rows show their own text"
+        },
+        {
+          "body": "Translate Video: transliteration suggestions no longer add double spaces"
+        }
+      ]
+    }
+  ]
+}
